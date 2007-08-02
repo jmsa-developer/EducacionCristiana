@@ -2,24 +2,23 @@
 namespace App\Controllers;
 
 use App\View;
- use App\Models\Bitacora;
+ use App\Models\BitacoraTrait;
 
 	class Bitacoracontroller extends BitacoraTrait
 	
      
     {
         public function bitacoraAction()
-     {   
-        $bitacora = Bitacora::get()->all();
+        {
+            $bitacora = Bitacora::get()->all();
+        {
+            View::render('bitacora.php',[
+                'bitacora'=>$bitacora
+            ]);
     
-        View::render('bitacora.php',[
-            'bitacora'=>$bitacora
-        ]);
-
-        
- View::render('bitacora.php');
-
-    }
-
-	}	
-		
+                View::redirect('/user/login');
+            
+    } View::render('bitacora.php');
+    
+        }
+        }
