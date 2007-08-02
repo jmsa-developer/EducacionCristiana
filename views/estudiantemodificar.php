@@ -152,8 +152,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <label>Lider del Ministerio</label>
-                            <td><input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="ingrese lider ministerio"
-                             required value="<?= $ministerio->lider_ministerio; ?>"/>               
+                            <input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="ingrese lider ministerio" required value="<?= $ministerio->lider_ministerio;?>"/>        
                           </div>
                                           <!-- /.form group -->
                                           
@@ -161,8 +160,7 @@
                 <div class="form-group">
                 <label>GDC</label>
                     
-                    <input type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" 
-                    required value="<?= $ministerio->gdc; ?>"/>                                                      
+                    <input type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" required value="<?= $ministerio->gdc; ?>"/>                                                      
                     
                     
 

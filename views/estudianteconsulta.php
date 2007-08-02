@@ -81,7 +81,7 @@
                       </td>
                       <td>
                           <a>
-                               ".$zona->direccion."
+                               ".$estudiante->telefono."
                           </a>
 
                       </td>

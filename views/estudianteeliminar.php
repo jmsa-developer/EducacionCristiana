@@ -60,14 +60,12 @@
                   <div class="form-group">
                         <label>APELLIDOS</label>
                                         
-                <input readonly type="text" class="form-control" name="apellido" id="apellido" maxlength="30" 
-                placeholder="Ingrese apellido"   value="<?= $estudiante->apellido; ?>/> 
+                <input readonly type="text" class="form-control" name="apellido" id="apellido" placeholder="Ingrese apellido" value="<?= $estudiante->apellido; ?>"/> 
                                  </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
                         <label>TELEFONO</label>
-                        <input readonly type="text" class="form-control" name="telefono" id="telefono" placeholder="Ingrese telefono" 
-                        data-inputmask='"mask": "(9999) 999-9999"'  value="<?= $estudiante->telefono; ?>"/>               
+                        <input readonly type="text" class="form-control" name="telefono" id="telefono" placeholder="Ingrese telefono" data-inputmask='"mask": "(9999) 999-9999"'  value="<?= $estudiante->telefono; ?>"/>               
                       
                         </div>
                       </div>
@@ -80,8 +78,7 @@
                 <div class="form-group">
                 <label>DIRECCION</label>
                 
-                <input readonly type="text"class="form-control" name="direccion" id="direccion" 
-                maxlength="30" placeholder="ingrese direccion" value="<?= $zona->direccion; ?>"/>               
+                <input readonly type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion" value="<?= $zona->direccion; ?>"/>               
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
@@ -112,7 +109,7 @@
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
                     <input  readonly type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento"
-                      data-inputmask-inputformat="dd/mm/yyyy" data-mask value="<?= $estudiante->fecha_inicio; ?>"/>               
+                      data-inputmask-inputformat="yyyy/mm/dd" data-mask value="<?= $estudiante->fecha_inicio; ?>"/>               
                   
                         </div>
                     </div>
@@ -164,10 +161,7 @@
                       
                       <select readonly class="form-control"  id="turno" name="turno" data-placeholder="Selecciona"
             style="width: 100%;" value="<?= $estudiante->email; ?>">         
-      <option>selecciona</option>
-      <option>1er</option>
-      <option>2do</option>
-      <option>3er</option>
+     
       
     </select>
                     
@@ -216,10 +210,9 @@
                                      <!-- Date -->
                 
 <script>
-   $(function () {
-      //Money Euro
+   $(function ()  //Money Euro
       $('[data-mask]').inputmask())
-}
+
 date = new Date();
 year = date.getFullYear();
 month = date.getMonth() + 1;
