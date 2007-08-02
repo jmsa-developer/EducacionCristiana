@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="public/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
     <link rel="stylesheet" href="public/plugins/summernote/summernote-bs4.min.css">
-
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <?php

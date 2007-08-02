@@ -38,3 +38,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
 <!-- Summernote -->
 <script src="public/plugins/summernote/summernote-bs4.min.js"></script>
+
+

@@ -9,6 +9,7 @@ use App\Models\Estudiante;
 use App\Models\Ministerio;
 use App\Models\Usuario;
 use App\Models\educativo;
+use App\Models\consultaestudiante;
 use App\View;
 use App\Models\Estudianteconsulta;
 
@@ -20,7 +21,21 @@ class AppController extends BaseController
     {
         View::render('plantilla.php');
     }
+    public function consultaestudianteAction()
+    {
+        if ($this->isPost()) {
 
+            $evaluaciones = new evaluaciones();
+            $evaluaciones->name = $this->post['name'];
+            $evaluaciones->cedula = $this->post['cedula'];
+            $evaluaciones->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('consultaestudiante.php');
+    }
     public function registerAction()
     {
         if ($this->isPost()) {

@@ -1,3 +1,4 @@
+
 <!-- Main content -->
 <section class="content">
       <div class="row">
@@ -20,7 +21,7 @@
         <!-- /.col-->
       </div>
       <!-- ./row -->
-      <script>
+          <script>
   $(function () {
     // Summernote
     $('#summernote').summernote()
