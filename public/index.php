@@ -7,4 +7,3 @@ const SITE_NAME = 'EducacionCristiana';
 $application = new App\Application();
 $application->run();
 
-?>

@@ -59,6 +59,39 @@ abstract class BaseModel {
         return $object->get($columns);
     }
 
+    public function getOne($id, $columns = '*'): iterable {
+        return $this->DB()
+            ->query("SELECT $columns FROM ". $this->_table . " WHERE id = $id")
+            ->fetch(\PDO::FETCH_ASSOC);
+    }
+
+    public static function getOneById($id, $columns = '*'): iterable {
+        $object = new static();
+        return $object->getOne($id, $columns);
+    }
+
+    public function getByConditions($conditions, $columns = '*'): iterable {
+        $where = '';
+        foreach ($conditions as $key => $value) {
+            $where .= "$key = '$value' AND ";
+        }
+        $where = substr($where, 0, -4);
+        return $this->DB()
+            ->query("SELECT $columns FROM ". $this->_table . " WHERE $where")
+            ->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public static function getAllByConditions($conditions, $columns = '*'): iterable {
+        $object = new static();
+        return $object->getByConditions($conditions, $columns);
+    }
+
+    public function getBySql($sql): iterable {
+        return $this->DB()
+            ->query($sql)
+            ->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
     public function insert(array $data): int {
 
         if($this->_table === ""){

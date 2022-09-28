@@ -2,15 +2,20 @@
 
 namespace App;
 
+use Exception;
+
 class View {
 
+    /**
+     * @throws Exception
+     */
     static function render(string $view, array $params = []): void {
 
         // Extract controller variables
         extract($params, EXTR_SKIP);
 
         // Page template path.
-        $content = APP_ROOT . "/Views/$view.php";
+        $content = APP_ROOT . "/Views/$view";
 
         if (is_readable($content)) {
             
@@ -19,7 +24,7 @@ class View {
             
         } else {
             
-            throw new \Exception("View $view no encontrada");
+            throw new Exception("View $view no encontrada");
         }
     }
 

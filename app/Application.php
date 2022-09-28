@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Exception;
+
 class Application{
 
     private $route;
@@ -22,7 +24,7 @@ class Application{
 
         $this->controller = $route[0];
 
-        $this->action = isset($route[1]) ? $route[1] : 'index';
+        $this->action = $route[1] ?? 'index';
 
         foreach ($route as $key => $value) {
             if($key > 1){
@@ -32,6 +34,9 @@ class Application{
     }
 
 
+    /**
+     * @throws Exception
+     */
     public function run(){
 
         $controller = 'App\Controllers\\' . ucfirst($this->controller) . 'Controller';
@@ -39,7 +44,7 @@ class Application{
         if(class_exists($controller)){
             $controller = new $controller();
         } else {
-            throw new \Exception("Controlador $controller no encontrado");
+            throw new Exception("Controlador $controller no encontrado");
         }
 
         $action = $this->action . 'Action';
@@ -47,7 +52,7 @@ class Application{
         if(method_exists($controller, $action)){
             call_user_func_array([$controller, $action], $this->params);
         } else {
-            throw new \Exception("Método $action no encontrado");
+            throw new Exception("Método $action no encontrado");
         }
 
         
