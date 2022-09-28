@@ -18,10 +18,14 @@ class BaseController
             // Redireccionar al controlador de login
             header('Location: login');
             exit;
-        }else{
-            header('Location: app');
-            exit;  
         }
+
+        if ($logged && get_class($this) === 'App\Controllers\LoginController') {
+            // Redireccionar a la raiz del proyecto
+            header('Location: /' . SITE_NAME);
+            exit;
+        }
+
     }
 
 

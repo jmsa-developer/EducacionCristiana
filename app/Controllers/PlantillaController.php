@@ -6,7 +6,7 @@ use App\View;
 	class PlantillaController{
 
 		public function indexAction(){
-			View::render('/views/plantilla.php');
+			View::render('plantilla.php');
 		}
 
 	}
