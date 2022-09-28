@@ -18,6 +18,9 @@ class BaseController
             // Redireccionar al controlador de login
             header('Location: login');
             exit;
+        }else{
+            header('Location: app');
+            exit;  
         }
     }
 

@@ -11,10 +11,14 @@
         <img class="animation__shake" src="public/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
     </div>
 
-
-    <?php include "navbar.php"; ?>
-
-    <?php include "navbar_left.php"; ?>
+  <?php
+  $logged = \App\Session::get('loggedIn');
+  
+  if($logged){
+    include "navbar.php";
+    include "navbar_left.php";
+  }
+  ?>
 
     <?php include "content.php"; ?>
 
