@@ -4,7 +4,8 @@ namespace App;
 
 use Exception;
 
-class Application{
+class Application
+{
 
     private $route;
     private $controller;
@@ -14,12 +15,12 @@ class Application{
 
     public function __construct($config = [])
     {
-        if($_GET['route']===''){
+        if ($_GET['route'] === '') {
             $route = 'app/index';
         } else {
             $route = $_GET['route'];
         }
-      
+
         $route = explode('/', $route);
 
         $this->controller = $route[0];
@@ -27,35 +28,42 @@ class Application{
         $this->action = $route[1] ?? 'index';
 
         foreach ($route as $key => $value) {
-            if($key > 1){
+            if ($key > 1) {
                 $this->params[] = $value;
             }
         }
+
     }
 
 
     /**
      * @throws Exception
      */
-    public function run(){
+    public function run()
+    {
 
         $controller = 'App\Controllers\\' . ucfirst($this->controller) . 'Controller';
 
-        if(class_exists($controller)){
+        if (class_exists($controller)) {
             $controller = new $controller();
         } else {
             throw new Exception("Controlador $controller no encontrado");
         }
 
         $action = $this->action . 'Action';
+        $defaultAction = $controller->defaultAction . 'Action';
 
-        if(method_exists($controller, $action)){
+        if (method_exists($controller, $action)) {
             call_user_func_array([$controller, $action], $this->params);
+        } elseif (method_exists($controller, $defaultAction)) {
+            header("Location: $this->controller/$controller->defaultAction");
+            exit;
+
         } else {
-            throw new Exception("Método $action no encontrado");
+            throw new Exception("Método $action no encontrado en el controlador " . ucfirst($this->controller) . 'Controller');
         }
 
-        
+
     }
 
 }

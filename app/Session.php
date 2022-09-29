@@ -21,6 +21,13 @@ class Session
         }
     }
 
+    public static function remove($key)
+    {
+        if (isset($_SESSION[$key])) {
+            unset($_SESSION[$key]);
+        }
+    }
+
     public static function destroy()
     {
         session_destroy();

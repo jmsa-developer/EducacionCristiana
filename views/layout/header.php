@@ -1,4 +1,6 @@
 <head>
+    <base href="/EducacionCristiana/">
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Educación Cristiana</title>

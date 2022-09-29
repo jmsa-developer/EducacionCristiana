@@ -6,21 +6,20 @@ use App\View;
 
 class BaseController
 {
+    public $defaultAction = 'index';
 
     public function __construct()
     {
-        // Inicializar la sesion
-        \App\Session::init();
         // Verificar si el usuario esta logueado
         $logged = \App\Session::get('loggedIn');
         // Si no esta logueado y no esta en el controlador de login
-        if (!$logged && get_class($this) != 'App\Controllers\LoginController') {
+        if (!$logged && get_class($this) != 'App\Controllers\UserController') {
             // Redireccionar al controlador de login
-            header('Location: login');
+            header('Location: user');
             exit;
         }
 
-        if ($logged && get_class($this) === 'App\Controllers\LoginController') {
+        if ($logged && get_class($this) === 'App\Controllers\UserController') {
             // Redireccionar a la raiz del proyecto
             header('Location: /' . SITE_NAME);
             exit;

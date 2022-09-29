@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include "header.php"; ?>
+<?php
+
+use App\Session;
+
+include "header.php"; ?>
+<base href="/EducacionCristiana/">
 
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -12,7 +17,7 @@
     </div>
 
   <?php
-  $logged = \App\Session::get('loggedIn');
+  $logged = Session::get('loggedIn');
   
   if($logged){
     include "navbar.php";

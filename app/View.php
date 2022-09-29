@@ -18,7 +18,7 @@ class View {
         $content = APP_ROOT . "/Views/$view";
 
         if (is_readable($content)) {
-            
+
             // Include global template
             require_once APP_ROOT . "/Views/layout/main.php";
             
@@ -26,6 +26,7 @@ class View {
             
             throw new Exception("View $view no encontrada");
         }
+
     }
 
 }
