@@ -19,8 +19,11 @@ class View {
 
         if (is_readable($content)) {
 
-            // Include global template
+         if($view=="login.php"||$view=="register.php"){
+            require_once APP_ROOT . "/Views/layout/main_principal.php";            
+         }else{
             require_once APP_ROOT . "/Views/layout/main.php";
+         }
             
         } else {
             
