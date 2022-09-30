@@ -16,6 +16,13 @@ class UserController extends BaseController
 
     public function registerAction()
     {
+        if($this->isPost()){
+
+            var_dump($this->post);
+            die;
+        }
+
+
         View::render('register.php');
     }
 
