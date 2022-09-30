@@ -19,7 +19,7 @@ class View {
 
         if (is_readable($content)) {
 
-         if($view=="login.php"||$view=="register.php"){
+         if($view=="login.php"){
             require_once APP_ROOT . "/Views/layout/main_principal.php";            
          }else{
             require_once APP_ROOT . "/Views/layout/main.php";
