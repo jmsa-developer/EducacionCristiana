@@ -26,7 +26,7 @@ class BaseController
             exit;
         }
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($this->isPost()) {
             $this->post = $_POST;
         }
     }

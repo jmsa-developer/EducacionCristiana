@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Estudiante;
 use App\View;
 
 // Controlador principal de la aplicacion
@@ -18,8 +19,12 @@ class UserController extends BaseController
     {
         if($this->isPost()){
 
-            var_dump($this->post);
-            die;
+            $estudiante = new Estudiante();
+            $estudiante->name = $this->post['name'];
+            $estudiante->cedula = $this->post['cedula'];
+            $estudiante->save();
+
+            View::redirect('/user/login');
         }
 
 
