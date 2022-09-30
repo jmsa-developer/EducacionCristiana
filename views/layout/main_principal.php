@@ -12,7 +12,8 @@ include "header.php"; ?>
 <div class="">
 
 
-    <?php include "content.php"; ?>
+<?php /** @var string $content */
+            require_once $content; ?>
 
 </div>
 <!-- ./wrapper -->
