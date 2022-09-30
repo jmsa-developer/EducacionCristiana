@@ -17,6 +17,8 @@
       </div><!-- /.container-fluid -->
     </section>
 
+      <form method="post" name="test">
+
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
@@ -41,7 +43,7 @@
                     <div class="form-group">
                         <label>NOMBRE</label>
                                   <tr>
-                        <td><input type="text" class="form-control" maxlength="20" placeholder="Ingrese nombre" /> <max 30 
+                        <td><input type="text" class="form-control" maxlength="20" placeholder="Ingrese nombre" name="name" /> <max 30
                         characters a-z A-Z></td>
                     </div>
                     <!-- /.form-group -->
@@ -227,5 +229,7 @@ document.getElementById("current_date").innerHTML = month + "/" + day + "/" + ye
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
+      </form>
+
   </div>
   <!-- /.content-wrapper -->

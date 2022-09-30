@@ -7,6 +7,7 @@ use App\View;
 class BaseController
 {
     public $defaultAction = 'index';
+    protected $post;
 
     public function __construct()
     {
@@ -25,7 +26,14 @@ class BaseController
             exit;
         }
 
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $this->post = $_POST;
+        }
     }
 
+    protected function isPost(): bool
+    {
+        return $_SERVER['REQUEST_METHOD'] === 'POST';
+    }
 
 }
