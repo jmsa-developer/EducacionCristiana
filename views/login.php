@@ -1,3 +1,23 @@
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.php">Educación Cristiana</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#services">Escuelas</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contactos</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+
 <!--Modal-->
   
   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -61,7 +81,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
-          <img src="../public/dist/img/Log.png" class="img-fluid animated" alt="">
+          <img src="public/dist/img/Log.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
