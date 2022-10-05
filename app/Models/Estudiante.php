@@ -7,13 +7,17 @@ use App\BaseModel;
 class Estudiante extends BaseModel
 {
 
-    public $name;
+    public $nombre;
+    public $apellido;
     public $cedula;
-
+    public $telefono;
+    public $email;
+    public $fecha_nacimiento;
+    public $fecha_inicio;
 
     public function __construct()
     {
-        parent::__construct('estudiante');
+        parent::__construct('estudiantes');
     }
 
 
@@ -21,10 +25,15 @@ class Estudiante extends BaseModel
     public function save(){
 
        return $this->insert([
-            'nombre'=>$this->name,
-            'cedula'=>$this->cedula
-        ]);
+            'nombre'=>$this->nombre,
+            'apellido'=>$this->apellido,
+            'cedula'=>$this->cedula,
+            'telefono'=>$this->telefono,
+            'email'=>$this->email,
+            'fecha_nacimiento'=>$this->fecha_nacimiento,
+            'fecha_inicio'=>$this->fecha_inicio,
 
+       ]);
+        
     }
-
 }

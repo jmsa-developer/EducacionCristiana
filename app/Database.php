@@ -16,7 +16,7 @@ class Database {
      *
      * @var string
      */
-    const DB_NAME = 'advanced';
+    const DB_NAME = 'educacioncristiana';
 
     /**
      * Database username
@@ -30,7 +30,7 @@ class Database {
      *
      * @var string
      */
-    const DB_PASSWORD = 'root';
+    const DB_PASSWORD = '';
 }
 
 
