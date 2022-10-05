@@ -1,6 +1,5 @@
 
 
-
   <!-- Content Wrapper. Contains page content -->
   <div class="">
     <!-- Content Header (Page header) -->
@@ -88,7 +87,7 @@
                 <div class="form-group">
                   
                 <label>Email</label>
-                            <td><input type="email" class="form-control" name="" id="" placeholder="Enter email address"></td>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email address">
                          
       
                   </div>
@@ -212,7 +211,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                           <label>FECHA DE INGRESO:</label>
-                    <div class="form-control" id="current_date">
+                    <input type="text"name="fecha_inicio" class="form-control" id="current_date"/>
                         
                                     </div>
                          
@@ -226,7 +225,7 @@ date = new Date();
 year = date.getFullYear();
 month = date.getMonth() + 1;
 day = date.getDate();
-document.getElementById("current_date").innerHTML = day + "/" +  month+ "/" + year;
+document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
 </script>
    
            
@@ -264,5 +263,7 @@ document.getElementById("current_date").innerHTML = day + "/" +  month+ "/" + ye
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <?php
-  include("registroestudiante.php")?>
+  <?php 
+var_dump($ministerios);
+
+?>

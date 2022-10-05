@@ -12,6 +12,7 @@ class View {
     static function render(string $view, array $params = []): void {
 
         // Extract controller variables
+        
         extract($params, EXTR_SKIP);
 
         // Page template path.
