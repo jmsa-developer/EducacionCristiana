@@ -43,13 +43,13 @@
                     <div class="form-group">
                         <label>NOMBRES</label>
                                   <tr>
-                        <td><input type="text" class="form-control" maxlength="20" placeholder="Ingrese nombre" name="name" /> <max 30
+                        <td><input type="text" class="form-control" maxlength="20" placeholder="Ingrese nombre" name="nombre" id="nombre" /> <max 30
                         characters a-z A-Z></td>
                     </div>
                     <!-- /.form-group -->
                     <div class="form-group">
                         <label>CEDULA</label>
-                        <input type="text"  class="form-control"  placeholder="Ingrese  cedula" />
+                        <input type="text"  class="form-control"  placeholder="Ingrese  cedula" name="cedula" id="cedula"/>
                     </div>
                     <!-- /.form-group -->
                 </div>
@@ -58,13 +58,13 @@
                     <div class="form-group">
                         <label>APELLIDOS</label>
                                         
-                        <input type="text" class="form-control" maxlength="30" placeholder="Ingrese apellido" /> <max 40 
+                        <input type="text" class="form-control" maxlength="30" placeholder="Ingrese apellido" name="apellido" id="apellido"/> <max 40 
                         characters a-z A-Z>
                     </div>
                     <!-- /.form-group -->
                     <div class="form-group">
                         <label>TELEFONO</label>
-                        <input type="text" class="form-control" data-inputmask='"mask": "(9999) 999-9999"' data-mask></td> <max 11
+                        <input type="text" class="form-control" data-inputmask='"mask": "(9999) 999-9999"' data-mask name="telefono" id="telefono"></td> <max 11
                           characters 0-9>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>DIRECCION</label>
-                        <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese lider direccion" /> <max 30
+                        <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese lider direccion" name="direccion" id="direccion"/> <max 30
                         characters a-z A-Z></tr>
                               </div>
                               <!-- /.form-group -->
@@ -91,7 +91,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                    <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_nacimiento" id="fecha_nacimiento">
                   
                         </div>
                     </div>                              
@@ -105,7 +105,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <label>Email</label>
-                            <td><input type="email" class="form-control" name="" id="" placeholder="Enter email address"></td>
+                            <td><input type="email" class="form-control" name="email" id="email" placeholder="Enter email address"></td>
                           </div>
                                           <!-- /.form group -->
 
@@ -133,7 +133,7 @@
                             <div class="form-group">
                                 <label>LIDER DE MINISTERIO</label>
                               
-                <input type="text" class="form-control" maxlength="30" placeholder="Enter lider del ministerio" /> <max 30
+                <input type="text" class="form-control" maxlength="30" placeholder="Enter lider del ministerio" name="lider_ministerio" id="lider_ministerio"/> <max 30
                     characters a-z A-Z>
                               
                                 
@@ -146,7 +146,7 @@
                                
                                <label>LIDER DEL GRUPO</label>
                
-               <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese lider del grupo" /> <max 30
+               <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese lider del grupo" name="lider_gdc" id="lider_gdc"/> <max 30
                    characters a-z A-Z></tr>
                              </div>
                                   
@@ -174,7 +174,7 @@
                                
                                <label>GDC</label>
                
-               <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese el Codigo del GDC" /> <max 30
+               <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese el Codigo del GDC" name="gdc" id="gdc"/> <max 30
                    characters a-z A-Z></tr>
                              </div>
 
@@ -184,7 +184,7 @@
                              <div class="form-group">
                 <label>PASTOR</label>
                       
-                      <select class="form-control"  id="turno" name="turno" data-placeholder="Selecciona"
+                      <select class="form-control"  id="" name="" data-placeholder="Selecciona"
             style="width: 100%;">
       <option>selecciona</option>
       <option>Carlos Yépez</option>
@@ -202,7 +202,7 @@
                                      <!-- Date -->
                 <div class="form-group">
                   <label>FECHA DE INGRESO:</label>
-                    <div id="current_date"></p>
+                    <div id="current_date" id="fecha_ingreso" name="fecha_ingreso" ></p>
 <script>
 date = new Date();
 year = date.getFullYear();

@@ -58,6 +58,19 @@ $ministerios=Ministerio::getAll();
         if($this->isPost()){
 
             $docente = new docente();
+            $docente->nombre = $this->post['nombre'];
+            $docente->apellido = $this->post['apellido'];
+            $docente->cedula = $this->post['cedula'];
+            $docente->telefono = $this->post['telefono'];
+            $docente->email = $this->post['email'];
+            $docente->direccion = $this->post['direccion'];
+            $docente->fecha_nacimiento = $this->post['fecha_nacimiento'];
+            $docente->lider_ministerio = $this->post['lider_ministerio'];
+            $docente->lider_gdc = $this->post['lider_gdc'];
+            $docente->turno = $this->post['turno'];
+            $docente->gdc = $this->post['gdc'];
+            $docente->fecha_ingreso = $this->post['fecha_ingreso'];
+
             $docente->save();
 
             View::redirect('/user/login');
