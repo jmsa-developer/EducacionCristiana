@@ -52,4 +52,39 @@ $ministerios=Ministerio::getAll();
         View::render('estudiante.php', ["ministerios"=>$ministerios]);
     }
 
+
+    public function docenteAction()
+    {
+        if($this->isPost()){
+
+            $docente = new docente();
+            $docente->save();
+
+            View::redirect('/user/login');
+        }
+
+        View::render('docente.php');
+    }
+
+    public function usuarioAction()
+    {
+        if($this->isPost()){
+
+            $usuario = new Usuario();
+            $usuario->nombre = $this->post['nombre'];
+            $usuario->apellido = $this->post['apellido'];
+            $usuario->cedula = $this->post['cedula'];
+            $usuario->email = $this->post['email'];
+            $usuario->usuario = $this->post['usuario'];
+            $usuario->clave = $this->post['clave'];
+            $usuario->rol = $this->post['rol'];
+            $usuario->descripcion = $this->post['descripcion'];
+            $usuario->save();
+
+            View::redirect('/user/login');
+        }
+
+        View::render('usuario.php');
+    }
+
 }
