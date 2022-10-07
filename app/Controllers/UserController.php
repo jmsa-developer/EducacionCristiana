@@ -86,7 +86,7 @@ $ministerios=Ministerio::getAll();
     {
         if($this->isPost()){
 
-            $usuario = new Usuario();
+            $usuario = new User();
             $usuario->nombre = $this->post['nombre'];
             $usuario->apellido = $this->post['apellido'];
             $usuario->cedula = $this->post['cedula'];
