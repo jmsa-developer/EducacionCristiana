@@ -14,11 +14,12 @@ class Docente extends BaseModel
     public $email;
     public $direccion;
     public $fecha_nacimiento;
+ /*   public $nombre_m;
     public $lider_ministerio;
     public $lider_gdc;
     public $turno;
     public $gdc;
-    public $fecha_ingreso;
+    public $fecha_ingreso;*/
 
 
     public function __construct()
@@ -38,11 +39,12 @@ class Docente extends BaseModel
             'email'=>$this->email,
             'fecha_nacimiento'=>$this->fecha_nacimiento,
             'direccion'=>$this->direccion,
+/*            'nombre_m'=>$this->nombre_m,
             'lider_ministerio'=>$this->lider_ministerio,
             'lider_gdc'=>$this->lider_gdc,
             'turno'=>$this->turno,
             'gdc'=>$this->gdc,
-            'fecha_ingreso'=>$this->fecha_ingreso,
+            'fecha_ingreso'=>$this->fecha_ingreso,*/
 
 
        ]);

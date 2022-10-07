@@ -112,7 +112,7 @@
                                           <div class="form-group">
                             <label>NOMBRE DEL MINISTERIO </label>
         
-                            <input type="text" class="form-control" maxlength="30" placeholder="ingrese nombre del ministerio" /> <max 30
+                            <input type="text" class="form-control" maxlength="30" placeholder="ingrese nombre del ministerio" name="nombre_m" id="nombre_m"/> <max 30
                                 characters a-z A-Z>
                         
                                     </div>
