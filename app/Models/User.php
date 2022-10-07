@@ -11,6 +11,16 @@ class User extends BaseModel
         parent::__construct('user');
     }
 
+    public static function getByUsernameAndPassword($username, $password ){
 
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        $user = self::getAllByConditions([
+            'username' => $username,
+            'password' => $password
+        ]);
+
+
+    }
 
 }
