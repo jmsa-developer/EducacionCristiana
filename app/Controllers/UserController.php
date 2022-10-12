@@ -119,4 +119,20 @@ $ministerios=Ministerio::getAll();
         View::render('grupoasignacion.php');
     }
 
+    public function evaluacionesAction()
+    {
+        if($this->isPost()){
+
+            $evaluaciones = new evaluaciones();
+            $evaluaciones->name = $this->post['name'];
+            $evaluaciones->cedula = $this->post['cedula'];
+            $evaluaciones->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('evaluaciones.php');
+    }
+
 }
