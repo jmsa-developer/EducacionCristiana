@@ -103,4 +103,20 @@ $ministerios=Ministerio::getAll();
         View::render('usuario.php');
     }
 
+    public function grupoasignacionAction()
+    {
+        if($this->isPost()){
+
+            $grupoasignacion = new grupoasignacion();
+            $grupoasignacion->name = $this->post['name'];
+            $grupoasignacion->cedula = $this->post['cedula'];
+            $grupoasignacion->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('grupoasignacion.php');
+    }
+
 }
