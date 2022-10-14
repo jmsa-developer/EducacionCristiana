@@ -41,7 +41,7 @@ class AppController extends BaseController
     {
         if($this->isPost()){
 
-            $estudiante = new Estudiante();
+            $estudiante = new estudiante();
             $estudiante->nombre = $this->post['nombre'];
             $estudiante->cedula = $this->post['cedula'];
             $estudiante->apellido = $this->post['apellido'];

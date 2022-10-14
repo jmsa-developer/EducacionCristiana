@@ -24,7 +24,7 @@ class Estudiante extends BaseModel
 
     public function save(){
 
-       return $this->select([
+       return $this->([
             'nombre'=>$this->nombre,
             'apellido'=>$this->apellido,
             'cedula'=>$this->cedula,

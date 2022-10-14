@@ -4,7 +4,7 @@ namespace App\Models;
 
 use App\BaseModel;
 
-class Estudiante extends BaseModel
+class estudiantes extends BaseModel
 {
 
     public $nombre;
@@ -16,7 +16,7 @@ class Estudiante extends BaseModel
     public $fecha_inicio;
 
 
-    public function save(){
+    public function save (){
 
        return $this->insert([
             'nombre'=>$this->nombre,
