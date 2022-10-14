@@ -217,4 +217,20 @@ $ministerios=Ministerio::getAll()->toArray();
 
     }
 
+    public function calificacionesAction()
+    {
+        if($this->isPost()){
+
+            $calificaciones = new calificaciones();
+            $calificaciones->name = $this->post['name'];
+            $calificaciones->cedula = $this->post['cedula'];
+            $calificaciones->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('calificaciones.php');
+    }
+
 }
