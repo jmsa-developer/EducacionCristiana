@@ -49,9 +49,9 @@ class AppController extends BaseController
 
             View::redirect('/user/login');
         }
-        $ministerios=Ministerio::getAll()->toArray();
+      
 
-        View::render('estudiante.php', ["ministerios"=>$ministerios]);
+        View::render('estudiante.php');
     }
 
 

@@ -65,7 +65,7 @@
           </form>
         </div>
         <div class="modal-footer justify-content-center">
-          <p>Not a member? <a href="#">Create an account</a></p>
+          <p>Not a member? <a href="user/registeruser">Create an account</a></p>
         </div>
       </div>
     </div>

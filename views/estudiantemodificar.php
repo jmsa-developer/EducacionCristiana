@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>ESTUDIANTE</h1>
+            <h1>MODIFICAR ESTUDIANTE</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -109,7 +109,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="text" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                    <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
                   
                         </div>
                     </div>
@@ -211,7 +211,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                           <label>FECHA DE modificacion:</label>
-                    <input type="text"name="fecha_inicio" class="form-control" id="current_date"/>
+                    <input disabled name="fecha_inicio" class="form-control" id="current_date"/>
                         
                                     </div>
                          
@@ -260,7 +260,4 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <?php 
-var_dump($ministerios);
-
-?>
+ 

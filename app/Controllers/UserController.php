@@ -11,7 +11,7 @@ use App\Models\Estudiantemodificar;
 use App\View;
 use App\Models\Ministerio;
 use App\Models\Docente;
-
+use App\Models\evaluacion;
 // Controlador principal de la aplicacion
 class UserController extends BaseController
 {

@@ -67,13 +67,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="app/usuario" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Modulo</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Consultar Modulo</p>
                             </a>
@@ -90,7 +90,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/charts/chartjs.html" class="nav-link">
+                            <a href="app/docente" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Docente</p>
                             </a>
@@ -113,13 +113,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="?pagina=estudiante" class="nav-link">
+                            <a href="app/estudiante" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Estudiante</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/UI/icons.html" class="nav-link">
+                            <a href="app/estudianteconsulta" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Consultar Estudiante</p>
                             </a>
@@ -137,13 +137,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/tables/simple.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Grupo</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Consultar Grupos</p>
                             </a>
@@ -183,13 +183,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/tables/simple.html" class="nav-link">
+                            <a href="app/evaluaciones" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Evaluaciones</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Consultar Evaluaciones</p>
                             </a>
@@ -206,13 +206,13 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/tables/simple.html" class="nav-link">
+                            <a href="app/calificaciones" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Calificación</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Consultar Calificaciones</p>
                             </a>
@@ -266,7 +266,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="app/reporte" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-paste"></i>
                         <p>
                             Reportes
@@ -275,7 +275,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-user-check"></i>
                         <p>
                             Roles
@@ -284,7 +284,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="pages/widgets.html" class="nav-link">
+                    <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-book-bookmark"></i>
                         <p>
                             Ayuda
