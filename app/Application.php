@@ -15,6 +15,8 @@ class Application
 
     public function __construct($config = [])
     {
+        Session::init();
+
         if ($_GET['route'] === '') {
             $route = 'app/index';
         } else {
@@ -56,9 +58,7 @@ class Application
         if (method_exists($controller, $action)) {
             call_user_func_array([$controller, $action], $this->params);
         } elseif (method_exists($controller, $defaultAction)) {
-            header("Location: $this->controller/$controller->defaultAction");
-            exit;
-
+            View::redirect("/$this->controller/$controller->defaultAction");
         } else {
             throw new Exception("Método $action no encontrado en el controlador " . ucfirst($this->controller) . 'Controller');
         }
