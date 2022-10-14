@@ -205,7 +205,7 @@ $ministerios=Ministerio::getAll()->toArray();
     public function registeruserAction()
     {
 
-        $user = new User();
+        $user = new Usuario();
 
         if ($user->load($this->post)) {
 
