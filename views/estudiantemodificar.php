@@ -210,7 +210,7 @@
                               <!-- /.col -->
                         <div class="col-md-6">
                           <div class="form-group">
-                          <label>FECHA DE INGRESO:</label>
+                          <label>FECHA DE modificacion:</label>
                     <input type="text"name="fecha_inicio" class="form-control" id="current_date"/>
                         
                                     </div>
@@ -242,12 +242,9 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
                   
                   <button type="submit" class="btn btn-primary col start">
                     <i class="fas fa-upload"></i>
-                    <span>GUARDAR</span>
+                    <span>MODIFICAR</span>
                   </button>
-                  <button type="reset" class="btn btn-warning col cancel">
-                    <i class="fas fa-times-circle"></i>
-                    <span>LIMPIAR</span>
-                  </button>
+                
                 </div>
               </div>
           <!-- /.card-body -->
@@ -263,3 +260,7 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+  <?php 
+var_dump($ministerios);
+
+?>

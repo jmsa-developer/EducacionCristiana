@@ -79,8 +79,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Formando Dicispulos de Cristo</h1>
-          <h2>We are team of talented designers <br> making websites with Bootstrap</h2>
+          <h1>Formando Discípulos de Cristo</h1><br>
+          <h2>Familias Con Porposito, Bienestar y liderazgo</h2>
           <div class="d-flex">
             <button type="button" class="btn btn-primary py-3 px-4" data-toggle="modal" data-target="#exampleModalCenter">
               Iniciar Sesión
@@ -157,33 +157,53 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <div class="icon"><i class="bx bx-book"></i></div>
               <h4><a href="">Obediencia</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <p>El propósito de esta escuela, es enseñar al creyente la importancia de 
+                la obediencia a toda autoridad civil, militar y espiritual, a la luz de 
+                las Sagradas Escrituras, siendo la misma, la máxima autoridad de poder escritural. 
+                La idea es pasear al creyente, enseñándole el lugar de preeminencia que ocupa el tema, 
+                tanto en el Antiguo y Nuevo Testamento; además, la verdad sobre un tema de suma 
+                importancia para una humanidad que vive en total rebeldía ante toda autoridad.    </p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
+              <div class="icon"><i class="bx bx-book"></i></div>
               <h4><a href="">Servidores</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <p>El propósito de esta escuela, es enseñar al creyente la importancia de servir a Dios, 
+                y al hombre sin ningún tipo de discriminación, siendo el servicio una de las principales 
+                razones de nuestra existencia en esta vida, según nos enseña las Sagradas Escrituras, 
+                máxima autoridad de poder escritural. La idea es pasear al creyente, enseñándole el 
+                lugar de preeminencia que ocupa el tema, tanto en el Antiguo y Nuevo Testamento; además, 
+                la verdad sobre un tema de suma importancia para una humanidad que ha desvirtuado la verdadera 
+                esencia del servicio.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <div class="icon"><i class="bx bx-book"></i></div>
               <h4><a href="">Visión</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <p>El propósito de esta escuela, es enseñar al creyente la importancia de tener una visión clara, 
+                y en la dirección correcta, que nos permita alinearnos al plan de Dios para su iglesia y la humanidad, 
+                como nos enseña las Sagradas Escrituras, máxima autoridad de poder escritural. La idea es pasear al creyente, 
+                enseñándole la importancia que ocupa el tema, tanto en el Antiguo y Nuevo Testamento; además, 
+                de orientarle los beneficios y pormenores que conlleva tener o no una visión que nos conduzca a puerto seguro, 
+                conforme a las promesas en esta vida, y de la venidera.</p>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
-              <div class="icon"><i class="bx bx-world"></i></div>
+              <div class="icon"><i class="bx bx-book"></i></div>
               <h4><a href="">Lideres</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <p>El propósito de esta escuela, es enseñar al creyente la importancia de liderizar, poniendo al servicio sus dones 
+                y talentos para la edificación del cuerpo de Cristo, que es la iglesia. Aquí se le enseña, sobre el perfil y 
+                los requisitos requeridos para emprender la ruta de un liderazgo en el reino de Dios. La idea es orientar y ensenar al creyente, 
+                la importancia que debe asumir en preparase en todo lo necesario para poder cumplir su función en el establecimiento del reino, 
+                y dar su aporte para crecimiento de los hermanos en la fe. </p>
             </div>
           </div>
 
@@ -212,19 +232,19 @@
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
+                <h4>Localización:</h4>
                 <p>A108 Adam Street, New York, NY 535022</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>EducacionCristiana@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
+                <h4>Teléfono:</h4>
                 <p>+1 5589 55488 55s</p>
               </div>
 
@@ -237,20 +257,20 @@
             <form action="/public/dist/forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
+                  <label for="name">Tu Nombre</label>
                   <input type="text" name="name" class="form-control" id="name" required>
                 </div>
                 <div class="form-group col-md-6 mt-3 mt-md-0">
-                  <label for="name">Your Email</label>
+                  <label for="name">tu Email</label>
                   <input type="email" class="form-control" name="email" id="email" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <label for="name">Subject</label>
+                <label for="name">Sujerencia</label>
                 <input type="text" class="form-control" name="subject" id="subject" required>
               </div>
               <div class="form-group mt-3">
-                <label for="name">Message</label>
+                <label for="name">Mensaje</label>
                 <textarea class="form-control" name="message" rows="10" required></textarea>
               </div>
               <div class="my-3">
@@ -258,7 +278,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
             </form>
           </div>
 

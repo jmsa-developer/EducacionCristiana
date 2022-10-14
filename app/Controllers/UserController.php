@@ -5,6 +5,9 @@ namespace App\Controllers;
 use App\Models\Estudiante;
 use App\Models\User;
 use App\Session;
+//use App\Models\Estudianteconsulta;
+use App\Models\Estudiantemodificar;
+
 use App\View;
 use App\Models\Ministerio;
 use App\Models\Docente;
@@ -124,6 +127,80 @@ $ministerios=Ministerio::getAll()->toArray();
 
         View::render('usuario.php');
     }
+
+    public function grupoasignacionAction()
+    {
+        if($this->isPost()){
+
+            $grupoasignacion = new grupoasignacion();
+            $grupoasignacion->name = $this->post['name'];
+            $grupoasignacion->cedula = $this->post['cedula'];
+            $grupoasignacion->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('grupoasignacion.php');
+    }
+
+    public function evaluacionesAction()
+    {
+        if($this->isPost()){
+
+            $evaluaciones = new evaluaciones();
+            $evaluaciones->name = $this->post['name'];
+            $evaluaciones->cedula = $this->post['cedula'];
+            $evaluaciones->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('evaluaciones.php');
+    }
+
+    public function estudiantemodificarAction()
+    {
+        if($this->isPost()){
+
+            $estudiante = new Estudiantemodificar();
+            $estudiante->nombre = $this->post['nombre'];
+            $estudiante->cedula = $this->post['cedula'];
+            $estudiante->apellido = $this->post['apellido'];
+            $estudiante->email = $this->post['email'];
+            $estudiante->fecha_nacimiento = $this->post['fecha_nacimiento'];
+            $estudiante->telefono = $this->post['telefono'];
+            $estudiante->fecha_inicio = $this->post['fecha_inicio'];
+            $estudiante->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('estudiantemodificar.php');
+    }
+    public function estudianteconsultaAction()
+    {
+        if($this->isPost()){
+
+            $estudiante = new Estudiante();
+            $estudiante->nombre = $this->post['nombre'];
+            $estudiante->cedula = $this->post['cedula'];
+            $estudiante->apellido = $this->post['apellido'];
+            $estudiante->email = $this->post['email'];
+            $estudiante->fecha_nacimiento = $this->post['fecha_nacimiento'];
+            $estudiante->telefono = $this->post['telefono'];
+            $estudiante->fecha_inicio = $this->post['fecha_inicio'];
+            $estudiante->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('estudianteconsulta.php');
+    }
+
 
     public function registeruserAction()
     {
