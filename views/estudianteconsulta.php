@@ -177,5 +177,4 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <?php
-include "layout/scripts.php"; ?>
+  <script src="public/dist/js/consulta.js"></script>

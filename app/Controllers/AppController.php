@@ -7,7 +7,11 @@ use App\Models\Estudiante;
 use App\Models\Ministerio;
 use App\Models\Usuario;
 use App\View;
-
+use App\models\reporte;
+use App\Models\evaluaciones;
+use App\Models\calificacion;
+use App\Models\Estudianteconsulta;
+use App\Models\Estudiantemodificar;
 // Controlador principal de la aplicacion
 class AppController extends BaseController
 {
@@ -191,5 +195,19 @@ class AppController extends BaseController
 
         View::render('calificaciones.php');
     }
+    public function reporteAction()
+    {
+        if($this->isPost()){
 
+            $calificaciones = new calificaciones();
+            $calificaciones->name = $this->post['name'];
+            $calificaciones->cedula = $this->post['cedula'];
+            $calificaciones->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('reporte.php');
+    }
 }
