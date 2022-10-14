@@ -195,7 +195,7 @@
                             <div class="col-md-6">
                               <div class="form-group">
                                
-                              <label>PASTOR</label>
+                              <label>PASTOR </label>
                       
                       <input type="text" class="form-control" name="pastor" id="pastor" maxlength="30" placeholder="ingrese pastor" /> <max 30
                           characters a-z A-Z>
