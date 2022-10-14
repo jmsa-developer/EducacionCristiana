@@ -35,6 +35,10 @@ include "header.php"; ?>
 <link rel="stylesheet" href="public/dist/css/inicio/styless.css">
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+
 <body class="">
 <div class="">
 
@@ -53,6 +57,9 @@ include "header.php"; ?>
     <script src="public/dist/js/inicio/popper.js"></script>
     <script src="public/dist/js/inicio/bootstrap.min.js"></script>
     <script src="public/dist/js/inicio/maini.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
 
 </body>
 </html>
