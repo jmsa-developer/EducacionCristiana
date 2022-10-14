@@ -12,6 +12,8 @@ use App\Models\evaluaciones;
 use App\Models\calificacion;
 use App\Models\Estudianteconsulta;
 use App\Models\Estudiantemodificar;
+use App\Models\grupoasignacion;
+
 // Controlador principal de la aplicacion
 class AppController extends BaseController
 {

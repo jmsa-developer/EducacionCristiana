@@ -319,13 +319,21 @@
                                      <!-- Date -->
                 <div class="form-group">
                   <label>FECHA DE INGRESO:</label>
-                    <div id="current_date"></p>
+                  <input disabled name="fecha_inicio" class="form-control" id="current_date"/>
+                        
+                        </div>
+             
+<!-- /.col -->
+</div>
+<!-- /.row -->
+                         <!-- Date -->
+    
 <script>
 date = new Date();
 year = date.getFullYear();
 month = date.getMonth() + 1;
 day = date.getDate();
-document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
+document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
 </script>
                         
                     
