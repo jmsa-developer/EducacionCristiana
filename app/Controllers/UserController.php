@@ -26,7 +26,7 @@ class UserController extends BaseController
             $username = $this->post['username'];
             $password = $this->post['password'];
 
-            $user = User::getByUsernameAndPassword($username, $password);
+            $user = Usuario::getByUsernameAndPassword($username, $password);
 
             if ($user) {
                 Session::set('loggedIn', true);
