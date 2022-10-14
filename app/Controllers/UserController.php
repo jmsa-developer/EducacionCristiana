@@ -3,6 +3,9 @@
 namespace App\Controllers;
 
 use App\Models\Estudiante;
+//use App\Models\Estudianteconsulta;
+use App\Models\Estudiantemodificar;
+
 use App\View;
 use App\Models\Ministerio;
 use App\Models\Docente;
@@ -134,5 +137,47 @@ $ministerios=Ministerio::getAll();
 
         View::render('evaluaciones.php');
     }
+
+    public function estudiantemodificarAction()
+    {
+        if($this->isPost()){
+
+            $estudiante = new Estudiantemodificar();
+            $estudiante->nombre = $this->post['nombre'];
+            $estudiante->cedula = $this->post['cedula'];
+            $estudiante->apellido = $this->post['apellido'];
+            $estudiante->email = $this->post['email'];
+            $estudiante->fecha_nacimiento = $this->post['fecha_nacimiento'];
+            $estudiante->telefono = $this->post['telefono'];
+            $estudiante->fecha_inicio = $this->post['fecha_inicio'];
+            $estudiante->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('estudiantemodificar.php');
+    }
+    public function estudianteconsultaAction()
+    {
+        if($this->isPost()){
+
+            $estudiante = new Estudiante();
+            $estudiante->nombre = $this->post['nombre'];
+            $estudiante->cedula = $this->post['cedula'];
+            $estudiante->apellido = $this->post['apellido'];
+            $estudiante->email = $this->post['email'];
+            $estudiante->fecha_nacimiento = $this->post['fecha_nacimiento'];
+            $estudiante->telefono = $this->post['telefono'];
+            $estudiante->fecha_inicio = $this->post['fecha_inicio'];
+            $estudiante->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('estudianteconsulta.php');
+    }
+
 
 }
