@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\Estudiante;
+use App\Models\User;
+use App\Session;
 use App\View;
 use App\Models\Ministerio;
 use App\Models\Docente;
@@ -14,7 +16,27 @@ class UserController extends BaseController
 
     public function loginAction()
     {
-        View::render('login.php');
+        $error = null;
+
+        if ($this->isPost()) {
+
+            $username = $this->post['username'];
+            $password = $this->post['password'];
+
+            $user = User::getByUsernameAndPassword($username, $password);
+
+            if ($user) {
+                Session::set('loggedIn', true);
+                Session::set('user', $user);
+                View::redirect('/app/index');
+            } else {
+                $error = 'Usuario o contraseña incorrectos';
+
+            }
+        }
+        View::render('login.php', [
+            'error' => $error
+        ]);
     }
 
     public function registerAction()
@@ -49,7 +71,7 @@ class UserController extends BaseController
 
             View::redirect('/user/login');
         }
-$ministerios=Ministerio::getAll();
+$ministerios=Ministerio::getAll()->toArray();
 
         View::render('estudiante.php', ["ministerios"=>$ministerios]);
     }
@@ -101,6 +123,21 @@ $ministerios=Ministerio::getAll();
         }
 
         View::render('usuario.php');
+    }
+
+    public function registeruserAction()
+    {
+
+        $user = new User();
+
+        if ($user->load($this->post)) {
+
+            $user->save();
+            View::redirect('/user/login');
+        }
+
+        View::render('register_user.php', ['user' => $user]);
+
     }
 
 }

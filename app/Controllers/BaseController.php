@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Session;
 use App\View;
 
 class BaseController
@@ -12,12 +13,12 @@ class BaseController
     public function __construct()
     {
         // Verificar si el usuario esta logueado
-        $logged = \App\Session::get('loggedIn');
+        $logged = Session::get('user');
+
         // Si no esta logueado y no esta en el controlador de login
         if (!$logged && get_class($this) != 'App\Controllers\UserController') {
             // Redireccionar al controlador de login
-            header('Location: user');
-            exit;
+            View::redirect('/user/login');
         }
 
         if ($logged && get_class($this) === 'App\Controllers\UserController') {

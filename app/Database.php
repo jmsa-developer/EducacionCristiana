@@ -30,7 +30,7 @@ class Database {
      *
      * @var string
      */
-    const DB_PASSWORD = '';
+    const DB_PASSWORD = 'root';
 }
 
 

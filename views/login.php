@@ -33,15 +33,22 @@
             <span class="ion-ios-person"></span>
           </div>
           <h3 class="text-center mb-4">Sign In</h3>
-          <form action="#" class="login-form">
+          <form class="login-form" method="post">
             <div class="form-group">
-              <input type="text" class="form-control rounded-left" placeholder="Username">
+              <input type="text" class="form-control rounded-left" placeholder="Username" name="username">
             </div>
             <div class="form-group d-flex">
-              <input type="password" class="form-control rounded-left" placeholder="Password">
+              <input type="password" class="form-control rounded-left" placeholder="Password" name="password">
             </div>
+
+              <?php if (isset($error)): ?>
+                <div class="alert alert-danger" role="alert">
+                  <?php echo $error; ?>
+                </div>
+                <?php endif; ?>
+
             <div class="form-group">
-              <a href="inicio"><button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button></a>
+              <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
             </div>
             <div class="form-group d-md-flex">
               <div class="form-check w-50">
