@@ -3,7 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\Estudiante;
-use App\Models\User;
+use App\Models\Usuario;
 use App\Session;
 //use App\Models\Estudianteconsulta;
 use App\Models\Estudiantemodificar;
@@ -111,7 +111,7 @@ $ministerios=Ministerio::getAll()->toArray();
     {
         if($this->isPost()){
 
-            $usuario = new User();
+            $usuario = new Usuario();
             $usuario->nombre = $this->post['nombre'];
             $usuario->apellido = $this->post['apellido'];
             $usuario->cedula = $this->post['cedula'];

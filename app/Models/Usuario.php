@@ -16,27 +16,30 @@ class Usuario extends BaseModel
     public $rol;
     public $descripcion;
 
-    public function __construct()
-    {
-        parent::__construct('usuario');
+    public static function getByUsernameAndPassword($username, $password ){
+
+
+        $user = self::get()->where([
+            'usuario' => $username,
+        ])->one();
+
+
+        if(!$user){
+            return false;
+        }
+
+
+        if(!password_verify($password, $user->clave)){
+            return false;
+        }
+
+        return $user;
+
     }
 
-
-
-    public function save(){
-
-       return $this->insert([
-            'nombre'=>$this->nombre,
-            'apellido'=>$this->apellido,
-            'cedula'=>$this->cedula,
-            'email'=>$this->email,
-            'usuario'=>$this->usuario,
-            'clave'=>$this->clave,
-            'rol'=>$this->rol,
-            'descripcion'=>$this->descripcion,
-
-
-       ]);
-        
+    public function save(): int
+    {
+        $this->clave = password_hash($this->clave, PASSWORD_DEFAULT);
+        return parent::save();
     }
 }
