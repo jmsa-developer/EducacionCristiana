@@ -22,13 +22,6 @@ class Docente extends BaseModel
     public $fecha_ingreso;*/
 
 
-    public function __construct()
-    {
-        parent::__construct('docente');
-    }
-
-
-
     public function save(){
 
        return $this->insert([

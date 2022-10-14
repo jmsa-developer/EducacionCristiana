@@ -15,12 +15,6 @@ class Estudiante extends BaseModel
     public $fecha_nacimiento;
     public $fecha_inicio;
 
-    public function __construct()
-    {
-        parent::__construct('estudiantes');
-    }
-
-
 
     public function save(){
 

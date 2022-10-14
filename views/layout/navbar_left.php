@@ -39,6 +39,15 @@
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
                 <li class="nav-item">
+                    <a href="user/logout" class="nav-link">
+                        <i class="nav-icon fas fa-solid fa-house-chimney"></i>
+                        <p>
+                            Cerrar sesion
+                            <span class="right badge badge-danger"></span>
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="inicio" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-house-chimney"></i>
                         <p>
@@ -58,7 +67,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="pages/layout/top-nav.html" class="nav-link">
+                            <a href="app/usuario" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Modulo</p>
                             </a>
