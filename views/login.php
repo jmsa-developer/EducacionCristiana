@@ -105,23 +105,28 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="icon-box">
-              <div class="icon"><i class="bi bi-laptop"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <div class="icon"><i class="bi bi-shield"></i></div>
+              <h4 class="title"><a href="">Carácter</a></h4>
+              <p class="description">Esta vinculada con la madurez espiritual del creyente,
+                que le permite aprovechar las oportunidades, y afrontar las dificultades con valentia.
+              </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-card-checklist"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4 class="title"><a href="">Disciplina</a></h4>
+              <p class="description">Es ese conjunto de normas que le permitirá al creyente, 
+                conducirse con perceverancia hacia su meta, obteniendo resultados favorables.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bi bi-clipboard-data"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <h4 class="title"><a href="">Enfoque</a></h4>
+              <p class="description">Concreta todos los esfuerzos sobre determinado sitios puntuales, 
+                con el proposito de alcanzar las metas trazadas, evitando todo tipo de distracción.
+              </p>
             </div>
           </div>
         </div>
