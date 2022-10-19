@@ -42,4 +42,5 @@ class Usuario extends BaseModel
         $this->clave = password_hash($this->clave, PASSWORD_DEFAULT);
         return parent::save();
     }
+
 }

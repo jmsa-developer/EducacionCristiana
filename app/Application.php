@@ -7,7 +7,6 @@ use Exception;
 class Application
 {
 
-    private $route;
     private $controller;
     private $action;
     private $params = [];

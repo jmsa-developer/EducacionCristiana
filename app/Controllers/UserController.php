@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 
+use App\Models\Estudiante;
+use App\Models\Persona;
 use App\Models\Usuario;
 use App\Session;
 
@@ -50,6 +52,8 @@ class UserController extends BaseController
     {
 
         $user = new Usuario();
+
+        die;
 
         if ($user->load($this->post)) {
 

@@ -21,14 +21,6 @@ class BaseController
             View::redirect('/user/login');
         }
 
-
-        /*
-        if ($logged && get_class($this) === 'App\Controllers\UserController') {
-            // Redireccionar a la raiz del proyecto
-            header('Location: /' . SITE_NAME);
-            exit;
-        }
-*/
         if ($this->isPost()) {
             $this->post = $_POST;
         }

@@ -7,12 +7,7 @@ use App\Models\Estudiante;
 use App\Models\Ministerio;
 use App\Models\Usuario;
 use App\View;
-use App\models\reporte;
-use App\Models\evaluaciones;
-use App\Models\calificacion;
 use App\Models\Estudianteconsulta;
-use App\Models\Estudiantemodificar;
-use App\Models\grupoasignacion;
 
 // Controlador principal de la aplicacion
 class AppController extends BaseController

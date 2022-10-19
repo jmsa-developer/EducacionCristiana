@@ -12,7 +12,6 @@ trait Query
 
     public static function find()
     {
-
         $q = new static();
 
         $q->query = "SELECT * FROM " . static::tableName();

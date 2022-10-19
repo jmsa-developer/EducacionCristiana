@@ -34,7 +34,7 @@ class View {
     }
 
     static function redirect($url){
-        header("Location: /EducacionCristiana$url");
+        header("Location: /".SITE_NAME.$url);
         exit;
     }
 
