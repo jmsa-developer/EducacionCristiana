@@ -53,11 +53,9 @@ class UserController extends BaseController
 
         $user = new Usuario();
 
-        die;
-
         if ($user->load($this->post)) {
 
-            $user->save();
+            $user->register();
             View::redirect('/user/login');
         }
 

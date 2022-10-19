@@ -41,7 +41,7 @@
                 <div class="form-group">
                   <label>NOMBRE</label>
                                  
-                 <input type="text" class="form-control"name="nombre" id="nombre" maxlength="20" placeholder="Ingrese nombre" /> <max 30
+                 <input type="text" class="form-control" name="nombre" id="nombre" maxlength="20" placeholder="Ingrese nombre" /> <max 30
                             characters a-z A-Z>
                 </div>
                 <!-- /.form-group -->
@@ -125,7 +125,7 @@
                            
                           <label>NOMBRE DEL MINISTERIO </label>
         
-        <select class="form-control" id="" name=""  data-placeholder="Selecciona"
+        <select class="form-control" id="nombre_m" name="nombre_m"  data-placeholder="Selecciona"
       style="width: 100%;">
 <option>selecciona</option>
 <option>Ministrio Iglekids</option>
@@ -150,7 +150,7 @@
                               <div class="form-group">
                               <label>LIDER DEL GRUPO</label>
                     
-                    <input type="text"class="form-control" name="apellido" id="apellido" maxlength="30" placeholder="ingrese lider del grupo" /> <max 30
+                    <input type="text"class="form-control" name="lider_grupo" id="lider_grupo" maxlength="30" placeholder="ingrese lider del grupo" /> <max 30
                         characters a-z A-Z>
                               
                                 
@@ -211,7 +211,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                           <label>FECHA DE INGRESO:</label>
-                    <input disabled name="fecha_inicio" class="form-control" id="current_date"/>
+                    <input readonly name="fecha_inicio" class="form-control" id="current_date"/>
                         
                                     </div>
                          

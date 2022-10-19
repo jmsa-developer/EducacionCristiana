@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Forms\EstudianteForm;
 use App\Models\Docente;
 use App\Models\Estudiante;
 use App\Models\Ministerio;
@@ -20,7 +21,7 @@ class AppController extends BaseController
 
     public function registerAction()
     {
-        if($this->isPost()){
+        if ($this->isPost()) {
 
             $estudiante = new Estudiante();
             $estudiante->name = $this->post['name'];
@@ -36,21 +37,13 @@ class AppController extends BaseController
 
     public function estudianteAction()
     {
-        if($this->isPost()){
+        $estudiante = new EstudianteForm();
+        if ($estudiante->load($this->post)) {
+            $estudiante->register();
 
-            $estudiante = new estudiante();
-            $estudiante->nombre = $this->post['nombre'];
-            $estudiante->cedula = $this->post['cedula'];
-            $estudiante->apellido = $this->post['apellido'];
-            $estudiante->email = $this->post['email'];
-            $estudiante->fecha_nacimiento = $this->post['fecha_nacimiento'];
-            $estudiante->telefono = $this->post['telefono'];
-            $estudiante->fecha_inicio = $this->post['fecha_inicio'];
-            $estudiante->save();
-
-            View::redirect('/user/login');
+            View::redirect('/app/index');
         }
-      
+
 
         View::render('estudiante.php');
     }
@@ -58,7 +51,7 @@ class AppController extends BaseController
 
     public function docenteAction()
     {
-        if($this->isPost()){
+        if ($this->isPost()) {
 
             $docente = new Docente();
             $docente->nombre = $this->post['nombre'];
@@ -85,7 +78,7 @@ class AppController extends BaseController
 
     public function usuarioAction()
     {
-        if($this->isPost()){
+        if ($this->isPost()) {
 
             $usuario = new Usuario();
             $usuario->nombre = $this->post['nombre'];
@@ -106,7 +99,7 @@ class AppController extends BaseController
 
     public function grupoasignacionAction()
     {
-        if($this->isPost()){
+        if ($this->isPost()) {
 
             $grupoasignacion = new grupoasignacion();
             $grupoasignacion->name = $this->post['name'];
@@ -122,7 +115,7 @@ class AppController extends BaseController
 
     public function evaluacionesAction()
     {
-        if($this->isPost()){
+        if ($this->isPost()) {
 
             $evaluaciones = new evaluaciones();
             $evaluaciones->name = $this->post['name'];
@@ -138,7 +131,7 @@ class AppController extends BaseController
 
     public function estudiantemodificarAction()
     {
-        if($this->isPost()){
+        if ($this->isPost()) {
 
             $estudiante = new Estudiantemodificar();
             $estudiante->nombre = $this->post['nombre'];
@@ -156,9 +149,10 @@ class AppController extends BaseController
 
         View::render('estudiantemodificar.php');
     }
+
     public function estudianteconsultaAction()
     {
-        if($this->isPost()){
+        if ($this->isPost()) {
 
             $estudiante = new Estudiante();
             $estudiante->nombre = $this->post['nombre'];
@@ -179,7 +173,7 @@ class AppController extends BaseController
 
     public function calificacionesAction()
     {
-        if($this->isPost()){
+        if ($this->isPost()) {
 
             $calificaciones = new calificaciones();
             $calificaciones->name = $this->post['name'];
@@ -192,9 +186,10 @@ class AppController extends BaseController
 
         View::render('calificaciones.php');
     }
+
     public function reporteAction()
     {
-        if($this->isPost()){
+        if ($this->isPost()) {
 
             $calificaciones = new calificaciones();
             $calificaciones->name = $this->post['name'];

@@ -15,6 +15,8 @@ class Usuario extends BaseModel
     public $clave;
     public $rol;
     public $descripcion;
+    public $estado;
+    public $borrado;
 
     public static function getByUsernameAndPassword($username, $password ){
 
@@ -37,7 +39,7 @@ class Usuario extends BaseModel
 
     }
 
-    public function save(): int
+    public function register(): int
     {
         $this->clave = password_hash($this->clave, PASSWORD_DEFAULT);
         return parent::save();
