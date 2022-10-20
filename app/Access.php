@@ -22,6 +22,7 @@ class Access
         if(!$user){
             return false;
         }
+        return true;
 
         if ($user->getRol()->nombre === 'admin') {
             return true;
