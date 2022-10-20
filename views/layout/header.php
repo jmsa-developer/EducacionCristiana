@@ -1,4 +1,13 @@
 <head>
+    <style>
+        .messages {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+    </style>
     <base href="/EducacionCristiana/">
 
     <meta charset="utf-8">
@@ -29,5 +38,17 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
+    <?php
+    use App\Session;
+
+    $message = Session::getMessage();
+    if (!empty($message)) {
+            echo "<div class='messages alert alert-{$message['type']} alert-dismissible fade show'>{$message['message']}
+        <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+            <span aria-hidden='true'>&times;</span>
+        </button></div>";
+
+    }
+    ?>
 
 </head>

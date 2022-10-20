@@ -87,7 +87,7 @@ class AppController extends BaseController
             $usuario->email = $this->post['email'];
             $usuario->usuario = $this->post['usuario'];
             $usuario->clave = $this->post['clave'];
-            $usuario->rol = $this->post['rol'];
+            $usuario->rol_id = $this->post['rol_id'];
             $usuario->descripcion = $this->post['descripcion'];
             $usuario->save();
 

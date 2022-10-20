@@ -85,7 +85,7 @@
 
                     <div class="form-group">
                         <label>Rol</label>
-                        <input type="text" class="form-control" data-inputmask='"mask": "(9999) 999-9999"' data-mask name="rol" id="rol" placeholder="Ingrese el Rol"></td> <max 11
+                        <input type="text" class="form-control" data-inputmask='"mask": "(9999) 999-9999"' data-mask name="rol_id" id="rol_id" placeholder="Ingrese el Rol"></td> <max 11
                           characters 0-9>
                     </div>
                 </div>

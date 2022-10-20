@@ -64,7 +64,14 @@ trait Query
         $this->result = $this->DB()->query($this->query)->fetch(\PDO::FETCH_ASSOC);
         $modelName = get_called_class();
         $model = new $modelName;
-        return static::populateRecord($model, $this->result);
+
+        if (!$this->result)
+            return false;
+
+        $model = static::populateRecord($model, $this->result);
+        $model->afterFind();
+
+        return $model;
     }
 
 
@@ -120,6 +127,10 @@ trait Query
     {
         $this->limit = $limit;
         return $this;
+    }
+
+    public function afterFind()
+    {
     }
 
 }

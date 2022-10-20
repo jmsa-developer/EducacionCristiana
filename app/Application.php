@@ -46,7 +46,7 @@ class Application
         $controller = 'App\Controllers\\' . ucfirst($this->controller) . 'Controller';
 
         if (class_exists($controller)) {
-            $controller = new $controller();
+            $controller = new $controller($this->controller, $this->action, $this->params);
         } else {
             throw new Exception("Controlador $controller no encontrado");
         }
@@ -55,7 +55,7 @@ class Application
         $defaultAction = $controller->defaultAction . 'Action';
 
         if (method_exists($controller, $action)) {
-            call_user_func_array([$controller, $action], $this->params);
+            call_user_func([$controller, $action]);
         } elseif (method_exists($controller, $defaultAction)) {
             View::redirect("/$this->controller/$controller->defaultAction");
         } else {

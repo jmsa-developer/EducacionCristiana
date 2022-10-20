@@ -30,14 +30,15 @@ class UserController extends BaseController
             if ($user) {
                 Session::set('loggedIn', true);
                 Session::set('user', $user);
+                Session::set('message',['type' => 'success','message'=>'Bienvenido '.$user->nombre]);
+
                 View::redirect('/app/index');
             } else {
-                $error = 'Usuario o contraseña incorrectos';
+                Session::set('message',['type' => 'danger','message'=>'Usuario o contraseña incorrectos']);
 
             }
         }
         View::render('login.php', [
-            'error' => $error
         ]);
     }
 
