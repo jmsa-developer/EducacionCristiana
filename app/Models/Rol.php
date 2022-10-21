@@ -8,6 +8,7 @@ class Rol extends BaseModel
 {
     public $nombre;
     public $descripcion;
+    public $url_base;
     public $borrado;
 
     public function getPermisos(){

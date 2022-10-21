@@ -24,16 +24,25 @@ class BaseController
 
         // Si no esta logueado y no esta en el controlador de login
         if (!Access::isLogged() && $this->class != 'App\Controllers\UserController') {
+
             // Redireccionar al controlador de login
             View::redirect('/user/login');
         }
 
+        if (Access::isLogged() && $this->class == 'App\Controllers\UserController' && $this->action == 'login') {
 
-
-        // Si no tiene permisos y no esta en el controlador de login
-        if (!Access::isAllowed($this->controller, $this->action) && $this->class != 'App\Controllers\UserController') {
             // Redireccionar al controlador de login
-            View::redirect('/app/index');
+            View::redirect(Session::get('user')->getRol()->url_base);
+        }
+
+
+        if ($this->class != 'App\Controllers\UserController') {
+            // Si no tiene permisos y no esta en el controlador de login
+            if (!Access::isAllowed($this->controller, $this->action)) {
+                // Redireccionar al controlador de login
+                View::redirect(Session::get('user')->getRol()->url_base);
+            }
+
         }
 
         if ($this->isPost()) {

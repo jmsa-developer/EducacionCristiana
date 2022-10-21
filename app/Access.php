@@ -17,7 +17,6 @@ class Access
     {
         $route = $controller . '/' . $action;
         $user = Session::get('user');
-        $user = Usuario::get()->where(['id'=> $user->id])->one();
 
         if(!$user){
             return false;
@@ -25,6 +24,10 @@ class Access
         return true;
 
         if ($user->getRol()->nombre === 'admin') {
+            return true;
+        }
+
+        if($route == $user->getRol()->url_base){
             return true;
         }
 
