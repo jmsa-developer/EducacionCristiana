@@ -42,7 +42,7 @@ class AppController extends BaseController
         if ($estudiante->load($this->post)) {
             $estudiante->register();
 
-            View::redirect('/app/index');
+          //  View::redirect('/app/index');
         }
 
 

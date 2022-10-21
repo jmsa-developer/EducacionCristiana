@@ -66,7 +66,7 @@
                                 <!-- /.form-group -->
                                 <div class="form-group">
                         <label>TELEFONO</label>
-                        <input type="text" class="form-control" name="telefono" id="telefono" data-inputmask='"mask": "(9999) 999-9999"' data-mask></td>
+                        <input type="text" class="form-control" name="telefono" id="telefono"  placeholder="Ingrese telefono" data-inputmask='"mask": "(9999) 999-9999"' data-mask></td>
                           <max 11
                           characters 0-9>
                         </div>
@@ -125,7 +125,7 @@
                            
                           <label>NOMBRE DEL MINISTERIO </label>
         
-        <select class="form-control" id="" name=""  data-placeholder="Selecciona"
+        <select class="form-control" id="nombre_m" name="nombre_m"  data-placeholder="Selecciona"
       style="width: 100%;">
 <option>selecciona</option>
 <option>Ministrio Iglekids</option>
@@ -150,7 +150,7 @@
                               <div class="form-group">
                               <label>LIDER DEL GRUPO</label>
                     
-                    <input type="text"class="form-control" name="apellido" id="apellido" maxlength="30" placeholder="ingrese lider del grupo" /> <max 30
+                    <input type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" /> <max 30
                         characters a-z A-Z>
                               
                                 
@@ -164,7 +164,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <label>Lider del Ministerio</label>
-                            <td><input type="text" class="form-control" name="" id="" placeholder="Enter email address"></td>
+                            <td><input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="Enter email address"></td>
                           </div>
                                           <!-- /.form group -->
                                           
@@ -197,8 +197,14 @@
                                
                               <label>PASTOR</label>
                       
-                      <input type="text" class="form-control" name="pastor" id="pastor" maxlength="30" placeholder="ingrese pastor" /> <max 30
-                          characters a-z A-Z>
+                              <select class="form-control"  id="pastor" name="pastor" data-placeholder="Selecciona"
+            style="width: 100%;">
+      <option>selecciona</option>
+      <option>Carlos Yépez</option>
+      <option>Julio Sivira</option>
+      <option>Angel Suarez</option>
+      
+    </select>
                                   </div>
                                   <!-- /.form-group -->
                                   
@@ -207,16 +213,25 @@
                                
                       
                               </div>
+                              <div class="col-md-6">
+                              <div class="form-group">
+                              <label>GDC</label>
+                    
+                    <input type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" />                                       
+                    </div> 
+                              
+                            </div>
                               <!-- /.col -->
-                        <div class="col-md-6">
+                              <div class="col-md-6">
                           <div class="form-group">
-                          <label>FECHA DE modificacion:</label>
-                    <input disabled name="fecha_inicio" class="form-control" id="current_date"/>
+                          <label>FECHA DE INGRESO:</label>
+                    <input readonly name="fecha_inicio" class="form-control" id="current_date"/>
                         
                                     </div>
                          
 <!-- /.col -->
 </div>
+<!-- /.row -->
 <!-- /.row -->
                                      <!-- Date -->
                 
@@ -258,6 +273,7 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
     </section>
 </form>
     <!-- /.content -->
+  </div>
   </div>
   <!-- /.content-wrapper -->
  

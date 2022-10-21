@@ -16,7 +16,7 @@ class Database {
      *
      * @var string
      */
-    const DB_NAME = 'educacioncristianas';
+    const DB_NAME = 'educacioncristiana';
 
     /**
      * Database username

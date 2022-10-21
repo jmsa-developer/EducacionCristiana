@@ -11,6 +11,7 @@ class Estudiante extends Persona
     public $ministerio_id;
     public $estado_id;
     public $ubicacion_id;
+    
 
     public function register(){
 

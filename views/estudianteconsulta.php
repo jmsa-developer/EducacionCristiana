@@ -1,180 +1,50 @@
 
-    <!-- Main content -->
-    <section class="content">
+     <section class="content">
 
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">consulta</h3>
+          <h2 class="card-title">consulta de estudiante</h2>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
               <i class="fas fa-minus"></i>
             </button>
-           
+            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
+              <i class="fas fa-times"></i>
+            </button>
           </div>
         </div>
-        <div class="card-body p-0">
-          <table class="table table-striped projects">
-              <thead>
-                  <tr>
-                      <th style="width: 1%">
-                          #
-                      </th>
-                      <th style="width: 30%" >
-                          nombre
-                      </th>
-                      <th style="width: 20%">
-                          apellido
-                      </th>
-                      <th style="width: 10%">
-                          cedula
-                      </th>
-                      <th style="width: 20%">
-                         telefono
-                      </th>
-                      <th style="width: 30%" >
-                         direccion
-                      </th>
-                      <th >
-                      zona
-                      </th>
-                      <th >
-                        
-                      </th>
-                      <th style="width: 20%">
-                      </th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>
-                          #
-                      </td>
-                      <td>
-                          <a>
-                              yurmi
-                          </a>
-                          
-                      </td>
-                      <td>
-                          figueroa
-                      </td>
-                      <td class="project_progress">
-                          24549373
-                      </td>
-                      <td class="project-state">
-                          0424669142
-                      </td>
-                      <td class="project-state">
-                          sector Romulo Gallego
-                      </td>
-                      <td class="project-state">
-                         Carorita
-                      </td>
-                      <td class="project-actions text-right">
-                          
-                          <a class="btn btn-info btn-sm" href="app/estudiantemodificar">
-                              <i class="fas fa-pencil-alt">
-                              </i>
-                              Edit
-                          </a>
-                          <a class="btn btn-danger btn-sm" href="#">
-                              <i class="fas fa-trash">
-                              </i>
-                              Delete
-                          </a>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          #
-                      </td>
-                      <td>
-                          <a>
-                            Carlyn
-                          </a>
-                          
-                      </td>
-                      <td>
-                          Yepez
-                      </td>
-                      <td class="project_progress">
-                          29880740
-                      </td>
-                      <td class="project-state">
-                          04145771481
-                      </td>
-                      <td class="project-state">
-                          urb los Horcones
-                      </td>
-                      <td class="project-state">
-                          la carucieña
-                      </td>
-                      <td class="project-actions text-right">
-                          
-                          <a class="btn btn-info btn-sm" href="app/estudiantemodificar">
-                              <i class="fas fa-pencil-alt">
-                              </i>
-                              Edit
-                          </a>
-                          <a class="btn btn-danger btn-sm" href="#">
-                              <i class="fas fa-trash">
-                              </i>
-                              Delete
-                          </a>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>
-                          #
-                      </td>
-                      <td>
-                          <a>
-                             Enmanuel
-                          </a>
-                          
-                      </td>
-                      <td>
-                          Canelon
-                      </td>
-                      <td class="project_progress">
-                          12345678
-                      </td>
-                      <td class="project-state">
-                          04245708968>
-                      </td>
-                      <td class="project-state">
-                         ur yucatan
-                      </td>
-                      <td class="project-state">
-                          tamaca
-                      </td>
-                      <td class="project-actions text-right">
-                          
-                          <a class="btn btn-info btn-sm" href="app/estudiantemodificar">
-                              <i class="fas fa-pencil-alt">
-                              </i>
-                              Edit
-                          </a>
-                          <a class="btn btn-danger btn-sm" href="#">
-                              <i class="fas fa-trash">
-                              </i>
-                              Delete
-                          </a>
-                      </td>
-                  </tr>
-                  
-                  </tr>
-              </tbody>
-          </table>
-        </div>
-        <!-- /.card-body -->
-      </div>
-      <!-- /.card -->
+        <div class="main-container">
+        <div class="card">
 
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <script src="public/dist/js/consulta.js"></script>
+            <div class="row">
+              <h3 class="display-8 text-center p-2  " >datos</h3>
+            </div>
+
+            <table class="table table-inverse" id="datatable">
+                
+                <tr>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Cédula</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                
+                <tbody>
+                </tbody>
+        
+        </div>
+        </table>
+    </div>
+     
+              
+             
+                
+           
+</div>
+</div>
+</div>
+
