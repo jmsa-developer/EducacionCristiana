@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Forms\EstudianteForm;
+use App\Forms\DocenteForm;
 use App\Models\Docente;
 use App\Models\Estudiante;
 use App\Models\Ministerio;
@@ -51,27 +52,13 @@ class AppController extends BaseController
 
     public function docenteAction()
     {
-        if ($this->isPost()) {
+        $docente = new DocenteForm();
+        if ($docente->load($this->post)) {
+            $docente->register();
 
-            $docente = new Docente();
-            $docente->nombre = $this->post['nombre'];
-            $docente->apellido = $this->post['apellido'];
-            $docente->cedula = $this->post['cedula'];
-            $docente->telefono = $this->post['telefono'];
-            $docente->email = $this->post['email'];
-            $docente->direccion = $this->post['direccion'];
-            $docente->fecha_nacimiento = $this->post['fecha_nacimiento'];
-            $docente->nombre_m = $this->post['nombre_m'];
-            $docente->lider_ministerio = $this->post['lider_ministerio'];
-            $docente->lider_gdc = $this->post['lider_gdc'];
-            $docente->turno = $this->post['turno'];
-            $docente->gdc = $this->post['gdc'];
-//            $docente->fecha_ingreso = $this->post['fecha_ingreso'];
-
-            $docente->save();
-
-            View::redirect('/user/login');
+            View::redirect('/app/index');
         }
+
 
         View::render('docente.php');
     }
@@ -87,7 +74,7 @@ class AppController extends BaseController
             $usuario->email = $this->post['email'];
             $usuario->usuario = $this->post['usuario'];
             $usuario->clave = $this->post['clave'];
-            $usuario->rol = $this->post['rol'];
+            $usuario->rol_id = $this->post['rol_id'];
             $usuario->descripcion = $this->post['descripcion'];
             $usuario->save();
 

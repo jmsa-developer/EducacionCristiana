@@ -110,12 +110,28 @@
                                           <!-- /.form group -->
 
                                           <div class="form-group">
-                            <label>NOMBRE DEL MINISTERIO </label>
-        
-                            <input type="text" class="form-control" maxlength="30" placeholder="ingrese nombre del ministerio" name="nombre_m" id="nombre_m"/> <max 30
-                                characters a-z A-Z>
-                        
-                                    </div>
+                           
+                           <label>NOMBRE DEL MINISTERIO </label>
+         
+         <select class="form-control" id="nombre_m" name="nombre_m"  data-placeholder="Selecciona"
+       style="width: 100%;">
+ <option>selecciona</option>
+ <option>Ministrio Iglekids</option>
+ <option>ministerio para Jovenes</option>
+ <option>Ministerio para Matrimonios</option>
+ <option>Ministerio para la Familia</option>
+ <option>Viña Loma 1</option>
+ <option>Viña Loma 2</option>
+ <option>Viña Centro</option>
+ <option>Viña los Pocitos</option>
+ <option>Viña Pavia</option>
+ <option>Viña Cuji</option>
+ <option>Viña Curariguita</option>
+ <option>Viña Puerto Ordaz</option>
+ <option>Viña Sagrada Familia</option>
+ </select>
+                               </div>
+ 
 
                                         
 
@@ -184,7 +200,7 @@
                              <div class="form-group">
                 <label>PASTOR</label>
                       
-                      <select class="form-control"  id="" name="" data-placeholder="Selecciona"
+                      <select class="form-control"  id="pastor" name="pastor" data-placeholder="Selecciona"
             style="width: 100%;">
       <option>selecciona</option>
       <option>Carlos Yépez</option>
@@ -202,7 +218,7 @@
                                      <!-- Date -->
                 <div class="form-group">
                   <label>FECHA DE INGRESO:</label>
-                  <input disabled name="fecha_inicio" class="form-control" id="current_date"/>
+                  <input disabled name="fecha_inicio" class="form-control" id="fecha_inicio"/>
                         
                         </div>
              

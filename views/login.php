@@ -41,12 +41,6 @@
               <input type="password" class="form-control rounded-left" placeholder="Password" name="password">
             </div>
 
-              <?php if (isset($error)): ?>
-                <div class="alert alert-danger" role="alert">
-                  <?php echo $error; ?>
-                </div>
-                <?php endif; ?>
-
             <div class="form-group">
               <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
             </div>

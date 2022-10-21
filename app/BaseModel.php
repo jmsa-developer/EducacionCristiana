@@ -10,6 +10,8 @@ abstract class BaseModel {
 
     use Query;
 
+    public $id;
+
     /**
      * Representa una instancia de PDO
      *
@@ -21,7 +23,6 @@ abstract class BaseModel {
     {
         return (new \ReflectionClass(get_called_class()))->getShortName();
     }
-
 
     public function __construct() {
 
@@ -96,9 +97,8 @@ abstract class BaseModel {
     }
 
     public function getOne($id, $columns = '*'): iterable {
-        return $this->DB()
-            ->query("SELECT $columns FROM ". static::tableName() . " WHERE id = $id")
-            ->fetch(\PDO::FETCH_ASSOC);
+        $query = "SELECT $columns FROM ". static::tableName() . " WHERE id = $id";
+        return $this->DB()->query($query)->fetch(\PDO::FETCH_ASSOC);
     }
 
     public static function getOneById($id, $columns = '*'): iterable {

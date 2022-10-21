@@ -13,10 +13,18 @@ class Usuario extends BaseModel
     public $email;
     public $usuario;
     public $clave;
-    public $rol;
+    public $rol_id;
     public $descripcion;
     public $estado;
     public $borrado;
+
+    private $rol;
+
+    public function afterFind()
+    {
+
+        $this->rol = Rol::get()->where(['id'=>$this->rol_id])->one();
+    }
 
     public static function getByUsernameAndPassword($username, $password ){
 
@@ -24,7 +32,6 @@ class Usuario extends BaseModel
         $user = self::get()->where([
             'usuario' => $username,
         ])->one();
-
 
         if(!$user){
             return false;
@@ -43,6 +50,10 @@ class Usuario extends BaseModel
     {
         $this->clave = password_hash($this->clave, PASSWORD_DEFAULT);
         return parent::save();
+    }
+
+    public function getRol(){
+        return $this->rol;
     }
 
 }

@@ -35,4 +35,11 @@ class Session
         session_destroy();
     }
 
+    public static function getMessage()
+    {
+        $message = self::get('message');
+        self::remove('message');
+        return $message;
+    }
+
 }
