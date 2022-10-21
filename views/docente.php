@@ -211,20 +211,21 @@
                     
 
                     </div>
-                      
+                    <div class="form-group">
+                          <label>FECHA DE INGRESO:</label>
+                    <input readonly name="fecha_inicio" class="form-control" id="current_date"/>
+                        
+                                    </div>        
 <!-- /.col -->
 </div>
 <!-- /.row -->
                                      <!-- Date -->
-                <div class="form-group">
-                  <label>FECHA DE INGRESO:</label>
-                  <input disabled name="fecha_inicio" class="form-control" id="fecha_inicio"/>
-                        
-                        </div>
              
 <!-- /.col -->
 </div>
+
 <!-- /.row -->
+
                          <!-- Date -->
     
 <script>
