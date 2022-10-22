@@ -2,7 +2,7 @@
 
 use App\Session;
 
-var_dump(Session::get('user'));
+//var_dump(Session::get('user'));
 
 ?>
 

@@ -125,8 +125,7 @@
                            
                           <label>NOMBRE DEL MINISTERIO </label>
         
-        <select class="form-control" id="nombre_m" name="nombre_m"  data-placeholder="Selecciona"
-      style="width: 100%;" >
+        <select class="form-control" id="nombre_m" name="nombre_m"  data-placeholder="Selecciona" style="width: 100%;" >
 <option>selecciona</option>
 <option>Ministrio Iglekids</option>
 <option>ministerio para Jovenes</option>
@@ -150,8 +149,7 @@
                               <div class="form-group">
                               <label>LIDER DEL GRUPO</label>
                     
-                    <input type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" /> <max 30
-                        characters a-z A-Z>
+                    <input type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" /> 
                               
                                 
                               
@@ -165,7 +163,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <label>Lider del Ministerio</label>
-                            <td><input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="Enter email address"></td>
+                            <input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="ingrese lider ministerio">
                           </div>
                                           <!-- /.form group -->
                                           
@@ -277,5 +275,7 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
 </form>
     <!-- /.content -->
   </div>
+
   </div>
+
   <!-- /.content-wrapper -->
