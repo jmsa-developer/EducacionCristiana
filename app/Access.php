@@ -21,20 +21,19 @@ class Access
         if(!$user){
             return false;
         }
-        return true;
 
         if ($user->getRol()->nombre === 'admin') {
             return true;
         }
 
-        if($route == $user->getRol()->url_base){
+        if("/".$route == $user->getRol()->url_base){
             return true;
         }
 
         $permisos = self::getPermisos($user->getRol()->id);
 
 
-        if (!isset($permisos[$route])) {
+        if (!array_search($route, $permisos)) {
             Session::set('message',['type' => 'danger','message'=>'No tiene permisos para acceder a esta ruta']);
             return false;
         }
