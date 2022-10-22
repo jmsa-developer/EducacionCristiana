@@ -8,6 +8,7 @@ use App\Models\Docente;
 use App\Models\Estudiante;
 use App\Models\Ministerio;
 use App\Models\Usuario;
+use App\Models\educativo;
 use App\View;
 use App\Models\Estudianteconsulta;
 
@@ -115,7 +116,21 @@ class AppController extends BaseController
 
         View::render('evaluaciones.php');
     }
+    public function educativoAction()
+    {
+        if ($this->isPost()) {
 
+            $evaluaciones = new educativo();
+            $evaluaciones->name = $this->post['name'];
+            $evaluaciones->cedula = $this->post['cedula'];
+            $evaluaciones->save();
+
+            View::redirect('/user/login');
+        }
+
+
+        View::render('educativo.php');
+    }
     public function estudiantemodificarAction()
     {
         if ($this->isPost()) {
