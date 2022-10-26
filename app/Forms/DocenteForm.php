@@ -16,11 +16,12 @@ class DocenteForm extends Model
     public $fecha_nacimiento;
     public $fecha_inicio;
     public $direccion;
- //   public $zona;
     public $nombre_m;
     public $turno;
     public $pastor;
-    public $lider_grupo;
+    public $lider_ministerio;
+    public $gdc;
+    public $lider_gdc;
 
 
 
@@ -35,6 +36,9 @@ class DocenteForm extends Model
 
         $ministerio = new Ministerio();
         $ministerio->nombre_m = $this->nombre_m;
+        $ministerio->lider_ministerio = $this->lider_ministerio;
+        $ministerio->gdc = $this->gdc;
+        $ministerio->lider_gdc = $this->lider_gdc;
         $ministerio_id = $ministerio->save();
 
 

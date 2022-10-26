@@ -38,15 +38,7 @@
                 data-accordion="false">
                 <!-- Add icons to the links using the .nav-icon class
                      with font-awesome or any other icon font library -->
-                <li class="nav-item">
-                    <a href="user/logout" class="nav-link">
-                        <i class="nav-icon fas fa-solid fa-house-chimney"></i>
-                        <p>
-                            Cerrar sesion
-                            <span class="right badge badge-danger"></span>
-                        </p>
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a href="app/index" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-house-chimney"></i>
@@ -299,6 +291,15 @@
                         <p>
                             Calendario
                             <span class="badge badge-info right">2</span>
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="user/logout" class="nav-link">
+                        <i class="nav-icon fas fa-solid fa-right-to-bracket"></i>
+                        <p>
+                            Cerrar sesion
+                            <span class="right badge badge-danger"></span>
                         </p>
                     </a>
                 </li>
