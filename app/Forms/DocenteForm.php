@@ -36,7 +36,7 @@ class DocenteForm extends Model
 
         $ministerio = new Ministerio();
         $ministerio->nombre_m = $this->nombre_m;
-        $ministerio->lider_ministerio = $this->nlider_ministerio;
+        $ministerio->lider_ministerio = $this->lider_ministerio;
         $ministerio->gdc = $this->gdc;
         $ministerio->lider_gdc = $this->lider_gdc;
         $ministerio_id = $ministerio->save();
