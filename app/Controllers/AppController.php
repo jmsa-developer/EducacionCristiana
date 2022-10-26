@@ -102,14 +102,11 @@ class AppController extends BaseController
 
     public function grupoasignacionAction()
     {
-        if ($this->isPost()) {
+        $grupoasignacion = new GrupoasignacionForm();
+        if ($grupoasignacion->load($this->post)) {
+            $grupoasignacion->register();
 
-            $grupoasignacion = new grupoasignacion();
-            $grupoasignacion->name = $this->post['name'];
-            $grupoasignacion->cedula = $this->post['cedula'];
-            $grupoasignacion->save();
-
-            View::redirect('/user/login');
+            View::redirect('/app/index');
         }
 
 

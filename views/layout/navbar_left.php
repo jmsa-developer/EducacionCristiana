@@ -48,7 +48,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="inicio" class="nav-link">
+                    <a href="app/index" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-house-chimney"></i>
                         <p>
                             inicio
@@ -90,7 +90,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="app/docente" class="nav-link">
+                            <a href="docente/registro" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Docente</p>
                             </a>
@@ -113,7 +113,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="app/estudiante" class="nav-link">
+                            <a href="estudiante/registro" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Estudiante</p>
                             </a>
@@ -137,7 +137,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="app/grupoasignacion" class="nav-link">
+                            <a href="grupoasignacion/registro" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Grupo</p>
                             </a>
