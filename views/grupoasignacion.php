@@ -218,115 +218,7 @@
           <!-- /.col -->
         </div>
                       <!-- /.col -->
-            <div class="row">
-              <div class="col-md-6">
-                <div class="form-group clearfix">
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox" checked id="checkboxDanger1">
-                        <label for="checkboxDanger1">
-                        Yurmi Figueroa
-                        </label>
-                      </div>
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox"  id="checkboxDanger2">
-                        <label for="checkboxDanger2">
-                        Carlyn Yépez
-                        </label>
-                      </div>
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox"  id="checkboxDanger3">
-                        <label for="checkboxDanger3">
-                        Enmanuel Canelón
-                        </label>
-                      </div>
 
-                    </div>
-                      <br>
-                    <div class="form-group clearfix">
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox" id="checkboxDanger4">
-                        <label for="checkboxDanger4">
-                        Luis Melendez
-                        </label>
-                      </div>
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox"  id="checkboxDanger5">
-                        <label for="checkboxDanger5">
-                        Nicolle Ramos
-                        </label>
-                      </div>
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox"  id="checkboxDanger6">
-                        <label for="checkboxDanger6">
-                        Mary Moreno
-                        </label>
-                      </div>
-
-                    </div>
-                    <br>
-                              <!-- /.form-group -->
-
-                              
-                            
-
-                            <!-- /.form-group -->
-                </div>
-                          <!-- /.col -->
-                
-
-                <div class="col-md-6">
-                    <div class="form-group clearfix">
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox" id="checkboxDanger7">
-                        <label for="checkboxDanger7">
-                        Maria Guerrero
-                        </label>
-                      </div>
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox"  id="checkboxDanger8">
-                        <label for="checkboxDanger8">
-                        Melodi Melendez
-                        </label>
-                      </div>
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox"  id="checkboxDanger9">
-                        <label for="checkboxDanger9">
-                        Rosaura Rodriguez
-                        </label>
-                      </div>
-
-                    </div>
-                  <br>
-                    <div class="form-group clearfix">
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox"  id="checkboxDanger10">
-                        <label for="checkboxDanger10">
-                        Mariela Mendoza
-                        </label>
-                      </div>
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox"  id="checkboxDanger11">
-                        <label for="checkboxDanger11">
-                        Sofia Guerrero
-                        </label>
-                      </div>
-                      <div class="icheck-primary d-inline">
-                      <input type="checkbox"  id="checkboxDanger12">
-                        <label for="checkboxDanger12">
-                        Patricia Lopez
-                        </label>
-                      </div>
-
-                    </div>
-                    <br>
-                                          <!-- /.form group -->
-                                          
-                <!-- Date dd/mm/yyyy -->
-              </div>
-
-            
-              <!-- /.form group -->
-            </div>
                       <!-- /.col -->
                       <br>
             <div class="row">
@@ -415,12 +307,19 @@
   
                       
 <!-- /.row -->
-                                     <!-- Date -->
-                <div class="form-group">
+<div class="col-md-6">
+<div class="form-group">
                   <label>FECHA DE INGRESO:</label>
                   <input disabled name="fecha_inicio" class="form-control" id="current_date"/>
                         
                         </div>
+                    <!-- /.form-group -->
+
+                    <!-- /.form-group -->
+                </div>
+
+                                     <!-- Date -->
+
              
 <!-- /.col -->
 </div>

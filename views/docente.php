@@ -221,11 +221,7 @@
 <!-- /.row -->
                                      <!-- Date -->
 
-                <div class="form-group">
-                  <label>FECHA DE INGRESO:</label>
-                  <input readonly name="fecha_inicio" class="form-control" id="fecha_inicio"/>
-                        
-                        </div>
+
 
              
 <!-- /.col -->
