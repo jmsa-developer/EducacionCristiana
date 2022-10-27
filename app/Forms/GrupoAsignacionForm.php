@@ -4,7 +4,7 @@ namespace App\Forms;
 
 use App\Models\Grupoasignacion;
 
-class GrupoasignacionForm extends Model
+class GrupoAsignacionForm extends Model
 {
     public $nombre;
     public $apellido;

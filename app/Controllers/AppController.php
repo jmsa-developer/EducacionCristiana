@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Forms\EstudianteForm;
 use App\Forms\DocenteForm;
+use App\Forms\GrupoAsignacionForm;
 use App\Models\Docente;
 use App\Models\Estudiante;
 use App\Models\Ministerio;
@@ -102,7 +103,7 @@ class AppController extends BaseController
 
     public function grupoasignacionAction()
     {
-        $grupoasignacion = new GrupoasignacionForm();
+        $grupoasignacion = new GrupoAsignacionForm();
         if ($grupoasignacion->load($this->post)) {
             $grupoasignacion->register();
 

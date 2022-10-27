@@ -174,8 +174,15 @@ abstract class BaseModel {
         // Execute statement with values
         $stmt->execute($values);
 
+        $id = $this->DB()->lastInsertId();
+
+
+        if($id){
+            $this->afterSave($id, 'save', get_called_class());
+        }
+
         // Return last inserted ID.
-        return $this->DB()->lastInsertId();
+        return $id;
     }
 
     /**

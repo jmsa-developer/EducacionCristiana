@@ -39,10 +39,14 @@ class EstudianteForm extends Model
         $zona->nombre = $this->zona;
         $zona_id = $zona->save();
 
+
+
+
         $ubicacion = new ubicacion();
         $ubicacion->direccion = $this->direccion;
         $ubicacion->zona_id = $zona_id;
         $ubicacion_id = $ubicacion->save();
+
 
         $ministerio = new Ministerio();
         $ministerio->nombre_m = $this->nombre_m;

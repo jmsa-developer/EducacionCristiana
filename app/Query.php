@@ -133,4 +133,7 @@ trait Query
     {
     }
 
+    public function afterSave($resultado, $accion, $modelo){
+    }
+
 }

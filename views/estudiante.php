@@ -198,11 +198,7 @@
                       
                               <select class="form-control"  id="pastor" name="pastor" data-placeholder="Selecciona"
             style="width: 100%;">
-      <option>selecciona</option>
-      <option>Carlos Yépez</option>
-      <option>Julio Sivira</option>
-      <option>Angel Suarez</option>
-      
+        <?= $pastoresOptions ?>
     </select>
                                   </div>
                                   <!-- /.form-group -->
