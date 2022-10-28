@@ -40,8 +40,8 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>NOMBRE</label>
-                                 
-                 <input type="text" class="form-control"name="nombre" id="nombre" maxlength="20" placeholder="Ingrese nombre" /> <max 30
+
+                 <input type="text" class="form-control"name="nombre" id="nombre" maxlength="20" placeholder="Ingrese nombre" value="<?= $estudiante->nombre; ?>"/> <max 30
                             characters a-z A-Z>
                 </div>
                 <!-- /.form-group -->

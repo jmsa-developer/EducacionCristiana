@@ -13,7 +13,20 @@ class Estudiante extends Persona
     public $ministerio_id;
     public $estado_id;
     public $ubicacion_id;
-    
+
+    public $ministerio;
+
+
+    public function loadRelations(){
+
+        if($this->ministerio_id){
+            $this->ministerio = Ministerio::get()->where(['id'=>$this->ministerio_id])->one();
+        }
+
+
+
+
+    }
 
     public function register(){
 

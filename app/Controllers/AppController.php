@@ -11,6 +11,7 @@ use App\Models\Ministerio;
 use App\Models\Usuario;
 use App\Models\educativo;
 use App\Models\consultaestudiante;
+use App\Session;
 use App\View;
 use App\Models\Estudianteconsulta;
 
@@ -146,44 +147,28 @@ class AppController extends BaseController
     }
     public function estudiantemodificarAction()
     {
-        if ($this->isPost()) {
+        $id = $_GET['id'];
+        $estudiante = Estudiante::get()->where(['id'=>$id])->one();
 
-            $estudiante = new Estudiantemodificar();
-            $estudiante->nombre = $this->post['nombre'];
-            $estudiante->cedula = $this->post['cedula'];
-            $estudiante->apellido = $this->post['apellido'];
-            $estudiante->email = $this->post['email'];
-            $estudiante->fecha_nacimiento = $this->post['fecha_nacimiento'];
-            $estudiante->telefono = $this->post['telefono'];
-            $estudiante->fecha_inicio = $this->post['fecha_inicio'];
-            $estudiante->save();
+        if($estudiante){
 
-            View::redirect('/user/login');
+            View::render('estudiantemodificar.php',[
+                'estudiante'=>$estudiante
+            ]);
         }
 
+        Session::set('message',['type' => 'danger','message'=>"El estudiante $id no existe"]);
+        View::redirect('/app/index');
 
-        View::render('estudiantemodificar.php');
     }
 
     public function estudianteconsultaAction()
     {
-        if ($this->isPost()) {
+        $estudiantes = Estudiante::get()->all();
 
-            $estudiante = new Estudiante();
-            $estudiante->nombre = $this->post['nombre'];
-            $estudiante->cedula = $this->post['cedula'];
-            $estudiante->apellido = $this->post['apellido'];
-            $estudiante->email = $this->post['email'];
-            $estudiante->fecha_nacimiento = $this->post['fecha_nacimiento'];
-            $estudiante->telefono = $this->post['telefono'];
-            $estudiante->fecha_inicio = $this->post['fecha_inicio'];
-            $estudiante->save();
-
-            View::redirect('/user/login');
-        }
-
-
-        View::render('estudianteconsulta.php');
+        View::render('estudianteconsulta.php',[
+            'estudiantes'=>$estudiantes
+        ]);
     }
 
     public function calificacionesAction()

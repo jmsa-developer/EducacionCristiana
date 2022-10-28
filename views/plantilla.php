@@ -3,6 +3,7 @@
 use App\Models\Pastor;
 use App\Util;
 
+
 $pastores = Pastor::get()->all();
 
 $pastoresOptions = Util::renderOptions($pastores, 'id', 'nombre');

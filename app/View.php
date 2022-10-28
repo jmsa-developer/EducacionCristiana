@@ -30,7 +30,7 @@ class View {
             
             throw new Exception("View $view no encontrada");
         }
-
+        exit;
     }
 
     static function redirect($url){

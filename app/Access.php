@@ -47,12 +47,36 @@ class Access
         $rol_permisos = Rol_Permiso::get()->where(['rol_id'=>$rol_id])->all();
 
         foreach ($rol_permisos as $rol_permiso){
-            $permiso = Permiso::get()->where(['id'=>$rol_permiso['permiso_id']])->one();
+            $permiso = Permiso::get()->where(['id'=>$rol_permiso->permiso_id])->one();
             $permisos[$permiso->nombre] = $permiso->url;
         }
 
         return $permisos;
     }
 
+    public static function isAllowedMenu(string $url): string{
+        $user = Session::get('user');
+
+        if(!$user){
+            return 'hide';
+        }
+
+        if ($user->getRol()->nombre === 'admin') {
+            return '';
+        }
+
+        if("/".$url == $user->getRol()->url_base){
+            return '';
+        }
+
+        $permisos = self::getPermisos($user->getRol()->id);
+
+
+        if (!array_search($url, $permisos)) {
+            Session::set('message',['type' => 'danger','message'=>'No tiene permisos para acceder a esta ruta']);
+            return 'hide';
+        }
+        return '';
+    }
 
 }

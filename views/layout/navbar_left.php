@@ -1,3 +1,8 @@
+<?php
+
+use App\Access;
+
+?>
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -49,7 +54,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="#" class='nav-link'>
                         <i class="nav-icon fas fa-solid fa-book-open-reader"></i>
                         <p>
                             Modulo Educativo

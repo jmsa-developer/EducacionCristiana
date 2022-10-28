@@ -13,11 +13,12 @@ class Util
             if(is_array($to)){
                 $texts = [];
                 foreach ($to as $item){
-                    $texts[] = $value[$item];
+                    $texts[] = $value->$item;
                 }
-                $result[$value[$from]] = implode(' - ', $texts);
+                $result[$value->$from] = implode(' - ', $texts);
             }else{
-                $result[$value[$from]] = $value[$to];
+
+                $result[$value->$from] = $value->$to;
 
             }
 

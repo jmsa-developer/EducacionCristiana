@@ -70,20 +70,33 @@ trait Query
 
         $model = static::populateRecord($model, $this->result);
         $model->afterFind();
-
+        $model->loadRelations();
         return $model;
     }
 
 
     public function all()
     {
-
+        $result =  [];
         if ($this->limit) {
             $this->query .= " limit $this->limit";
         }
 
         $this->result = $this->DB()->query($this->query)->fetchAll(\PDO::FETCH_ASSOC);
-        return $this->result;
+
+        if($this->result >0){
+
+            foreach ($this->result as $res){
+                $modelName = get_called_class();
+                $model = new $modelName;
+                $model = static::populateRecord($model, $res);
+                $model->afterFind();
+                $model->loadRelations();
+                $result[] = $model;
+            }
+        }
+
+        return $result;
     }
 
     public static function populateRecord($record, $row)
@@ -131,6 +144,10 @@ trait Query
 
     public function afterFind()
     {
+    }
+
+    public function loadRelations(){
+
     }
 
     public function afterSave($resultado, $accion, $modelo){

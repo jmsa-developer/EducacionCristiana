@@ -34,6 +34,13 @@ class Application
             }
         }
 
+        foreach ($_GET as $key => $value){
+            if($key != 'route'){
+                $this->params[$key] = $value;
+            }
+
+        }
+
     }
 
 
