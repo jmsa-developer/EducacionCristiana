@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\BaseModel;
-
+use App\BitacoraTrait;
 class Rol extends BaseModel
 {
     public $nombre;

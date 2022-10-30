@@ -32,20 +32,18 @@ class EstudianteForm extends Model
 
         $pastor = new Pastor();
         $pastor->nombre = $this->pastor;
-        $pastor->turno = $this->turno;
-        $pastor_id = $pastor->save();
+          $pastor_id = $pastor->save();
+
+       
+
+
+
 
         $zona = new zona();
-        $zona->nombre = $this->zona;
+        $zona->direccion = $this->direccion;
+        $zona->zona = $this->zona;
+          
         $zona_id = $zona->save();
-
-
-
-
-        $ubicacion = new ubicacion();
-        $ubicacion->direccion = $this->direccion;
-        $ubicacion->zona_id = $zona_id;
-        $ubicacion_id = $ubicacion->save();
 
 
         $ministerio = new Ministerio();
@@ -60,7 +58,7 @@ class EstudianteForm extends Model
         $estudiante->load($this->data);
         $estudiante->pastor_id = $pastor_id;
         $estudiante->ministerio_id = $ministerio_id;
-        $estudiante->ubicacion_id = $ubicacion_id;
+        $estudiante->zona_id = $zona_id;
         $estudiante->estado_id = 0;
         
         $estudiante->save();

@@ -17,7 +17,7 @@ class DocenteForm extends Model
     public $fecha_inicio;
     public $direccion;
     public $nombre_m;
-    public $turno;
+   // public $turno;
     public $pastor;
     public $lider_ministerio;
     public $gdc;
@@ -31,7 +31,7 @@ class DocenteForm extends Model
 
         $pastor = new Pastor();
         $pastor->nombre = $this->pastor;
-        $pastor->turno = $this->turno;
+      
         $pastor_id = $pastor->save();
 
         $ministerio = new Ministerio();

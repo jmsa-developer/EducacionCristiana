@@ -41,15 +41,14 @@
                 <div class="form-group">
                   <label>NOMBRE</label>
                                  
-                 <input type="text" class="form-control" name="nombre" id="nombre" maxlength="20" placeholder="Ingrese nombre" /> <max 30
-                            characters a-z A-Z>
+                 <input type="text" class="form-control" name="nombre" id="nombre" maxlength="20" placeholder="Ingrese nombre" required/> 
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   
                       <label>CEDULA</label>
                   
-                   <input type="text"  class="form-control" name="cedula" id="cedula" placeholder="Ingrese  cedula" />
+                   <input type="text"  class="form-control" name="cedula" id="cedula" placeholder="Ingrese  cedula" required/>
                     
       
                   </div>
@@ -60,15 +59,12 @@
                   <div class="form-group">
                         <label>APELLIDOS</label>
                                         
-                <input type="text" class="form-control" name="apellido" id="apellido" maxlength="30" placeholder="Ingrese apellido" /> <max 40
-                                  characters a-z A-Z>
+                <input type="text" class="form-control" name="apellido" id="apellido" maxlength="30" placeholder="Ingrese apellido" required/> 
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
                         <label>TELEFONO</label>
-                        <input type="text" class="form-control" name="telefono" id="telefono" data-inputmask='"mask": "(9999) 999-9999"' placeholder="Ingrese telefono" data-mask></td>
-                          <max 11
-                          characters 0-9>
+                        <input type="text" class="form-control" name="telefono" id="telefono" data-inputmask='"mask": "(9999) 999-9999"' placeholder="Ingrese telefono" data-mask required/>                      
                         </div>
                       </div>
                   
@@ -80,14 +76,14 @@
                 <div class="form-group">
                 <label>DIRECCION</label>
                 
-                <input type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion" /> <max 30
+                <input type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion" required/> <max 30
                     characters a-z A-Z>
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   
                 <label>Email</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email address">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email address" required/>
                          
       
                   </div>
@@ -98,7 +94,7 @@
                   <div class="form-group">
                   <label>ZONA</label>
                   
-                  <input type="text"  class="form-control" name="zona" id="zona" placeholder="Ingrese  zona" />
+                  <input type="text"  class="form-control" name="zona" id="zona" placeholder="Ingrese  zona" required/>
                    
                                 </div>
                                 <!-- /.form-group -->
@@ -109,7 +105,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask>
+                    <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" data-inputmask-alias="datetime" data-inputmask-inputformat="yyyy/mm/dd" data-mask required/>
                   
                         </div>
                     </div>
@@ -125,21 +121,8 @@
                            
                           <label>NOMBRE DEL MINISTERIO </label>
         
-        <select class="form-control" id="nombre_m" name="nombre_m"  data-placeholder="Selecciona" style="width: 100%;" >
-<option>selecciona</option>
-<option>Ministrio Iglekids</option>
-<option>ministerio para Jovenes</option>
-<option>Ministerio para Matrimonios</option>
-<option>Ministerio para la Familia</option>
-<option>Viña Loma 1</option>
-<option>Viña Loma 2</option>
-<option>Viña Centro</option>
-<option>Viña los Pocitos</option>
-<option>Viña Pavia</option>
-<option>Viña Cuji</option>
-<option>Viña Curariguita</option>
-<option>Viña Puerto Ordaz</option>
-<option>Viña Sagrada Familia</option>
+        <select class="form-control" id="nombre_m" name="nombre_m" data-placeholder="yurmi" style="width: 100%;" required>
+        <?= $ministeriosOptions ?>
 </select>
                               </div>
                               <!-- /.form-group -->
@@ -149,7 +132,7 @@
                               <div class="form-group">
                               <label>LIDER DEL GRUPO</label>
                     
-                    <input type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" /> 
+                    <input type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" required/> 
                               
                                 
                               
@@ -163,22 +146,16 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <label>Lider del Ministerio</label>
-                            <input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="ingrese lider ministerio">
+                            <input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="ingrese lider ministerio" required/>
                           </div>
                                           <!-- /.form group -->
                                           
                 <!-- Date dd/mm/yyyy -->
                 <div class="form-group">
-                <label>TURNO</label>
-                      
-                      <select class="form-control"  id="turno" name="turno" data-placeholder="Selecciona"
-            style="width: 100%;">
-      <option>selecciona</option>
-      <option>1er</option>
-      <option>2do</option>
-      <option>3er</option>
-      
-    </select>
+                <label>GDC</label>
+                    
+                    <input type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" required/>                                       
+                   
                     
 
                     </div>
@@ -196,8 +173,8 @@
                                
                               <label>PASTOR </label>
                       
-                              <select class="form-control"  id="pastor" name="pastor" data-placeholder="Selecciona"
-            style="width: 100%;">
+                              <select class="form-control"  id="pastor" name="pastor" 
+            style="width: 100%;" required>
         <?= $pastoresOptions ?>
     </select>
                                   </div>
@@ -210,23 +187,15 @@
                               </div>
                               <div class="col-md-6">
                               <div class="form-group">
-                              <label>GDC</label>
-                    
-                    <input type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" />                                       
-                    </div> 
+                              <label>FECHA DE INGRESO:</label>
+                    <input readonly name="fecha_inicio" class="form-control" id="current_date"/>
+                        
+                                    </div> 
                               
                             </div>
                               <!-- /.col -->
-                              <div class="col-md-6">
-                          <div class="form-group">
-                          <label>FECHA DE INGRESO:</label>
-                    <input readonly name="fecha_inicio" class="form-control" id="current_date"/>
-                        
-                                    </div>
-                         
-<!-- /.col -->
-</div>
-<!-- /.row -->
+                             
+
                                      <!-- Date -->
                 
 <script>

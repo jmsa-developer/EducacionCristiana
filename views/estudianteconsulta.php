@@ -63,19 +63,19 @@
                       </td>
                       <td>
                           <a>
-                               ".$estudiante->nombre."
+                               ".$estudiante->apellido."
                           </a>
 
                       </td>
                       <td>
                           <a>
-                               ".$estudiante->nombre."
+                               ".$estudiante->cedula."
                           </a>
 
                       </td>
                       <td>
                           <a>
-                               ".$estudiante->nombre."
+                               ".$estudiante->telefono."
                           </a>
 
                       </td>
@@ -125,3 +125,10 @@
   </div>
   <!-- /.content-wrapper -->
   <script src="public/dist/js/consulta.js"></script>
+<script>
+date = new Date();
+year = date.getFullYear();
+month = date.getMonth() + 1;
+day = date.getDate();
+document.getElementById("current_date").value = year + "/" +  month+ "/" + day;
+</script

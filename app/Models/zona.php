@@ -3,11 +3,13 @@
 namespace App\Models;
 
 use App\BaseModel;
+use App\BitacoraTrait;
 
 class zona extends BaseModel
 {
 
-    public $nombre;
+    public $direccion;
+    public $zona;
     public $borrado;
 
 

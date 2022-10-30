@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\BaseModel;
-
+use App\BitacoraTrait;
 class Rol_Permiso extends BaseModel
 {
     public $rol_id;
