@@ -6,10 +6,11 @@ use App\Models\Estudiante;
 use App\Models\Ministerio;
 use App\Models\Pastor;
 use App\Models\zona;
-use App\Models\ubicacion;
+
 
 class EstudianteForm extends Model
 {
+
     public $nombre;
     public $apellido;
     public $cedula;
