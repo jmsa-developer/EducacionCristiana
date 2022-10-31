@@ -10,10 +10,12 @@ use App\Models\Estudiante;
 use App\Models\Ministerio;
 use App\Models\Usuario;
 use App\Models\educativo;
-use App\Models\consultaestudiante;
+use App\Models\Zona;
+use App\Models\Pastor;
 use App\Session;
 use App\View;
 use App\Models\Estudianteconsulta;
+use App\Models\Estudianteeliminar;
 
 // Controlador principal de la aplicacion
 class AppController extends BaseController
@@ -149,11 +151,17 @@ class AppController extends BaseController
     {
         $id = $_GET['id'];
         $estudiante = Estudiante::get()->where(['id'=>$id])->one();
-
+        $zona = Zona::get()->where(['id'=>$id])->one();
+        $ministerio = Ministerio::get()->where(['id'=>$id])->one();
+        $pastor = Pastor::get()->where(['id'=>$id])->one();
         if($estudiante){
 
             View::render('estudiantemodificar.php',[
-                'estudiante'=>$estudiante
+                'estudiante'=>$estudiante,
+                    'zona'=>$zona,
+                'ministerio'=>$ministerio,
+                'pastor'=>$pastor
+
             ]);
         }
 
@@ -165,9 +173,11 @@ class AppController extends BaseController
     public function estudianteconsultaAction()
     {
         $estudiantes = Estudiante::get()->all();
+        $zona = Zona::get()->all();
 
         View::render('estudianteconsulta.php',[
-            'estudiantes'=>$estudiantes
+            'estudiantes'=>$estudiantes,
+            'zona'=>$zona
         ]);
     }
 
@@ -201,5 +211,28 @@ class AppController extends BaseController
 
 
         View::render('reporte.php');
+
     }
+    public function estudianteeliminarAction()
+    {
+        $id = $_GET['id'];
+        $estudiante = Estudiante::get()->where(['id'=>$id])->one();
+        $zona = Zona::get()->where(['id'=>$id])->one();
+        $ministerio = Ministerio::get()->where(['id'=>$id])->one();
+        $pastor = Pastor::get()->where(['id'=>$id])->one();
+        if($estudiante){
+
+            View::render('estudianteeliminar.php',[
+                'estudiante'=>$estudiante,
+                    'zona'=>$zona,
+                'ministerio'=>$ministerio,
+                'pastor'=>$pastor
+
+            ]);
+        }
+
+        View::redirect('/app/index');
+
+    }
+
 }

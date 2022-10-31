@@ -41,15 +41,15 @@
                 <div class="form-group">
                   <label>NOMBRE</label>
                                  
-                 <input readonly type="text" class="form-control"name="nombre" id="nombre" maxlength="20" placeholder="Ingrese nombre" required/> <max 30
-                            characters a-z A-Z>
-                </div>
+                 <input readonly type="text" class="form-control"name="nombre" id="nombre" maxlength="20" 
+                 placeholder="Ingrese nombre" value="<?= $estudiante->nombre; ?>"/>                                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   
                       <label>CEDULA</label>
                   
-                   <input readonly type="text"  class="form-control" name="cedula" id="cedula" placeholder="Ingrese  cedula" required/>
+                   <input readonly type="text"  class="form-control" name="cedula" id="cedula" 
+                   placeholder="Ingrese  cedula" value="<?= $estudiante->cedula; ?>"/>               
                     
       
                   </div>
@@ -60,14 +60,15 @@
                   <div class="form-group">
                         <label>APELLIDOS</label>
                                         
-                <input readonly type="text" class="form-control" name="apellido" id="apellido" maxlength="30" placeholder="Ingrese apellido"  required  value="<?= $estudiante->nombre; ?>/> 
+                <input readonly type="text" class="form-control" name="apellido" id="apellido" maxlength="30" 
+                placeholder="Ingrese apellido"   value="<?= $estudiante->apellido; ?>/> 
                                  </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
                         <label>TELEFONO</label>
-                        <input readonly type="text" class="form-control" name="telefono" id="telefono"  placeholder="Ingrese telefono" data-inputmask='"mask": "(9999) 999-9999"' data-mask required>
-                          <max 11
-                          characters 0-9>
+                        <input readonly type="text" class="form-control" name="telefono" id="telefono" placeholder="Ingrese telefono" 
+                        data-inputmask='"mask": "(9999) 999-9999"'  value="<?= $estudiante->telefono; ?>"/>               
+                      
                         </div>
                       </div>
                   
@@ -79,14 +80,15 @@
                 <div class="form-group">
                 <label>DIRECCION</label>
                 
-                <input readonly type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion" required/> <max 30
-                    characters a-z A-Z>
+                <input readonly type="text"class="form-control" name="direccion" id="direccion" 
+                maxlength="30" placeholder="ingrese direccion" value="<?= $zona->direccion; ?>"/>               
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   
                 <label>Email</label>
-                            <inpu readonly type="email" class="form-control" name="email" id="email" placeholder="Enter email address" required>
+                            <inpu readonly type="email" class="form-control" name="email" id="email" placeholder="Enter email address"
+                             value="<?= $estudiante->email; ?>"/>               
                          
       
                   </div>
@@ -97,7 +99,8 @@
                   <div class="form-group">
                   <label>ZONA</label>
                   
-                  <input readonly type="text"  class="form-control" name="zona" id="zona" placeholder="Ingrese  zona" required/>
+                  <input readonly type="text"  class="form-control" name="zona" id="zona" 
+                  placeholder="Ingrese  zona" value="<?= $zona->zona; ?>"/>               
                    
                                 </div>
                                 <!-- /.form-group -->
@@ -108,7 +111,8 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input  readonly type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask required>
+                    <input  readonly type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento"
+                      data-inputmask-inputformat="dd/mm/yyyy" data-mask value="<?= $estudiante->fecha_inicio; ?>"/>               
                   
                         </div>
                     </div>
@@ -125,21 +129,8 @@
                           <label>NOMBRE DEL MINISTERIO </label>
         
         <select readonly class="form-control" id="nombre_m" name="nombre_m"  data-placeholder="Selecciona"
-      style="width: 100%;"required>
-<option>selecciona</option>
-<option>Ministrio Iglekids</option>
-<option>ministerio para Jovenes</option>
-<option>Ministerio para Matrimonios</option>
-<option>Ministerio para la Familia</option>
-<option>Viña Loma 1</option>
-<option>Viña Loma 2</option>
-<option>Viña Centro</option>
-<option>Viña los Pocitos</option>
-<option>Viña Pavia</option>
-<option>Viña Cuji</option>
-<option>Viña Curariguita</option>
-<option>Viña Puerto Ordaz</option>
-<option>Viña Sagrada Familia</option>
+      style="width: 100%;"value="<?= $ministerio->nombre_m; ?>">               
+
 </select>
                               </div>
                               <!-- /.form-group -->
@@ -149,7 +140,8 @@
                               <div class="form-group">
                               <label>LIDER DEL GRUPO</label>
                     
-                    <input readonly type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" required/>                     characters a-z A-Z>
+                    <input readonly type="text"class="form-control" name="lider_gdc" id="lider_gdc"
+                     maxlength="30" placeholder="ingrese lider del grupo" value="<?= $ministerio->lider_gdc; ?>"/>                                 
                               
                                 
                               
@@ -162,7 +154,8 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <label>Lider del Ministerio</label>
-                            <input readonly type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="Enter email address" required>                          </div>
+                            <input readonly type="text" class="form-control" name="lider_ministerio" 
+                            id="lider_ministerio" placeholder="Enter lider ministerio" value="<?= $ministerio->lider_ministerio; ?>"/>                                         </div>
                                           <!-- /.form group -->
                                           
                 <!-- Date dd/mm/yyyy -->
@@ -170,7 +163,7 @@
                 <label>TURNO</label>
                       
                       <select readonly class="form-control"  id="turno" name="turno" data-placeholder="Selecciona"
-            style="width: 100%;" required>
+            style="width: 100%;" value="<?= $estudiante->email; ?>">         
       <option>selecciona</option>
       <option>1er</option>
       <option>2do</option>
@@ -195,11 +188,8 @@
                               <label>PASTOR</label>
                       
                               <select readonly class="form-control"  id="pastor" name="pastor" data-placeholder="Selecciona"
-            style="width: 100%;" required>
-      <option>selecciona</option>
-      <option>Carlos Yépez</option>
-      <option>Julio Sivira</option>
-      <option>Angel Suarez</option>
+            style="width: 100%;" value="<?= $pastor->pastor; ?>">               
+   
       
     </select>
                                   </div>
@@ -214,7 +204,8 @@
                               <div class="form-group">
                               <label>GDC</label>
                     
-                    <input readonly type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" required/>                                       
+                    <input readonly type="text"class="form-control" name="gdc" id="gdc" maxlength="30" 
+                    placeholder="ingrese gdc" value="<?= $ministerio->gdc; ?>"/>                                                
                     </div> 
                               
                             </div>
@@ -227,7 +218,7 @@
 <script>
    $(function () {
       //Money Euro
-      $('[data-mask]').inputmask()
+      $('[data-mask]').inputmask())
 }
 date = new Date();
 year = date.getFullYear();
