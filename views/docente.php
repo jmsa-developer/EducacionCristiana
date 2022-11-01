@@ -198,7 +198,7 @@
 
 
                              <div class="form-group">
-                <label>PASTOR</label>
+                <label>PASTOR</label> 
                       
                       <select class="form-control"  id="pastor" name="pastor" data-placeholder="Selecciona"
             style="width: 100%;">
