@@ -48,40 +48,19 @@
                 </div>
               </div> 
                 </div>
-                <!-- /.card-body -->
-
                 
-              
             </div>
-            <!-- /.card -->
-
-            
-            
-            <!-- /.card -->
 
           </div>
-          <!--/.col (left) -->
-          <!-- right column -->
-          
-          
-            
-              
+    
                     </div>
        
                     <div class="card-footer">
                       <button type="submit" class="btn btn-primary">Submit</button>
                     </div> 
-                 
-                   
-                  
-
                       </div>
                     </div>
                   </div>
-
-              
-                              
-             
               </div>
               
               <!-- /.card-body -->
