@@ -2,7 +2,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.php">Educación Cristiana</a></h1>
+      <h1 class="logo"><a href="index.php">Dirección de Educación Cristiana</a></h1>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -32,17 +32,17 @@
           <div class="icon d-flex align-items-center justify-content-center">
             <span class="ion-ios-person"></span>
           </div>
-          <h3 class="text-center mb-4">Sign In</h3>
+          <h3 class="text-center mb-4">Bienvenidos</h3>
           <form class="login-form" method="post">
             <div class="form-group">
-              <input type="text" class="form-control rounded-left" placeholder="Username" name="username">
+              <input type="text" class="form-control rounded-left" placeholder="Ussuario" name="username">
             </div>
             <div class="form-group d-flex">
-              <input type="password" class="form-control rounded-left" placeholder="Password" name="password">
+              <input type="password" class="form-control rounded-left" placeholder="Contraseña" name="password">
             </div>
 
             <div class="form-group">
-              <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
+              <button type="submit" class="form-control btn btn-primary rounded submit px-3">Entrar</button>
             </div>
             <div class="form-group d-md-flex">
               <div class="form-check w-50">
@@ -59,7 +59,7 @@
           </form>
         </div>
         <div class="modal-footer justify-content-center">
-          <p>Not a member? <a href="user/registeruser">Create an account</a></p>
+          <p>Has olvidado tu contraseña?    <a href="user/registeruser">Ingresa Aquí</a></p>
         </div>
       </div>
     </div>
