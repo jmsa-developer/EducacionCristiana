@@ -108,130 +108,7 @@
                   </div>
                 </div>
                     <!-- /.form-group -->
-            </div>
-            <br>
-            
-            <div class="row">
-            <div class="col-sm-6">
-              <div class="form-group">
-                <h1>Estudiantes</h1>
-              </div>
-            </div>
-            </div>
-            <br>
-        <div class="row">
-          <div class="col-md-4">
-            <!-- Widget: user widget style 2 -->
-            <div class="card card-widget widget-user-2">
-              <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header bg-info">
-                <div class="widget-user-image">
-                  <img class="img-circle elevation-2" src="public/dist/img/yurmi.jpg" alt="User Avatar">
-                </div>
-                <!-- /.widget-user-image -->
-                <h3 class="widget-user-username">Yurmi Figueroa</h3>
-                <h5 class="widget-user-desc">Estudiante</h5>
-              </div>
-              <div class="card-footer p-0">
-                <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      Seleccionar <span class="float-right badge bg-primary" ><input type="checkbox"  id="checkboxDanger6"></span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      Ubicación: 
-                      <p>Florencio Jimenez Sector 2</p>
-                    </a>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-            <!-- /.widget-user -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-4">
-            <!-- Widget: user widget style 1 -->
-            <div class="card card-widget widget-user-2">
-              <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header bg-info">
-                <div class="widget-user-image">
-                  <img class="img-circle elevation-2" src="public/dist/img/carlyn.jpg" alt="User Avatar">
-                </div>
-                <!-- /.widget-user-image -->
-                <h3 class="widget-user-username">Carlyn Yépez</h3>
-                <h5 class="widget-user-desc">Estudiante</h5>
-              </div>
-              <div class="card-footer p-0">
-                <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                    Seleccionar <span class="float-right badge bg-primary" ><input type="checkbox"  id="checkboxDanger6"></span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      Ubicación: 
-                      <p>Florencio Jimenez Sector 2</p>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- /.widget-user -->
-          </div>
-          <!-- /.col -->
-          <div class="col-md-4">
-            <!-- Widget: user widget style 1 -->
-            <div class="card card-widget widget-user-2">
-              <!-- Add the bg color to the header using any of the bg-* classes -->
-              <div class="widget-user-header bg-info">
-                <div class="widget-user-image">
-                  <img class="img-circle elevation-2" src="public/dist/img/user7-128x128.jpg" alt="User Avatar">
-                </div>
-                <!-- /.widget-user-image -->
-                <h3 class="widget-user-username">Nadia Carmichael</h3>
-                <h5 class="widget-user-desc">Estudiante</h5>
-              </div>
-              <div class="card-footer p-0">
-                <ul class="nav flex-column">
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                    Seleccionar <span class="float-right badge bg-primary" ><input type="checkbox"  id="checkboxDanger6"></span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      Ubicación: 
-                      <p>Florencio Jimenez Sector 2</p>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- /.widget-user -->
-          </div>
-
-
-          <!-- /.col -->
-        </div>
-                      <!-- /.col -->
-
-                      <!-- /.col -->
-                      <br>
-            <div class="row">
-            <div class="col-sm-6">
-            <div class="form-group">
-                        <label>NUMERO DE ESTUDIANTES =</label>
-                                  <tr>
-                        <td><input type="text" class="form-control" maxlength="20" placeholder="Ingrese nuemro de estudiantes" name="nombre" id="nombre" /> <max 30
-                        characters a-z A-Z></td>
-                    </div>
-            </div>
-            </div>
-            <br>                    
+            </div>                   
   
             <!-- /.row -->
             <div class="row">
@@ -367,6 +244,12 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
                   <button type="reset" class="btn btn-warning col cancel">
                     <i class="fas fa-times-circle"></i>
                     <span>LIMPIAR</span>
+                  </button>
+                  <button  class="btn btn-success col fileinput-button">
+                    <a href="grupoasignacionest/registro" class="" style="color:#FFF;">
+                    <i class="fas fa-arrow-right"></i>
+                    <span>SIGUENTE</span>
+                    </a>
                   </button>
                 </div>
               </div>

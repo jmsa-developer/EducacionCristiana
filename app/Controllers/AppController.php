@@ -116,6 +116,19 @@ class AppController extends BaseController
 
         View::render('grupoasignacion.php');
     }
+    public function grupoasignacionestAction()
+    {
+        $grupoasignacionest = new GrupoAsignacionEstForm();
+        if ($grupoasignacionest->load($this->post)) {
+            $grupoasignacionest->register();
+
+            View::redirect('/app/index');
+        }
+
+
+        View::render('grupoasignacionest.php');
+    }
+
 
     public function evaluacionesAction()
     {
