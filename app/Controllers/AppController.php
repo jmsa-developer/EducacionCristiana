@@ -12,6 +12,7 @@ use App\Models\Usuario;
 use App\Models\educativo;
 use App\Models\Zona;
 use App\Models\Pastor;
+use App\Models\Bitacora;
 use App\Session;
 use App\View;
 use App\Models\Estudianteconsulta;
@@ -25,21 +26,7 @@ class AppController extends BaseController
     {
         View::render('plantilla.php');
     }
-    public function consultaestudianteAction()
-    {
-        if ($this->isPost()) {
-
-            $evaluaciones = new evaluaciones();
-            $evaluaciones->name = $this->post['name'];
-            $evaluaciones->cedula = $this->post['cedula'];
-            $evaluaciones->save();
-
-            View::redirect('/user/login');
-        }
-
-
-        View::render('consultaestudiante.php');
-    }
+  
     public function registerAction()
     {
         if ($this->isPost()) {
@@ -213,7 +200,21 @@ class AppController extends BaseController
         View::render('reporte.php');
 
     }
-    public function estudianteeliminarAction()
+    public function bitacoraAction()
+    {
+        $bitacora = Bitacora::get()->all();
+    {
+        View::render('bitacora.php',[
+            'bitacora'=>$bitacora
+        ]);
+
+            View::redirect('/user/login');
+        
+} View::render('bitacora.php');
+
+    }
+
+    public function estudianteeliminarAction  ()
     {
         $id = $_GET['id'];
         $estudiante = Estudiante::get()->where(['id'=>$id])->one();

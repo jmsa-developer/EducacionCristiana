@@ -16,6 +16,8 @@ trait BitacoraTrait
         $bitacora->accion = $accion;
         $bitacora->url = $_GET['route'];
         $bitacora->modelo = $modelo;
+        $bitacora->hora = $hora;
+        $bitacora->fecha = $fecha;
         $bitacora->save();
     }
 
