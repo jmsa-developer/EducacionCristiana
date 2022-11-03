@@ -13,6 +13,7 @@ class Bitacora extends BaseModel
     public $accion;
     public $resultado;
     public $modelo;
-
+    public $hora;
+    public $fecha;
 
 }

@@ -3,24 +3,22 @@ namespace App\Controllers;
 
 use App\View;
  use App\Models\Bitacora;
+ 
 	class Bitacoracontroller extends BaseModel
 	
-		
-		
-		public function BitacoraAction()
-	
+    public function bitacoraAction()
     {
-        if ($this->isPost()) {
-
-            $calificaciones = new calificaciones();
-            $calificaciones->name = $this->post['name'];
-            $calificaciones->cedula = $this->post['cedula'];
-            $calificaciones->save();
+        $bitacora = Bitacora::get()->all();
+    {
+        View::render('bitacora.php',[
+            'bitacora'=>$bitacora
+        ]);
 
             View::redirect('/user/login');
-        }
-
-
-        View::render('bitacora.php');
+        
+} 
 
     }
+
+		
+		

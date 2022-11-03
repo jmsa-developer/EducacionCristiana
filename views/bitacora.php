@@ -33,6 +33,7 @@
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
                   <tr>
+                  <th>#</th>
                     <th>usuario</th>
                     <th>url</th>
                     <th>accion</th>
@@ -43,45 +44,60 @@
                   </thead>
                   <tbody>
                   <?php
-                    foreach ($estudiantes as $key => $estudiante){
+                    foreach ($bitacora as $key => $bitacora){
                         $i = $key + 1 ;
-                        echo
-                  <tr>
-                    <td><a>
-                    ".$bitacora->user_id."
-                </a></td>
-                    <td><a>
-                    ".$bitacora->url."
-                </a>
-                    </td>
-                    <td><a>
-                    ".$bitacora->accion."
-                </a></td>
-                    <td> <a>
-                    ".$bitacora->modelo."
-                </a></td>
-                    <td><a>
-                    ".$bitacora->hora."
-                </a></td>
-                <td><a>
-                    ".$bitacora->fecha."
-                </a></td>
-                  </tr>;
+                        echo "<tr> 
+                       <td>
+                         $i
+                      </td>
+                      <td>
+                          <a>
+                              ".$bitacora->user_id."
+                          </a>
 
-                }
+                      </td>
+                      <td>
+                          <a>
+                               ".$bitacora->url."
+                          </a>
 
-              ?>
-                  
+                      </td>
+                      <td>
+                          <a>
+                               ".$bitacora->accion."
+                          </a>
+
+                      </td>
+                      <td>
+                          <a>
+                               ".$bitacora->modelo."
+                          </a>
+
+                      </td>
+                      <td>
+                          <a>
+                               ".$bitacora->hora."
+                          </a>
+
+                      </td>
+                      <td>
+                          <a>
+                               ".$bitacora->fecha."
+                          </a>
+
+                      </td>
+                      
+                      </tr>";
+
+                    }
+
+                  ?>
+
+
+
+                
                   </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>Rendering engine</th>
-                    <th>Browser</th>
-                    <th>Platform(s)</th>
-                    <th>Engine version</th>
-                    <th>CSS grade</th>
-                  </tr>
-                  </tfoot>
+                  
                 </table>
               </div>
               <!-- /.card-body -->
@@ -108,20 +124,3 @@
 <!-- ./wrapper -->
 
 
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-</script>

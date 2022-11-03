@@ -213,20 +213,7 @@ class AppController extends BaseController
         View::render('reporte.php');
 
     }
-    public function bitacoraAction()
-    {
-        $bitacora = Bitacora::get()->all();
-    {
-        View::render('bitacora.php',[
-            'bitacora'=>$bitacora
-        ]);
-
-            View::redirect('/user/login');
-        
-} View::render('bitacora.php');
-
-    }
-
+   
     public function estudianteeliminarAction  ()
     {
         $id = $_GET['id'];
