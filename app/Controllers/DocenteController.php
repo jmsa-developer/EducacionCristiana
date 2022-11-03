@@ -27,5 +27,14 @@ class DocenteController extends BaseController
         View::render('docente.php');
     }
 
+    public function consultaAction()
+    {
+        $docentes = Docente::get()->all();
+
+        View::render('docenteconsulta.php',[
+            'docentes'=>$docentes,
+        ]);
+    }
+
  
 }

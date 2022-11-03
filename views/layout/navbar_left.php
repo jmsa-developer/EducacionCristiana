@@ -93,7 +93,7 @@ use App\Access;
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/charts/flot.html" class="nav-link">
+                            <a href="docente/consulta" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Consultar Docente</p>
                             </a>
