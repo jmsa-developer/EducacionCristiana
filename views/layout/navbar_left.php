@@ -116,7 +116,7 @@ use App\Access;
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="app/estudianteconsulta" class="nav-link">
+                            <a href="estudiante/consulta" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Consultar Estudiante</p>
                             </a>

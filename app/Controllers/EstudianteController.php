@@ -40,5 +40,16 @@ class EstudianteController extends BaseController
         
 }
 
+public function consultaAction()
+{
+    $estudiantes = Estudiante::get()->all();
+    //$zona = Zona::get()->all();
+
+    View::render('estudianteconsulta.php',[
+        'estudiantes'=>$estudiantes,
+      //  'zona'=>$zona
+    ]);
+}
+
  
 }

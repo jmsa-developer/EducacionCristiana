@@ -170,16 +170,7 @@ class AppController extends BaseController
 
     }
 
-    public function estudianteconsultaAction()
-    {
-        $estudiantes = Estudiante::get()->all();
-        $zona = Zona::get()->all();
 
-        View::render('estudianteconsulta.php',[
-            'estudiantes'=>$estudiantes,
-            'zona'=>$zona
-        ]);
-    }
 
 
 
