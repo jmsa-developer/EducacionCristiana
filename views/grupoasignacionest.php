@@ -173,12 +173,11 @@
             <div id="actions" class="row">
               <div class="col-lg-6">
                 <div class="btn-group w-100">
-                <button  class="btn btn-success col fileinput-button">
-                    <a href="grupoasignacion/registro" class="" style="color:#FFF;">
-                    <i class="fas fa-left-long"></i>
-                    <span>ATRÁS</span>
-                    </a>
-                  </button>
+                <a class="btn btn-success col fileinput-button" href='grupoasignacion/registro'>
+                <i class="fas fa-left-long"></i>  
+                <span>ATRÁS</span>
+                 </a>
+                
                   <button type="submit" class="btn btn-primary col start">
                     <i class="fas fa-upload"></i>
                     <span>GUARDAR</span>

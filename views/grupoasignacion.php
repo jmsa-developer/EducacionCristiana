@@ -245,12 +245,11 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
                     <i class="fas fa-times-circle"></i>
                     <span>LIMPIAR</span>
                   </button>
-                  <button  class="btn btn-success col fileinput-button">
-                    <a href="grupoasignacionest/registro" class="" style="color:#FFF;">
-                    <i class="fas fa-arrow-right"></i>
-                    <span>SIGUENTE</span>
-                    </a>
-                  </button>
+                  <a class="btn btn-success col fileinput-button" href='grupoasignacionest/registro'>
+                  <i class="fas fa-arrow-right"></i>
+                          <span>SIGUENTE</span>
+                      </a>
+                  
                 </div>
               </div>
           <!-- /.card-body -->
