@@ -36,7 +36,9 @@
 <script src="public/dist/js/pages/dashboard.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
-<!-- Summernote -->
-<script src="public/plugins/summernote/summernote-bs4.min.js"></script>
+<!-- fullCalendar 2.2.5 -->
+<script src="public/plugins/moment/moment.min.js"></script>
+<script src="public/plugins/fullcalendar/main.js"></script>
+
 
 

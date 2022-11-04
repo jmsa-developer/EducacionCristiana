@@ -14,7 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Educación Cristiana</title>
 
-    <!-- Google Font: Source Sans Pro -->
+  <!-- fullCalendar -->
+  <link rel="stylesheet" href="public/plugins/fullcalendar/main.css">
+   <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
