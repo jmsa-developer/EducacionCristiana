@@ -8,6 +8,7 @@ use App\Session;
 
 class Estudiante extends Persona
 {
+    use BitacoraTrait;
 
     public $pastor_id;
     public $ministerio_id;

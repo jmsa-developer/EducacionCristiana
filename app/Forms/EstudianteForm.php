@@ -22,45 +22,31 @@ class EstudianteForm extends Model
     public $zona;
     public $nombre_m;
     public $turno;
-    public $pastor;
+    public $pastor_id;
     public $lider_gdc;
     public $lider_ministerio;
     public $gdc;
+    public $ministerio_id;
 
 
 
     public function register(){
 
-        $pastor = new Pastor();
-        $pastor->nombre = $this->pastor;
-          $pastor_id = $pastor->save();
-
-       
-
-
-
 
         $zona = new zona();
         $zona->direccion = $this->direccion;
         $zona->zona = $this->zona;
-          
+
         $zona_id = $zona->save();
-
-
-        $ministerio = new Ministerio();
-        $ministerio->nombre_m = $this->nombre_m;
-        $ministerio->lider_ministerio = $this->lider_ministerio;
-       $ministerio->gdc = $this->gdc;
-        $ministerio->lider_gdc = $this->lider_gdc;
-        $ministerio_id = $ministerio->save();
 
 
         $estudiante = new Estudiante();
         $estudiante->load($this->data);
-        $estudiante->pastor_id = $pastor_id;
-        $estudiante->ministerio_id = $ministerio_id;
+        $estudiante->fecha_inicio = date('d-m-Y');
         $estudiante->zona_id = $zona_id;
         $estudiante->estado_id = 0;
+
+
         
         $estudiante->save();
 
