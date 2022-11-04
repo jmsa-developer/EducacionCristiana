@@ -121,7 +121,7 @@
                            
                           <label>NOMBRE DEL MINISTERIO </label>
         
-        <select class="form-control" id="nombre_m" name="nombre_m" data-placeholder="yurmi" style="width: 100%;" required>
+        <select class="form-control" id="ministerio_id" name="ministerio_id" data-placeholder="yurmi" style="width: 100%;" required>
         <?= $ministeriosOptions ?>
 </select>
                               </div>
@@ -173,7 +173,7 @@
                                
                               <label>PASTOR </label>
                       
-                              <select class="form-control"  id="pastor" name="pastor" 
+                              <select class="form-control"  id="pastor_id" name="pastor_id"
             style="width: 100%;" required>
         <?= $pastoresOptions ?>
     </select>
