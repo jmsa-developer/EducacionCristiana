@@ -200,7 +200,7 @@
                              <div class="form-group">
                 <label>PASTOR</label> 
                       
-                      <select class="form-control"  id="pastor" name="pastor" data-placeholder="Selecciona"
+                      <select class="form-control"  id="pastor_id" name="pastor_id" data-placeholder="Selecciona"
             style="width: 100%;">
             <?= $pastoresOptions ?>
       

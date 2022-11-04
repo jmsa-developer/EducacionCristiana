@@ -18,7 +18,7 @@ class DocenteForm extends Model
     public $direccion;
     public $nombre_m;
    // public $turno;
-    public $pastor;
+    public $pastor_id;
     public $lider_ministerio;
     public $gdc;
     public $lider_gdc;
@@ -29,10 +29,7 @@ class DocenteForm extends Model
 
     public function register(){
 
-        $pastor = new Pastor();
-        $pastor->nombre = $this->pastor;
-      
-        $pastor_id = $pastor->save();
+
 
         $ministerio = new Ministerio();
         $ministerio->nombre_m = $this->nombre_m;
@@ -44,7 +41,6 @@ class DocenteForm extends Model
 
         $docente = new Docente();
         $docente->load($this->data);
-        $docente->pastor_id = $pastor_id;
         $docente->ministerio_id = $ministerio_id;
         $docente->save();
 
