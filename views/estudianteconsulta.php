@@ -124,7 +124,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <script src="public/dist/js/consulta.js"></script>
+
 <script>
 date = new Date();
 year = date.getFullYear();

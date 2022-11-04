@@ -115,9 +115,9 @@
 
 
 
-<script src="../../public/plugins/summernote/summernote-bs4.min.js"></script>
 
 <script>
+
   $(function () {
     // Summernote
     $('#summernote').summernote()
@@ -126,3 +126,6 @@
   })
 </script>
 <!-- Page specific script -->
+<!-- fullCalendar -->
+<link rel="stylesheet" href="public/plugins/fullcalendar/main.css">
+ 
