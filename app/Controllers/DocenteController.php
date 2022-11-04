@@ -24,8 +24,22 @@ class DocenteController extends BaseController
         }
 
 
-        View::render('docente.php');
-    }
+    
+
+
+    $pastores = Pastor::get()->all();
+    $ministerios = Ministerio::get()->all();
+
+    $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre','turno']);
+    $ministeriosOptions = Util::renderOptions($ministerios, 'id', 'nombre_m');
+
+    View::render('estudiante.php',[
+        'pastoresOptions' => $pastoresOptions,
+        'ministeriosOptions'=>$ministeriosOptions
+    ]);
+
+}
+
 
     public function consultaAction()
     {
