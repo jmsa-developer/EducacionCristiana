@@ -5,7 +5,9 @@ namespace App\Controllers;
 use App\Forms\DocenteForm;
 use App\Models\Docente;
 use App\Models\Ministerio;
+use App\Models\Pastor;
 use App\Models\Usuario;
+use App\Util;
 use App\View;
 
 // Controlador principal de la aplicacion
