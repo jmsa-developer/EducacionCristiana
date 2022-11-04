@@ -16,6 +16,8 @@ class Estudiante extends Persona
     public $zona_id;
 
     public $ministerio;
+    public $zona;
+    public $pastor;
 
 
     public function loadRelations(){
@@ -23,9 +25,14 @@ class Estudiante extends Persona
         if($this->ministerio_id){
             $this->ministerio = Ministerio::get()->where(['id'=>$this->ministerio_id])->one();
         }
-     
 
+        if($this->zona_id){
+            $this->zona = Zona::get()->where(['id'=>$this->zona_id])->one();
+        }
 
+        if($this->pastor_id){
+            $this->pastor = Pastor::get()->where(['id'=>$this->pastor_id])->one();
+        }
 
 
     }

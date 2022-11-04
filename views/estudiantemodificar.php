@@ -78,9 +78,9 @@
               <div class="col-md-6">
                 <div class="form-group">
                 <label>DIRECCION</label>
-                
+
                 <input type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion"
-                 required value="<?= $zona->direccion;?>"/>               
+                 required value="<?= $estudiante->zona->direccion;?>"/>
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
@@ -99,7 +99,7 @@
                   <label>ZONA</label>
                   
                   <input type="text"  class="form-control" name="zona" id="zona" placeholder="Ingrese  zona"
-                   required value="<?= $zona->zona; ?>"/>               
+                   required value="<?= $estudiante->zona->zona; ?>"/>
                    
                                 </div>
                                 <!-- /.form-group -->
@@ -128,7 +128,7 @@
                           <label>NOMBRE DEL MINISTERIO </label>
         
         <select class="form-control" id="nombre_m" name="nombre_m"  placeholder="Selecciona"
-      style="width: 100%;" value="<?= $ministerio->nombre_m; ?>"/>               >
+      style="width: 100%;" value="<?= $estudiante->ministerio->nombre_m; ?>"/>               >
       <?= $ministeriosOptions ?>
 </select>
                               </div>
@@ -139,7 +139,7 @@
                               <div class="form-group">
                               <label>LIDER DEL GRUPO</label>
                     
-                    <input type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" required value="<?= $ministerio->lider_gdc; ?>"/>                
+                    <input type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" required value="<?= $estudiante->ministerio->lider_gdc; ?>"/>
                               
                                 
                               
@@ -152,7 +152,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <label>Lider del Ministerio</label>
-                            <input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="ingrese lider ministerio" required value="<?= $ministerio->lider_ministerio;?>"/>        
+                            <input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="ingrese lider ministerio" required value="<?= $estudiante->ministerio->lider_ministerio;?>"/>
                           </div>
                                           <!-- /.form group -->
                                           
@@ -160,7 +160,7 @@
                 <div class="form-group">
                 <label>GDC</label>
                     
-                    <input type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" required value="<?= $ministerio->gdc; ?>"/>                                                      
+                    <input type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" required value="<?= $estudiante->ministerio->gdc; ?>"/>
                     
                     
 
