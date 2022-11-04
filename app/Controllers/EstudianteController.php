@@ -8,6 +8,7 @@ use App\Models\Ministerio;
 use App\Models\Pastor;
 use App\Models\Usuario;
 
+use App\Session;
 use App\Util;
 use App\View;
 
@@ -22,6 +23,7 @@ class EstudianteController extends BaseController
         $estudiante = new EstudianteForm();
         if ($estudiante->load($this->post)) {
             $estudiante->register();
+            Session::set('message',['type' => 'success','message'=>'Estudiante registrado correctamente']);
 
             View::redirect('/app/index');
         }
@@ -38,6 +40,17 @@ class EstudianteController extends BaseController
         ]);
     
         
+}
+
+public function consultaAction()
+{
+    $estudiantes = Estudiante::get()->all();
+    //$zona = Zona::get()->all();
+
+    View::render('estudianteconsulta.php',[
+        'estudiantes'=>$estudiantes,
+      //  'zona'=>$zona
+    ]);
 }
 
  

@@ -7,7 +7,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>ESTUDIANTE</h1>
+            <h1>MODIFICAR ESTUDIANTE</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -40,15 +40,16 @@
               <div class="col-md-6">
                 <div class="form-group">
                   <label>NOMBRE</label>
-                                 
-                 <input type="text" class="form-control" name="nombre" id="nombre" maxlength="20" placeholder="Ingrese nombre" required/> 
-                </div>
+
+                 <input type="text" class="form-control"name="nombre" id="nombre" maxlength="20" placeholder="Ingrese nombre" 
+                 required value="<?= $estudiante->nombre; ?>"/>               
+              </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   
                       <label>CEDULA</label>
                   
-                   <input type="text"  class="form-control" name="cedula" id="cedula" placeholder="Ingrese  cedula" required/>
+                   <input type="text"  class="form-control" name="cedula" id="cedula" placeholder="Ingrese  cedula" required value="<?= $estudiante->cedula; ?>"/>               
                     
       
                   </div>
@@ -59,12 +60,14 @@
                   <div class="form-group">
                         <label>APELLIDOS</label>
                                         
-                <input type="text" class="form-control" name="apellido" id="apellido" maxlength="30" placeholder="Ingrese apellido" required/> 
+                <input type="text" class="form-control" name="apellido" id="apellido" maxlength="30" placeholder="Ingrese apellido" required value="<?= $estudiante->apellido; ?>"/>                <max 40
+                                  characters a-z A-Z>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
                         <label>TELEFONO</label>
-                        <input type="text" class="form-control" name="telefono" id="telefono" data-inputmask='"mask": "(9999) 999-9999"' placeholder="Ingrese telefono" data-mask required/>                      
+                        <input type="text" class="form-control" name="telefono" id="telefono"  placeholder="Ingrese telefono" data-inputmask='"mask": "(9999) 999-9999"' data-mask required value="<?= $estudiante->nombre; ?>"/>                                         <max 11
+                          characters 0-9>
                         </div>
                       </div>
                   
@@ -75,15 +78,16 @@
               <div class="col-md-6">
                 <div class="form-group">
                 <label>DIRECCION</label>
-                
-                <input type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion" required/> <max 30
-                    characters a-z A-Z>
+
+                <input type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion"
+                 required value="<?= $estudiante->zona->direccion;?>"/>
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                   
                 <label>Email</label>
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email address" required/>
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter email address"
+                             required value="<?= $estudiante->email; ?>"/>               
                          
       
                   </div>
@@ -94,7 +98,8 @@
                   <div class="form-group">
                   <label>ZONA</label>
                   
-                  <input type="text"  class="form-control" name="zona" id="zona" placeholder="Ingrese  zona" required/>
+                  <input type="text"  class="form-control" name="zona" id="zona" placeholder="Ingrese  zona"
+                   required value="<?= $estudiante->zona->zona; ?>"/>
                    
                                 </div>
                                 <!-- /.form-group -->
@@ -105,7 +110,8 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" data-inputmask-alias="datetime" data-inputmask-inputformat="yyyy/mm/dd" data-mask required/>
+                    <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" required  
+                     value="<?= $estudiante->fecha_inicio; ?>"/>               
                   
                         </div>
                     </div>
@@ -121,8 +127,9 @@
                            
                           <label>NOMBRE DEL MINISTERIO </label>
         
-        <select class="form-control" id="ministerio_id" name="ministerio_id" data-placeholder="yurmi" style="width: 100%;" required>
-        <?= $ministeriosOptions ?>
+        <select class="form-control" id="nombre_m" name="nombre_m"  placeholder="Selecciona"
+      style="width: 100%;" value="<?= $estudiante->ministerio->nombre_m; ?>"/>               >
+      <?= $ministeriosOptions ?>
 </select>
                               </div>
                               <!-- /.form-group -->
@@ -132,12 +139,11 @@
                               <div class="form-group">
                               <label>LIDER DEL GRUPO</label>
                     
-                    <input type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" required/> 
+                    <input type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" required value="<?= $estudiante->ministerio->lider_gdc; ?>"/>
                               
                                 
                               
                             </div>
-                            
                             <!-- /.form-group -->
                           </div>
                           <!-- /.col -->
@@ -146,7 +152,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <label>Lider del Ministerio</label>
-                            <input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="ingrese lider ministerio" required/>
+                            <input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="ingrese lider ministerio" required value="<?= $estudiante->ministerio->lider_ministerio;?>"/>
                           </div>
                                           <!-- /.form group -->
                                           
@@ -154,8 +160,8 @@
                 <div class="form-group">
                 <label>GDC</label>
                     
-                    <input type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" required/>                                       
-                   
+                    <input type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" required value="<?= $estudiante->ministerio->gdc; ?>"/>
+                    
                     
 
                     </div>
@@ -171,11 +177,12 @@
                             <div class="col-md-6">
                               <div class="form-group">
                                
-                              <label>PASTOR </label>
+                              <label>PASTOR</label>
                       
-                              <select class="form-control"  id="pastor_id" name="pastor_id"
-            style="width: 100%;" required>
+                      <select class="form-control"  id="pastor" name="pastor" data-placeholder="Selecciona"
+            style="width: 100%;" value="<?= $pastor->pastor; ?>">
         <?= $pastoresOptions ?>
+  
     </select>
                                   </div>
                                   <!-- /.form-group -->
@@ -188,14 +195,12 @@
                               <div class="col-md-6">
                               <div class="form-group">
                               <label>FECHA DE INGRESO:</label>
-                    <input readonly name="fecha_inicio" class="form-control" id="current_date"/>
+                    <input readonly name="fecha_inicio" class="form-control" id="current_date" value="<?= $estudiante->nombre; ?>"/>               
                         
                                     </div> 
                               
                             </div>
-                              <!-- /.col -->
-                             
-
+                              
                                      <!-- Date -->
                 
 <script>
@@ -203,7 +208,7 @@ date = new Date();
 year = date.getFullYear();
 month = date.getMonth() + 1;
 day = date.getDate();
-document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
+document.getElementById("current_date").value = year + "/" +  month+ "/" + day;
 </script>
    
            
@@ -220,12 +225,9 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
                   
                   <button type="submit" class="btn btn-primary col start">
                     <i class="fas fa-upload"></i>
-                    <span>GUARDAR</span>
+                    <span>MODIFICAR</span>
                   </button>
-                  <button type="reset" class="btn btn-warning col cancel">
-                    <i class="fas fa-times-circle"></i>
-                    <span>LIMPIAR</span>
-                  </button>
+                
                 </div>
               </div>
           <!-- /.card-body -->
@@ -240,7 +242,6 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
 </form>
     <!-- /.content -->
   </div>
-
   </div>
-
   <!-- /.content-wrapper -->
+ 
