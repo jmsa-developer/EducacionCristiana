@@ -9,8 +9,9 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                        <li class="breadcrumb-item active">Contactos</li>
+                    <img src="public/dist/img/logo.jpeg" width="80" height="80" 
+ 
+                             class="img-size  -0 img-circle mr-5">
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
