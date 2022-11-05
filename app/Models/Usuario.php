@@ -22,6 +22,7 @@ class Usuario extends BaseModel
 
     public function afterFind()
     {
+        
 
         $this->rol = Rol::get()->where(['id'=>$this->rol_id])->one();
     }

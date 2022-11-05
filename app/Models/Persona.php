@@ -6,6 +6,8 @@ use App\BaseModel;
 use App\BitacoraTrait;
 class Persona extends BaseModel
 {
+    use BitacoraTrait;
+    
     public $nombre;
     public $apellido;
     public $cedula;

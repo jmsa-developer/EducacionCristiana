@@ -6,7 +6,8 @@ use App\BaseModel;
 
 class Docente extends Persona
 {
-
+ 
+    
     public $direccion;
     public $pastor_id;
     public $ministerio_id;

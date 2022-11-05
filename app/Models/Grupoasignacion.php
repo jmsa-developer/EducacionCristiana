@@ -7,7 +7,7 @@ use App\BaseModel;
 class Grupoasignacion extends BaseModel
 {
 
-
+    use BitacoraTrait;
 
 
     public function register(){

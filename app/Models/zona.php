@@ -5,7 +5,7 @@ namespace App\Models;
 use App\BaseModel;
 use App\BitacoraTrait;
 
-class zona extends BaseModel
+class Zona extends BaseModel
 {
 
     public $direccion;
