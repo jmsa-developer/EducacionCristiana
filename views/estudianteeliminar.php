@@ -3,19 +3,9 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+    <section class="content">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>ELIMINAR ESTUDIANTE</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">formulario</li>
-            </ol>
-          </div>
-        </div>
+        
       </div><!-- /.container-fluid -->
     </section>
     <form method="post" name="test">
@@ -25,7 +15,7 @@
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Perfil </h3>
+            <h3 class="card-title">ELIMINAR ESTUDIANTE </h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -78,7 +68,7 @@
                 <div class="form-group">
                 <label>DIRECCION</label>
                 
-                <input readonly type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion" value="<?= $zona->direccion; ?>"/>               
+                <input readonly type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion" value="<?= $estudiante->zona->direccion; ?>"/>               
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
@@ -97,7 +87,7 @@
                   <label>ZONA</label>
                   
                   <input readonly type="text"  class="form-control" name="zona" id="zona" 
-                  placeholder="Ingrese  zona" value="<?= $zona->zona; ?>"/>               
+                  placeholder="Ingrese  zona" value="<?= $estudiante->zona->zona; ?>"/>               
                    
                                 </div>
                                 <!-- /.form-group -->

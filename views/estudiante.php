@@ -1,15 +1,10 @@
 
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="">
+
     <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          
-       
-        </div>
-      </div><!-- /.container-fluid -->
+    <section class="content">
+     ><!-- /.container-fluid -->
     </section>
     <form method="post" name="test">
     <!-- Main content -->
@@ -234,6 +229,6 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
     <!-- /.content -->
   </div>
 
-  </div>
+
 
   <!-- /.content-wrapper -->

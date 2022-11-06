@@ -47,7 +47,7 @@
                 <!-- /.card-body -->
                 <div class="card-body">
                 <label>Descripcion</label>
-                <textarea id="summernote" name="summernote" >
+                <textarea id="summernote" name="descripcion" >
                   
                       Place <em>some</em> <u>text</u> <strong>here</strong>
                     </textarea>
