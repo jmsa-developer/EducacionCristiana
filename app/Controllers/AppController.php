@@ -15,7 +15,7 @@ use App\Models\Pastor;
 use App\Models\Bitacora;
 use App\Session;
 use App\View;
-use App\Models\Estudianteconsulta;
+//use App\Models\Educativo;
 use App\Models\Estudianteeliminar;
 
 // Controlador principal de la aplicacion
@@ -132,38 +132,7 @@ class AppController extends BaseController
 
         View::render('evaluaciones.php');
     }
-    public function educativoAction()
-    {
-        if ($this->isPost()) {
-
-            $evaluaciones = new educativo();
-            $evaluaciones->name = $this->post['name'];
-            $evaluaciones->cedula = $this->post['cedula'];
-            $evaluaciones->save();
-
-            View::redirect('/user/login');
-        }
-
-
-        View::render('educativo.php');
-    }
-    public function estudiantemodificarAction()
-    {
-        $id = $_GET['id'];
-        $estudiante = Estudiante::get()->where(['id'=>$id])->one();
-
-        if($estudiante){
-
-            View::render('estudiantemodificar.php',[
-                'estudiante'=>$estudiante,
-
-            ]);
-        }
-
-        Session::set('message',['type' => 'danger','message'=>"El estudiante $id no existe"]);
-        View::redirect('/app/index');
-
-    }
+  
 
 
 
@@ -222,18 +191,6 @@ class AppController extends BaseController
         View::redirect('/app/index');
 
     }
-    public function bitacoraAction()
-    {
-        $bitacora = Bitacora::get()->all();
-    {
-        View::render('bitacora.php',[
-            'bitacora'=>$bitacora
-        ]);
-
-            View::redirect('/user/login');
-        
-} View::render('bitacora.php');
-
-    }
+   
 
 }

@@ -40,6 +40,7 @@ class EstudianteController extends BaseController
         ]);
     
         
+      
 }
 
 public function consultaAction()
@@ -53,7 +54,7 @@ public function consultaAction()
     ]);
 }
 
-public function estudiantemodificarAction()
+public function modificarAction()
 {
     $id = $_GET['id'];
     $estudiante = Estudiante::get()->where(['id'=>$id])->one();
@@ -71,6 +72,26 @@ public function estudiantemodificarAction()
 
 }
 
+public function eliminarAction  ()
+{
+    $id = $_GET['id'];
+    $estudiante = Estudiante::get()->where(['id'=>$id])->one();
+    $zona = Zona::get()->where(['id'=>$id])->one();
+    $ministerio = Ministerio::get()->where(['id'=>$id])->one();
+    $pastor = Pastor::get()->where(['id'=>$id])->one();
+    if($estudiante){
 
+        View::render('estudianteeliminar.php',[
+            'estudiante'=>$estudiante,
+                'zona'=>$zona,
+            'ministerio'=>$ministerio,
+            'pastor'=>$pastor
+
+        ]);
+    }
+
+    View::redirect('/app/index');
+
+}
  
 }

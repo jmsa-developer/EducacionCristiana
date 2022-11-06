@@ -1,0 +1,123 @@
+
+  <section class="content">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content">
+    <!-- Content Header (Page header) -->
+ 
+     
+        
+          <!-- SELECT2 EXAMPLE -->
+          <div class="card card-default">
+            <div class="card-header">
+              
+              <h3 class="card-title">consultar temas</h3>
+  
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+                
+              </div>
+      
+   
+
+    <!-- Main content -->
+  
+            <!-- /.card -->
+
+            
+       
+            <!-- /.card -->
+
+          </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+          <div class="col-md-8">
+            <!-- Form Element sizes -->
+            <div class="card card-success">
+              
+             
+              </div>
+          
+                
+                <!-- /.card-header -->
+                <div class="card-body">
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th style="width: 10px">#</th>
+                        <th>temas</th>
+                        <th>descripcion</th>
+                        <th style="width: 40px">%</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <tbody>
+                  <?php
+                    foreach ($educativo as $key => $educativo){
+                        $i = $key + 1 ;
+                        echo "<tr> 
+                       <td>
+                         $i
+                      </td>
+                      <td>
+                          <a>
+                              ".$educativo->nombre."
+                          </a>
+
+                      </td>
+                      
+                      <td>
+                          <a>
+                              ".$educativo->summernote."
+                          </a>
+
+                      </td>
+                    
+                      </tr>";
+
+                    }
+
+                  ?>
+
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.card-body -->
+                <div class="card-footer clearfix">
+                  <ul class="pagination pagination-sm m-0 float-right">
+                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                  </ul>
+               
+                                
+                  </form>
+                </div>
+                
+              
+                              
+           
+            
+              
+              <!-- /.card-body -->
+              </section>
+            </div>
+          </div>
+        </div>
+     
+
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+ 
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+

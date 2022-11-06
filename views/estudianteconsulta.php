@@ -93,12 +93,12 @@
                       </td>
                       <td class='project-actions text-right'>
 
-                      <a class='btn btn-info btn-sm' href='app/estudiantemodificar?id=".$estudiante->id."'>
+                      <a class='btn btn-info btn-sm' href='estudiante/modificar?id=".$estudiante->id."'>
                           <i class='fas fa-pencil-alt'>
                           </i>
                           Edit
                       </a>
-                      <a class='btn btn-danger btn-sm' href='app/estudianteeliminar?id=".$estudiante->id."'>
+                      <a class='btn btn-danger btn-sm' href='estudiante/eliminar?id=".$estudiante->id."'>
                           <i class='fas fa-trash'>
                           </i>
                           Delete

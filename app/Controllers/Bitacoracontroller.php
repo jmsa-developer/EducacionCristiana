@@ -2,13 +2,14 @@
 namespace App\Controllers;
 
 use App\View;
- use App\Models\BitacoraTrait;
 
-	class Bitacoracontroller extends BitacoraTrait
+ use App\Models\Bitacora;
+
+	class Bitacoracontroller extends BaseController
 	
      
     {
-        public function bitacoraAction()
+        public function consultaAction()
         {
             $bitacora = Bitacora::get()->all();
         {
