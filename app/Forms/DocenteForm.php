@@ -17,12 +17,14 @@ class DocenteForm extends Model
     public $fecha_nacimiento;
     public $fecha_inicio;
     public $direccion;
-    public $nombre_m;
+//    public $nombre_m;
    // public $turno;
     public $pastor_id;
-    public $lider_ministerio;
-    public $gdc;
-    public $lider_gdc;
+    public $ministerio_id;
+
+   // public $lider_ministerio;
+   // public $gdc;
+  //  public $lider_gdc;
 
 
 
@@ -32,12 +34,7 @@ class DocenteForm extends Model
 
 
 
-        $ministerio = new Ministerio();
-        $ministerio->nombre_m = $this->nombre_m;
-        $ministerio->lider_ministerio = $this->lider_ministerio;
-        $ministerio->gdc = $this->gdc;
-        $ministerio->lider_gdc = $this->lider_gdc;
-        $ministerio_id = $ministerio->save();
+
 
         $usuario = new Usuario();
         $usuario->load($this->data);
@@ -47,7 +44,8 @@ class DocenteForm extends Model
         $docente = new Docente();
         $docente->usuario_id = $usuario->id;
         $docente->load($this->data);
-        $docente->ministerio_id = $ministerio_id;
+        $docente->fecha_inicio = date('d-m-Y');
+        
         $docente->save();
 
     }

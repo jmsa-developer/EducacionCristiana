@@ -87,13 +87,13 @@
                       </td>
                       <td>
                           <a>
-                               ".$docente->nombre."
+                               ".$docente->email."
                           </a>
 
                       </td>
                       <td class='project-actions text-right'>
 
-                      <a class='btn btn-info btn-sm' href='app/docentemodificar?id=".$docente->id."'>
+                      <a class='btn btn-info btn-sm' href='docente/modificar?id=".$docente->id."'>
                           <i class='fas fa-pencil-alt'>
                           </i>
                           Edit
