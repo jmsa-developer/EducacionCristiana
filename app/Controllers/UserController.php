@@ -64,6 +64,14 @@ class UserController extends BaseController
 
     }
 
+    public function consultauserAction()
+    {
+        $user = Usuario::get()->all();
+
+        View::render('consulta_user.php',[
+            'user'=>$user,
+        ]);
+    }
 
 
 }

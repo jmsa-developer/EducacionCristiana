@@ -35,7 +35,7 @@
                           rol
                       </th>
                       <th style="width: 30%" >
-                          direccion
+                          email
                       </th>
                      
                       <th >
@@ -47,7 +47,7 @@
                   </thead>
                   <tbody>
                   <?php
-                    foreach ($usuario as $key => $usuario){
+                    foreach ($user as $key => $user){
                         $i = $key + 1 ;
                         echo "<tr> 
                        <td>
@@ -55,37 +55,44 @@
                       </td>
                       <td>
                           <a>
-                              ".$usuario->nombre."
+                              ".$user->nombre."
                           </a>
 
                       </td>
                       <td>
                           <a>
-                               ".$usuario->apellido."
+                               ".$user->apellido."
                           </a>
 
                       </td>
                       <td>
                           <a>
-                               ".$usuario->cedula."
+                               ".$user->cedula."
                           </a>
 
                       </td>
                       <td>
                           <a>
-                               ".$usuario->rol_id."
+                               ".$user->rol_id."
+                          </a>
+
+                      </td>
+
+                      <td>
+                          <a>
+                               ".$user->email."
                           </a>
 
                       </td>
                      
                       <td class='project-actions text-right'>
 
-                      <a class='btn btn-info btn-sm' href='usuario/modificar?id=".$usuario->id."'>
+                      <a class='btn btn-info btn-sm' href='user/modificar?id=".$user->id."'>
                           <i class='fas fa-pencil-alt'>
                           </i>
                           Edit
                       </a>
-                      <a class='btn btn-danger btn-sm' href='usuario/eliminar?id=".$usuario->id."'>
+                      <a class='btn btn-danger btn-sm' href='user/eliminar?id=".$user->id."'>
                           <i class='fas fa-trash'>
                           </i>
                           Delete
