@@ -124,12 +124,21 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group">
+
+
+
+
+
+
+
+
+                          
                            
                           <label>NOMBRE DEL MINISTERIO </label>
         
-        <select class="form-control" id="nombre_m" name="nombre_m"  placeholder="Selecciona"
-      style="width: 100%;" value="<?= $estudiante->ministerio->nombre_m; ?>"/>               >
-      <?= $ministeriosOptions ?>
+        <select class="form-control" id="ministerio_id" name="ministerio_id"  placeholder="Selecciona"
+      style="width: 100%;" value="<?=    $estudiante->ministerio->nombre_m; ?>" >         
+            <?= $ministeriosOptions ?>
 </select>
                               </div>
                               <!-- /.form-group -->
@@ -160,7 +169,7 @@
                 <div class="form-group">
                 <label>GDC</label>
                     
-                    <input type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" required value="<?= $estudiante->ministerio->gdc; ?>"/>
+                    <input type="text" class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" required value="<?= $estudiante->ministerio->gdc; ?>">
                     
                     
 
@@ -179,8 +188,8 @@
                                
                               <label>PASTOR</label>
                       
-                      <select class="form-control"  id="pastor" name="pastor" data-placeholder="Selecciona"
-            style="width: 100%;" value="<?= $pastor->pastor; ?>">
+                      <select class="form-control"  id="pastor_id" name="pastor_id" data-placeholder="Selecciona"
+            style="width: 100%;" value="<?= $estudiante->pastor->nombre; ?>">
         <?= $pastoresOptions ?>
   
     </select>
@@ -195,7 +204,7 @@
                               <div class="col-md-6">
                               <div class="form-group">
                               <label>FECHA DE INGRESO:</label>
-                    <input readonly name="fecha_inicio" class="form-control" id="current_date" value="<?= $estudiante->nombre; ?>"/>               
+                    <input readonly name="fecha_inicio" class="form-control" id="current_date" value="<?= $estudiante->fecha_ingreso; ?>"/>               
                         
                                     </div> 
                               
