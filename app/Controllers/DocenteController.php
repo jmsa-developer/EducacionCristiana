@@ -53,5 +53,24 @@ class DocenteController extends BaseController
         ]);
     }
 
+
+    public function modificarAction()
+    {
+        $id = $_GET['id'];
+        $docente = Docente::get()->where(['id'=>$id])->one();
+
+        if($docente){
+
+            View::render('docentemodificar.php',[
+                'docente'=>$docente,
+
+            ]);
+        }
+
+        Session::set('message',['type' => 'danger','message'=>"El docente $id no existe"]);
+        View::redirect('/app/index');
+
+    }
+
  
 }
