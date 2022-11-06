@@ -5,7 +5,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">consulta de estudiante</h3>
+          <h3 class="card-title">consultar usuarios</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -32,14 +32,12 @@
                           cedula
                       </th>
                       <th style="width: 20%">
-                          telefono
+                          rol
                       </th>
                       <th style="width: 30%" >
                           direccion
                       </th>
-                      <th >
-                          zona
-                      </th>
+                     
                       <th >
 
                       </th>
@@ -49,7 +47,7 @@
                   </thead>
                   <tbody>
                   <?php
-                    foreach ($estudiantes as $key => $estudiante){
+                    foreach ($usuario as $key => $usuario){
                         $i = $key + 1 ;
                         echo "<tr> 
                        <td>
@@ -57,48 +55,37 @@
                       </td>
                       <td>
                           <a>
-                              ".$estudiante->nombre."
+                              ".$usuario->nombre."
                           </a>
 
                       </td>
                       <td>
                           <a>
-                               ".$estudiante->apellido."
+                               ".$usuario->apellido."
                           </a>
 
                       </td>
                       <td>
                           <a>
-                               ".$estudiante->cedula."
+                               ".$usuario->cedula."
                           </a>
 
                       </td>
                       <td>
                           <a>
-                               ".$estudiante->telefono."
+                               ".$usuario->rol_id."
                           </a>
 
                       </td>
-                      <td>
-                          <a>
-                               ".$estudiante->zona->direccion."
-                          </a>
-
-                      </td>
-                      <td>
-                          <a>
-                               ".$estudiante->zona->zona."
-                          </a>
-
-                      </td>
+                     
                       <td class='project-actions text-right'>
 
-                      <a class='btn btn-info btn-sm' href='estudiante/modificar?id=".$estudiante->id."'>
+                      <a class='btn btn-info btn-sm' href='usuario/modificar?id=".$usuario->id."'>
                           <i class='fas fa-pencil-alt'>
                           </i>
                           Edit
                       </a>
-                      <a class='btn btn-danger btn-sm' href='estudiante/eliminar?id=".$estudiante->id."'>
+                      <a class='btn btn-danger btn-sm' href='usuario/eliminar?id=".$usuario->id."'>
                           <i class='fas fa-trash'>
                           </i>
                           Delete

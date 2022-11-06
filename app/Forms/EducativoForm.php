@@ -10,7 +10,7 @@ class EducativoForm extends Model
 {
 
     public $nombre;
-    public $sunmernote;
+    public $decripcion;
     public $archivo;
     
 
@@ -25,6 +25,7 @@ class EducativoForm extends Model
        
         $educativo->load($this->data);
       //  $educativo->fecha_inicio = date('d-m-Y');
+
         $educativo->save();
 
     }

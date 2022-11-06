@@ -33,7 +33,7 @@ class EstudianteForm extends Model
     public function register(){
 
 
-        $zona = new zona();
+        $zona = new Zona();
         $zona->direccion = $this->direccion;
         $zona->zona = $this->zona;
 

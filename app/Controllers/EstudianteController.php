@@ -76,17 +76,13 @@ public function eliminarAction  ()
 {
     $id = $_GET['id'];
     $estudiante = Estudiante::get()->where(['id'=>$id])->one();
-    $zona = Zona::get()->where(['id'=>$id])->one();
-    $ministerio = Ministerio::get()->where(['id'=>$id])->one();
-    $pastor = Pastor::get()->where(['id'=>$id])->one();
+
     if($estudiante){
 
-        View::render('estudianteeliminar.php',[
+        View::render('estudiantemodificar.php',[
             'estudiante'=>$estudiante,
-                'zona'=>$zona,
-            'ministerio'=>$ministerio,
-            'pastor'=>$pastor
 
+        
         ]);
     }
 
