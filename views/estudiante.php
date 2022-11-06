@@ -6,9 +6,7 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>ESTUDIANTE</h1>
-          </div>
+          
        
         </div>
       </div><!-- /.container-fluid -->
@@ -20,7 +18,7 @@
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Perfil </h3>
+            <h3 class="card-title">Perfil Estudiante </h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">

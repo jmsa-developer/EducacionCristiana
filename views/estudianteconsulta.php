@@ -81,13 +81,13 @@
                       </td>
                       <td>
                           <a>
-                               ".$estudiante->telefono."
+                               ".$estudiante->zona->direccion."
                           </a>
 
                       </td>
                       <td>
                           <a>
-                               ".$estudiante->nombre."
+                               ".$estudiante->zona->zona."
                           </a>
 
                       </td>

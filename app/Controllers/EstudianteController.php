@@ -53,5 +53,24 @@ public function consultaAction()
     ]);
 }
 
+public function estudiantemodificarAction()
+{
+    $id = $_GET['id'];
+    $estudiante = Estudiante::get()->where(['id'=>$id])->one();
+
+    if($estudiante){
+
+        View::render('estudiantemodificar.php',[
+            'estudiante'=>$estudiante,
+
+        ]);
+    }
+
+    Session::set('message',['type' => 'danger','message'=>"El estudiante $id no existe"]);
+    View::redirect('/app/index');
+
+}
+
+
  
 }
