@@ -25,7 +25,7 @@
        
               <!-- /.card-header -->
               <!-- form start -->
-              <form>
+              <form method="post">
              
                 
                   <div class="card-body">
@@ -76,7 +76,7 @@
               </section>
             </div>
           </div>
-          </div>
+          </section>
           </div>
   <!-- /.content-wrapper -->
  
