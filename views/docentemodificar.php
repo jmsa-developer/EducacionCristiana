@@ -100,7 +100,7 @@
                            <label>NOMBRE DEL MINISTERIO </label>
          
          <select class="form-control" id="ministerio_id" name="ministerio_id"  data-placeholder="Selecciona"
-       style="width: 100%;" required value="<?= $docente->ministerio->ministerio_id; ?>" >
+       style="width: 100%;" required value="<?= $docente->$ministerio->id; ?>" >
        
        <?= $ministeriosOptions ?>
 

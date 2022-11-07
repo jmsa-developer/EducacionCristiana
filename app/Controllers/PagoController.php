@@ -39,7 +39,31 @@ class PagoController extends BaseController
 }
 
 
+    public function consultaAction()
+    {
+        $pagos = Pago::get()->all();
 
+        View::render('pagoconsulta.php',[
+            'pagos'=>$pagos,
+        ]);
+    }
  
+    public function modificarAction()
+    {
+        $id = $_GET['id'];
+        $pago = Pago::get()->where(['id'=>$id])->one();
+
+        if($pago){
+
+            View::render('pagomodificar.php',[
+                'pago'=>$pago,
+
+            ]);
+        }
+
+        Session::set('message',['type' => 'danger','message'=>"El pago $id no existe"]);
+        View::redirect('/app/index');
+
+    }
     
 }
