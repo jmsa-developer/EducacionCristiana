@@ -20,6 +20,7 @@ class EducativoController extends BaseController
     {
         $educativo = new EducativoForm();
         if ($educativo->load($this->post)) {
+           
             $educativo->register();
             Session::set('message',['type' => 'success','message'=>'tema registrado correctamente']);
 

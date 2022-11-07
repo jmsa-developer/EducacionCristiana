@@ -67,6 +67,18 @@ public function modificarAction()
         ]);
     }
 
+    $pastores = Pastor::get()->all();
+        $ministerios = Ministerio::get()->all();
+
+        $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre']);
+        $ministeriosOptions = Util::renderOptions($ministerios, 'id', 'nombre_m');
+
+        View::render('estudiantemodificar.php',[
+            'pastoresOptions' => $pastoresOptions,
+            'ministeriosOptions'=>$ministeriosOptions
+        ]);
+    
+        
     Session::set('message',['type' => 'danger','message'=>"El estudiante $id no existe"]);
     View::redirect('/app/index');
 

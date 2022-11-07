@@ -117,21 +117,6 @@ class AppController extends BaseController
     }
 
 
-    public function evaluacionesAction()
-    {
-        if ($this->isPost()) {
-
-            $evaluaciones = new evaluaciones();
-            $evaluaciones->name = $this->post['name'];
-            $evaluaciones->cedula = $this->post['cedula'];
-            $evaluaciones->save();
-
-            View::redirect('/user/login');
-        }
-
-
-        View::render('evaluaciones.php');
-    }
   
 
 
@@ -170,27 +155,7 @@ class AppController extends BaseController
     }
    
 
-    public function estudianteeliminarAction  ()
-    {
-        $id = $_GET['id'];
-        $estudiante = Estudiante::get()->where(['id'=>$id])->one();
-        $zona = Zona::get()->where(['id'=>$id])->one();
-        $ministerio = Ministerio::get()->where(['id'=>$id])->one();
-        $pastor = Pastor::get()->where(['id'=>$id])->one();
-        if($estudiante){
-
-            View::render('estudianteeliminar.php',[
-                'estudiante'=>$estudiante,
-                    'zona'=>$zona,
-                'ministerio'=>$ministerio,
-                'pastor'=>$pastor
-
-            ]);
-        }
-
-        View::redirect('/app/index');
-
-    }
+   
    
 
 }
