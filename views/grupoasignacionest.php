@@ -2,7 +2,7 @@
   <div class="">
     <!-- Content Header (Page header) -->
     <section class="content">
-      <
+      
       <!-- /.container-fluid -->
     </section>
 
