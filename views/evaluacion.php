@@ -71,12 +71,9 @@
                 <div class="form-group">
                 <label>TEMA</label>
                       
-                <select class="form-control"  id="tipo" name="tipo" data-placeholder="Selecciona" style="width: 100%;">
-                     <option>seleccione el Tema</option>
-                     <option>Tema 1</option>
-                     <option>Tema 2</option>
-                     <option>Tema 3</option>
-                     <option>Tema 4</option>
+                <select class="form-control"  id="tema_id" name="tipo" data-placeholder="Selecciona" style="width: 100%;">
+                <?= $temaOptions ?>
+                    
 
       
                 </select>
