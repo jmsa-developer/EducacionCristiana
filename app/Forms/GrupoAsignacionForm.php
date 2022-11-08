@@ -3,22 +3,23 @@
 namespace App\Forms;
 
 use App\Models\Grupoasignacion;
+use App\Models\Docente;
 
-class GrupoAsignacionForm extends Model
+
+class GrupoasignacionForm extends Model
 {
-    public $nombre;
-    public $apellido;
-    public $cedula;
-    public $telefono;
-    public $email;
-    public $fecha_nacimiento;
-    public $fecha_inicio;
     public $direccion;
- //   public $zona;
-    public $nombre_m;
-    public $turno;
-    public $pastor;
-    public $lider_grupo;
+    public $hora;
+    public $dia;
+  //  public $numero_estudiantes;
+    public $auxiliar;
+    public $descripcion;
+    public $fecha_inicio;
+    public $fecha_culminacion;
+
+    public $docente_id;
+    //public $zona;
+
 
 
 
@@ -26,7 +27,11 @@ class GrupoAsignacionForm extends Model
 
     public function register(){
 
+
+        $grupoasignacion = new Grupoasignacion();
+        $grupoasignacion->load($this->data);
         
+        $grupoasignacion->save();
 
     }
 

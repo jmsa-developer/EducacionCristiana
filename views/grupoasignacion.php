@@ -29,12 +29,9 @@
                 <div class="form-group">
                 <label>ESCUELA</label>
                       
-                <select class="form-control"  id="escuela" name="escuela" data-placeholder="Selecciona" style="width: 100%;">
-                     <option>selecciona una Escuela</option>
-                     <option>Obediencia</option>
-                     <option>Servidores</option>
-                     <option>Vision</option>
-                     <option>Academia De Lideres</option>
+                <select class="form-control"  id="escuela_id" name="escuela_id" data-placeholder="Selecciona" style="width: 100%;">
+
+                <?= $escuelasOptions ?>
 
       
                  </select>
@@ -45,12 +42,8 @@
                     <div class="form-group">
                 <label>DOCENTE</label>
                       
-                <select class="form-control"  id="escuela" name="escuela" data-placeholder="Selecciona" style="width: 100%;">
-                     <option>seleccione un Docente</option>
-                     <option>Mary Adames</option>
-                     <option>Jose Torrealba</option>
-                     <option>Nancy de Melendez</option>
-                     <option>Yoryanis Brito</option>
+                <select class="form-control"  id="docente_id" name="docente_id" data-placeholder="Selecciona" style="width: 100%;">
+                <?= $docentesOptions ?>
 
       
                  </select>
@@ -64,12 +57,9 @@
                 <div class="form-group">
                 <label>ZONA</label>
                       
-                <select class="form-control"  id="escuela" name="escuela" data-placeholder="Selecciona" style="width: 100%;">
-                     <option>selecciona una Zona</option>
-                     <option>Garabatal</option>
-                     <option>Carucieña</option>
-                     <option>Jose Felix</option>
-                     <option>Cerrajones</option>
+                <select class="form-control"  id="zona_id" name="zona_id" data-placeholder="Selecciona" style="width: 100%;">
+                <?= $zonaOptions ?>
+
 
       
                  </select>
@@ -102,7 +92,7 @@
                     <div class="form-group">
                         <label>DÍA </label>
                                   <tr>
-                        <td><input type="text" class="form-control" maxlength="20" placeholder="Ingrese el día" name="nombre" id="nombre" /> <max 30
+                        <td><input type="text" class="form-control" maxlength="20" placeholder="Ingrese el día" name="dia" id="dia" /> <max 30
                         characters a-z A-Z></td>
                     </div>
 
@@ -113,7 +103,7 @@
                     <div class="form-group">
                         <label>HORA</label>
                                         
-                        <input type="time" class="form-control" maxlength="30" placeholder="Ingrese la hora" name="apellido" id="apellido"/> <max 40 
+                        <input type="time" class="form-control" maxlength="30" placeholder="Ingrese la hora" name="hora" id="hora"/> <max 40 
                         characters a-z A-Z>
                     </div>
                     <!-- /.form-group -->
@@ -134,14 +124,14 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_nacimiento" id="fecha_nacimiento">
+                    <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_inicio" id="fecha_inicio">
                   
                         </div>
                     </div>
 
                     <div class="form-group">
                                <label>DIRECCIÓN DEL GRUPO</label>
-                                <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese la dirección del grupo" /> <max 30 characters a-z A-Z></tr>
+                                <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese la dirección del grupo" name="direccion" id="direccion" /> <max 30 characters a-z A-Z></tr>
                     </div>
                           <!-- /.form-group -->
                         </div>
@@ -155,38 +145,21 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_nacimiento" id="fecha_nacimiento">
+                    <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_culminacion" id="fecha_culminacion">
                   
                         </div>
                     </div>
 
                     <div class="form-group">
                             <label>DESCRIPCIÓN</label>
-                            <input type="text" class="form-control" maxlength="30" placeholder="ingrese la descripcio'n" /> <max 30 characters a-z A-Z>
+                            <input type="text" class="form-control" maxlength="30" placeholder="ingrese la descripción" name="descripcion" id="descripcion"/> <max 30 characters a-z A-Z>
                     </div>
                         <!-- /.form group -->                  
                       <!-- /.col -->
                       </div>
   
                       
-<!-- /.row -->
-<div class="col-md-6">
-<div class="form-group">
-                  <label>FECHA DE INGRESO:</label>
-                  <input disabled name="fecha_inicio" class="form-control" id="current_date"/>
-                        
-                        </div>
-                    <!-- /.form-group -->
 
-                    <!-- /.form-group -->
-                </div>
-
-                                     <!-- Date -->
-
-             
-<!-- /.col -->
-</div>
-<!-- /.row -->
                          <!-- Date -->
     
 <script>
