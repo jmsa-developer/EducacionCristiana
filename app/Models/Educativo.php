@@ -16,7 +16,8 @@ class Educativo extends BaseModel
     public $archivo;
     public $summernote;
     public $escuela_id;
-
+    
+    public $borrado;
 
 
 }
