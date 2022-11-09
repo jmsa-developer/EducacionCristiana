@@ -135,34 +135,30 @@
                               
                             
                               <div class="form-group">
-                              <label>LIDER DEL GRUPO</label>
-                    
-                    <input type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" required value="<?= $estudiante->ministerio->lider_gdc; ?>"/>
-                              
-                                
-                              
-                            </div>
+                              <label>FECHA DE INGRESO:</label>
+                    <input readonly name="fecha_inicio" class="form-control" id="current_date" value="<?= $estudiante->fecha_ingreso; ?>"/>               
+                        
+                                    </div>
                             <!-- /.form-group -->
                           </div>
                           <!-- /.col -->
                 
                      
                         <div class="col-md-6">
-                          <div class="form-group">
-                            <label>Lider del Ministerio</label>
-                            <input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="ingrese lider ministerio" required value="<?= $estudiante->ministerio->lider_ministerio;?>"/>
-                          </div>
+                        <div class="form-group">
+                               
+                               <label>PASTOR</label>
+                       
+                       <select class="form-control"  id="pastor_id" name="pastor_id" data-placeholder="Selecciona"
+             style="width: 100%;" value="<?= $estudiante->pastor->nombre; ?>">
+         <?= $pastoresOptions ?>
+   
+     </select>
+                                   </div>
                                           <!-- /.form group -->
                                           
                 <!-- Date dd/mm/yyyy -->
-                <div class="form-group">
-                <label>GDC</label>
-                    
-                    <input type="text" class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" required value="<?= $estudiante->ministerio->gdc; ?>">
-                    
-                    
-
-                    </div>
+                
                 </div>
 
             
@@ -170,34 +166,8 @@
                         </div>
                       <!-- /.col -->
                     
-                           <!-- /.row -->
-                           <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-group">
-                               
-                              <label>PASTOR</label>
-                      
-                      <select class="form-control"  id="pastor_id" name="pastor_id" data-placeholder="Selecciona"
-            style="width: 100%;" value="<?= $estudiante->pastor->nombre; ?>">
-        <?= $pastoresOptions ?>
-  
-    </select>
-                                  </div>
-                                  <!-- /.form-group -->
-                                  
-                                  
-                                
-                               
-                      
-                              </div>
-                              <div class="col-md-6">
-                              <div class="form-group">
-                              <label>FECHA DE INGRESO:</label>
-                    <input readonly name="fecha_inicio" class="form-control" id="current_date" value="<?= $estudiante->fecha_ingreso; ?>"/>               
+                           
                         
-                                    </div> 
-                              
-                            </div>
                               
                                      <!-- Date -->
                 
@@ -211,7 +181,7 @@ document.getElementById("current_date").value = year + "/" +  month+ "/" + day;
    
            
          
-              </div>
+              
               <!-- /.col -->
             </div>
             <!-- /.row -->

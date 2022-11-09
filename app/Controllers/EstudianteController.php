@@ -7,7 +7,7 @@ use App\Models\Estudiante;
 use App\Models\Ministerio;
 use App\Models\Pastor;
 use App\Models\Usuario;
-
+use App\Models\Zona;
 use App\Session;
 use App\Util;
 use App\View;
@@ -32,7 +32,7 @@ class EstudianteController extends BaseController
         $ministerios = Ministerio::get()->all();
 
         $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre','turno']);
-        $ministeriosOptions = Util::renderOptions($ministerios, 'id', 'nombre_m');
+        $ministeriosOptions = Util::renderOptions($ministerios, 'id', ['nombre_m', 'lider_ministerio']);
 
         View::render('estudiante.php',[
             'pastoresOptions' => $pastoresOptions,

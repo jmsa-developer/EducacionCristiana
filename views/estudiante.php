@@ -4,7 +4,7 @@
 
     <!-- Content Header (Page header) -->
     <section class="content">
-     ><!-- /.container-fluid -->
+     <!-- /.container-fluid -->
     </section>
     <form method="post" name="test">
     <!-- Main content -->
@@ -13,7 +13,7 @@
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Perfil Estudiante </h3>
+            <h3 class="card-title"> Estudiante </h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -118,13 +118,10 @@
                               
                             
                               <div class="form-group">
-                              <label>LIDER DEL GRUPO</label>
-                    
-                    <input type="text"class="form-control" name="lider_gdc" id="lider_gdc" maxlength="30" placeholder="ingrese lider del grupo" required/> 
-                              
-                                
-                              
-                            </div>
+                              <label>FECHA DE INGRESO:</label>
+                    <input readonly name="fecha_inicio" class="form-control" id="current_date"/>
+                        
+                                    </div> 
                             
                             <!-- /.form-group -->
                           </div>
@@ -132,71 +129,25 @@
                 
                      
                         <div class="col-md-6">
-                          <div class="form-group">
-                            <label>Lider del Ministerio</label>
-                            <input type="text" class="form-control" name="lider_ministerio" id="lider_ministerio" placeholder="ingrese lider ministerio" required/>
+                            
+                        <label>PASTOR </label>
+                      
+                      <select class="form-control"  id="pastor_id" name="pastor_id"
+    style="width: 100%;" required>
+<?= $pastoresOptions ?>
+</select>
                           </div>
                                           <!-- /.form group -->
                                           
                 <!-- Date dd/mm/yyyy -->
-                <div class="form-group">
-                <label>GDC</label>
-                    
-                    <input type="text"class="form-control" name="gdc" id="gdc" maxlength="30" placeholder="ingrese gdc" required/>                                       
-                   
-                    
-
-                    </div>
+                
                 </div>
 
             
-              <!-- /.form group -->
+              
                         </div>
-                      <!-- /.col -->
                     
-                           <!-- /.row -->
-                           <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-group">
-                               
-                              <label>PASTOR </label>
                       
-                              <select class="form-control"  id="pastor_id" name="pastor_id"
-            style="width: 100%;" required>
-        <?= $pastoresOptions ?>
-    </select>
-                                  </div>
-                                  <!-- /.form-group -->
-                                  
-                                  
-                                
-                               
-                      
-                              </div>
-                              <div class="col-md-6">
-                              <div class="form-group">
-                              <label>FECHA DE INGRESO:</label>
-                    <input readonly name="fecha_inicio" class="form-control" id="current_date"/>
-                        
-                                    </div> 
-                              
-                            </div>
-                              <!-- /.col -->
-                             
-
-                                     <!-- Date -->
-                
-<script>
-date = new Date();
-year = date.getFullYear();
-month = date.getMonth() + 1;
-day = date.getDate();
-document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
-</script>
-   
-           
-         
-              </div>
               <!-- /.col -->
             </div>
             <!-- /.row -->
@@ -229,6 +180,12 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
     <!-- /.content -->
   </div>
 
-
+  <script>
+date = new Date();
+year = date.getFullYear();
+month = date.getMonth() + 1;
+day = date.getDate();
+document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
+</script>
 
   <!-- /.content-wrapper -->

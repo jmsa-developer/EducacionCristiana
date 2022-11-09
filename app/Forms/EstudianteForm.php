@@ -5,8 +5,8 @@ namespace App\Forms;
 use App\Models\Estudiante;
 use App\Models\Ministerio;
 use App\Models\Pastor;
-use App\Models\zona;
-
+use App\Models\Zona;
+use App\Models\Usuario;
 
 class EstudianteForm extends Model
 {
@@ -29,21 +29,31 @@ class EstudianteForm extends Model
     public $ministerio_id;
 
 
+    const CONTRASENA = '123456';
 
+           
+      
     public function register(){
 
+        $usuario = new Usuario();
+        $usuario->usuario = $this->cedula;
+        $usuario->clave = password_hash(self::CONTRASENA, PASSWORD_DEFAULT);
+        $usuario->load($this->data);
+        $usuario->save();
 
         $zona = new Zona();
         $zona->direccion = $this->direccion;
         $zona->zona = $this->zona;
-
         $zona_id = $zona->save();
 
+        
 
         $estudiante = new Estudiante();
+        $estudiante->usuario_id = $usuario->id;
         $estudiante->load($this->data);
         $estudiante->fecha_inicio = date('d-m-Y');
         $estudiante->zona_id = $zona_id;
+    
         $estudiante->estado_id = 0;
 
 
