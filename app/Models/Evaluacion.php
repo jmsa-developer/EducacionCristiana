@@ -10,16 +10,16 @@ class Evaluacion  extends BaseModel
 {
     use BitacoraTrait;
 
-    public $estudinte_id;
-    public $docente_id;
-    public $estado_id;
-    public $tema_id;
-    
+      public $estudiante_id;
+       public $docente_id;
+       public $estado_id;
+         public $tema_id;
+           public $evaluacion_tipo_id;
 
-    public $etudiante;
+    public $estudiante;
     public $docente;
     public $tema;
-
+    public $evaluacion_tipo;
 
    
 

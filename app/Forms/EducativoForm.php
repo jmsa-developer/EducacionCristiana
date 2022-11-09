@@ -3,7 +3,7 @@
 namespace App\Forms;
 
 use App\Models\Educativo;
-
+use App\Models\EScuela;
 
 
 class EducativoForm extends Model

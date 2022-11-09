@@ -39,7 +39,7 @@ public function consultaAction()
 
 {
     $educativo = Educativo::get()->all();
-    //$zona = Zona::get()->all();
+    
 
     View::render('educativoconsulta.php',[
         'educativo'=>$educativo,

@@ -42,13 +42,13 @@
                 
                 <!-- /.card-header -->
                 <div class="card-body">
-                  <table class="table table-bordered">
+                <table class="table table-striped projects">
                     <thead>
                       <tr>
                         <th style="width: 10px">#</th>
                         <th>temas</th>
                         <th>descripcion</th>
-                        <th style="width: 40px">%</th>
+                   
                       </tr>
                     </thead>
                     <tbody>
@@ -73,7 +73,20 @@
                           </a>
 
                       </td>
-                    
+                      <td class='project-actions text-right'>
+
+                      <a class='btn btn-info btn-sm' href='educativo/modificar?id=".$educativo->id."'>
+                          <i class='fas fa-pencil-alt'>
+                          </i>
+                          Edit
+                      </a>
+                      <a class='btn btn-danger btn-sm' href='educativo/eliminar?id=".$educativo->id."'>
+                      <i class='fas fa-trash'>
+                      </i>
+                      Delete
+                  </a>
+                  </td>
+                  
                       </tr>";
 
                     }

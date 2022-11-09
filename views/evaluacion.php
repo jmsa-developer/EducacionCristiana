@@ -29,12 +29,8 @@
                 <div class="form-group">
                 <label>Tipo de Evaluación</label>
                       
-                <select class="form-control"  id="tipo" name="tipo" data-placeholder="Selecciona" style="width: 100%;">
-                     <option>seleccione tipo de evaluación</option>
-                     <option>Foro</option>
-                     <option>Tarea</option>
-                     <option>Examén</option>
-                     <option>Glosario de Terminos</option>
+                <select class="form-control"  id="evaluacion_tipo_id" name="evaluacion_tipo_id" data-placeholder="Selecciona" style="width: 100%;">
+                   <?=  $evaluacion_tipoOptions ?>
 
       
                 </select>
@@ -44,7 +40,7 @@
                     <!-- /.form-group -->
                     <div class="form-group">
                         <label>TIEMPO</label>
-                        <input type="time"  class="form-control"  placeholder="Ingrese  tiempo" />
+                        <input type="time"  id="tiempo" name="tiempo" class="form-control"  placeholder="Ingrese  tiempo" />
                     </div>
                     <!-- /.form-group -->
                 </div>
@@ -53,14 +49,13 @@
                     <div class="form-group">
                         <label>DESCRIPCIÓN</label>
                                         
-                        <input type="text" class="form-control" maxlength="30" placeholder="Ingrese Dscripción" /> <max 40 
+                        <input type="text" class="form-control" id="descripcion" name="descripcion" maxlength="30" placeholder="Ingrese Dscripción" /> <max 40 
                         characters a-z A-Z>
                     </div>
                     <!-- /.form-group -->
                     <div class="form-group">
                         <label>NUMERO DE INTENTOS</label>
-                        <input type="text" class="form-control" data-inputmask='"mask": "(9999) 999-9999"' data-mask></td> <max 11
-                          characters 0-9>
+                        <input type="text" class="form-control" id="numero_intento" name="numero_intento" > 
                     </div>
                 </div>
                     <!-- /.form-group -->
@@ -71,7 +66,7 @@
                 <div class="form-group">
                 <label>TEMA</label>
                       
-                <select class="form-control"  id="tema_id" name="tipo" data-placeholder="Selecciona" style="width: 100%;">
+                <select class="form-control"  id="tema_id" name="tema_id" data-placeholder="Selecciona" style="width: 100%;">
                 <?= $temaOptions ?>
                     
 
@@ -90,7 +85,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <label>VALOR ASIGNACIÓN</label>
-                            <td><input type="text" class="form-control" name="" id="" placeholder="Enter email address"></td>
+                            <td><input type="text" class="form-control" id="valor" name="valor" placeholder="Enter email address"></td>
                           </div>
                                           <!-- /.form group -->
                                           
@@ -114,7 +109,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_nacimiento" id="fecha_nacimiento">
+                    <input type="text" id="fecha_inicio" name="fecha_inicio" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_nacimiento" id="fecha_nacimiento">
                   
                         </div>
                     </div>
@@ -132,7 +127,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_nacimiento" id="fecha_nacimiento">
+                    <input type="text" class="form-control" id="fecha_cierre" name="fecha_cierre" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_nacimiento" id="fecha_nacimiento">
                   
                         </div>
                     </div>
