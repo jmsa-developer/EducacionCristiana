@@ -8,8 +8,8 @@ use App\BitacoraTrait;
 class Zona extends BaseModel
 {
 
-    public $direccion;
-    public $zona;
+   
+    public $zona_nombre;
     public $borrado;
 
 
