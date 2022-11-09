@@ -34,7 +34,7 @@ class EstudianteController extends BaseController
 
         $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre','turno']);
         $ministeriosOptions = Util::renderOptions($ministerios, 'id', ['nombre_m', 'lider_ministerio']);
- $zonasOptions = Util::renderOptions($zonas, 'id', 'zona');
+        $zonasOptions = Util::renderOptions($zonas, 'id', 'zona_nombre');
 
         View::render('estudiante.php',[
             'pastoresOptions' => $pastoresOptions,

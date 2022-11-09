@@ -79,13 +79,16 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-md-6">
-                  <div class="form-group">
-                  <label>ZONA</label>
-                  
-                  <select  type="text"  class="form-control" name="zona_id" id="zona_id" placeholder="Ingrese  zona" required />
-                  <?= $zonasOptions ?>
-</select>
-                                </div>
+                <div class="form-group">
+                           
+                           <label>Zona </label>
+         
+         <select class="form-control" id="zona_id" name="zona_id"  data-placeholder="Selecciona"
+       style="width: 100%;">
+       <?= $zonasOptions ?>
+
+ </select>
+                               </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
                                 <label>FECHA DE NACIMIENTO:</label>
