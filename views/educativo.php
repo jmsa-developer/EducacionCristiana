@@ -25,7 +25,7 @@
        
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post">
+              <form method="post" enctype="multipart/form-data">
              
                 
                   <div class="card-body">
