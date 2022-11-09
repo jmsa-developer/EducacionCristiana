@@ -82,8 +82,9 @@
                   <div class="form-group">
                   <label>ZONA</label>
                   
-                  <input type="text"  class="form-control" name="zona" id="zona" placeholder="Ingrese  zona" required/>
-                   
+                  <select  type="text"  class="form-control" name="zona_id" id="zona_id" placeholder="Ingrese  zona" required />
+                  <?= $zonasOptions ?>
+</select>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">

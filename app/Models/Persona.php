@@ -15,7 +15,7 @@ class Persona extends BaseModel
     public $email;
     public $fecha_nacimiento;
     public $fecha_inicio;
-
+    public $direccion;
 
 
 

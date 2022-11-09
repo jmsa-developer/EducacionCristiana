@@ -27,7 +27,7 @@ class EstudianteForm extends Model
     public $lider_ministerio;
     public $gdc;
     public $ministerio_id;
-
+    public $zona_id;
 
     const CONTRASENA = '123456';
 
@@ -41,10 +41,7 @@ class EstudianteForm extends Model
         $usuario->load($this->data);
         $usuario->save();
 
-        $zona = new Zona();
-        $zona->direccion = $this->direccion;
-        $zona->zona = $this->zona;
-        $zona_id = $zona->save();
+        
 
         
 
@@ -52,7 +49,7 @@ class EstudianteForm extends Model
         $estudiante->usuario_id = $usuario->id;
         $estudiante->load($this->data);
         $estudiante->fecha_inicio = date('d-m-Y');
-        $estudiante->zona_id = $zona_id;
+      //  $estudiante->zona_id = $zona_id;
     
         $estudiante->estado_id = 0;
 

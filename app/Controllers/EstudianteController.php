@@ -30,13 +30,16 @@ class EstudianteController extends BaseController
 
         $pastores = Pastor::get()->all();
         $ministerios = Ministerio::get()->all();
+        $zonas = Zona::get()->all();
 
         $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre','turno']);
         $ministeriosOptions = Util::renderOptions($ministerios, 'id', ['nombre_m', 'lider_ministerio']);
+ $zonasOptions = Util::renderOptions($zonas, 'id', 'zona');
 
         View::render('estudiante.php',[
             'pastoresOptions' => $pastoresOptions,
-            'ministeriosOptions'=>$ministeriosOptions
+            'ministeriosOptions'=>$ministeriosOptions,
+            'zonasOptions'=>$zonasOptions
         ]);
     
         

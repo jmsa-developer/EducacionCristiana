@@ -37,12 +37,10 @@
                       <th style="width: 30%" >
                           direccion
                       </th>
-                      <th >
+                      <th style="width: 30%" >
                           zona
                       </th>
-                      <th >
 
-                      </th>
                       <th style="width: 20%">
                       </th>
                   </tr>
@@ -81,7 +79,7 @@
                       </td>
                       <td>
                           <a>
-                               ".$estudiante->zona->direccion."
+                               ".$estudiante->direccion."
                           </a>
 
                       </td>

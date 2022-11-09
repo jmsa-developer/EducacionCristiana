@@ -2348,10 +2348,10 @@
     return Object.assign({}, getFreshSideObject(), paddingObject);
   }
 
-  function expandToHashMap(value, keys) {
-    return keys.reduce(function (hashMap, key) {
-      hashMap[key] = value;
-      return hashMap;
+  function expandToMap(value, keys) {
+    return keys.reduce(function (Map, key) {
+      Map[key] = value;
+      return Map;
     }, {});
   }
 
@@ -2359,7 +2359,7 @@
     padding = typeof padding === 'function' ? padding(Object.assign({}, state.rects, {
       placement: state.placement
     })) : padding;
-    return mergePaddingObject(typeof padding !== 'number' ? padding : expandToHashMap(padding, basePlacements));
+    return mergePaddingObject(typeof padding !== 'number' ? padding : expandToMap(padding, basePlacements));
   };
 
   function arrow(_ref) {
@@ -2652,7 +2652,7 @@
     data: {}
   };
 
-  var hash$1 = {
+  var $1 = {
     left: 'right',
     right: 'left',
     bottom: 'top',
@@ -2660,17 +2660,17 @@
   };
   function getOppositePlacement(placement) {
     return placement.replace(/left|right|bottom|top/g, function (matched) {
-      return hash$1[matched];
+      return $1[matched];
     });
   }
 
-  var hash = {
+  var  = {
     start: 'end',
     end: 'start'
   };
   function getOppositeVariationPlacement(placement) {
     return placement.replace(/start|end/g, function (matched) {
-      return hash[matched];
+      return [matched];
     });
   }
 
@@ -2944,7 +2944,7 @@
         altBoundary = _options$altBoundary === void 0 ? false : _options$altBoundary,
         _options$padding = _options.padding,
         padding = _options$padding === void 0 ? 0 : _options$padding;
-    var paddingObject = mergePaddingObject(typeof padding !== 'number' ? padding : expandToHashMap(padding, basePlacements));
+    var paddingObject = mergePaddingObject(typeof padding !== 'number' ? padding : expandToMap(padding, basePlacements));
     var altContext = elementContext === popper ? reference : popper;
     var popperRect = state.rects.popper;
     var element = state.elements[altBoundary ? altContext : elementContext];
@@ -6364,7 +6364,7 @@
 
       EventHandler.off(this._config.target, EVENT_CLICK);
       EventHandler.on(this._config.target, EVENT_CLICK, SELECTOR_TARGET_LINKS, event => {
-        const observableSection = this._observableSections.get(event.target.hash);
+        const observableSection = this._observableSections.get(event.target.);
 
         if (observableSection) {
           event.preventDefault();
@@ -6443,16 +6443,16 @@
 
       for (const anchor of targetLinks) {
         // ensure that the anchor has an id and is not disabled
-        if (!anchor.hash || isDisabled(anchor)) {
+        if (!anchor. || isDisabled(anchor)) {
           continue;
         }
 
-        const observableSection = SelectorEngine.findOne(anchor.hash, this._element); // ensure that the observableSection exists & is visible
+        const observableSection = SelectorEngine.findOne(anchor., this._element); // ensure that the observableSection exists & is visible
 
         if (isVisible(observableSection)) {
-          this._targetLinks.set(anchor.hash, anchor);
+          this._targetLinks.set(anchor., anchor);
 
-          this._observableSections.set(anchor.hash, observableSection);
+          this._observableSections.set(anchor., observableSection);
         }
       }
     }
