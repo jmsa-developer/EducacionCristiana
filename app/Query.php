@@ -109,6 +109,8 @@ trait Query
                 $record->$name = $value;
             }
         }
+        $record->id = intval($record->id);
+
         return $record;
     }
 

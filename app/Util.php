@@ -10,13 +10,13 @@ class Util
         $result = [];
         foreach ($array as $key => $value) {
 
-            if(is_array($to)){
+            if (is_array($to)) {
                 $texts = [];
-                foreach ($to as $item){
+                foreach ($to as $item) {
                     $texts[] = $value->$item;
                 }
                 $result[$value->$from] = implode(' - ', $texts);
-            }else{
+            } else {
 
                 $result[$value->$from] = $value->$to;
 
@@ -26,13 +26,18 @@ class Util
         return $result;
     }
 
-    static function renderOptions($array, $from, $to)
+    static function renderOptions($array, $from, $to, $selected = null)
     {
         $options = self::mapObject($array, $from, $to);
         $result = '<option>selecciona</option>';
         foreach ($options as $key => $opt) {
+            if ($selected === $key) {
+                $result .= "<option value=$key selected> $opt </option>";
 
-            $result .= "<option value=$key> $opt </option>";
+            } else {
+                $result .= "<option value=$key> $opt </option>";
+
+            }
         }
         return $result;
     }

@@ -6,7 +6,8 @@ use Exception;
 use PDO;
 use ReflectionClass;
 
-abstract class BaseModel {
+abstract class BaseModel
+{
 
     use Query;
 
@@ -24,7 +25,8 @@ abstract class BaseModel {
         return (new \ReflectionClass(get_called_class()))->getShortName();
     }
 
-    public function __construct() {
+    public function __construct()
+    {
 
         if (static::$db === null) {
 
@@ -85,50 +87,58 @@ abstract class BaseModel {
      * @return BaseModel
      * @access  public
      */
-    public static function get($columns = '*') {
+    public static function get($columns = '*')
+    {
         $object = new static();
-        $object->query = "SELECT $columns FROM ". static::tableName();
+        $object->query = "SELECT $columns FROM " . static::tableName();
         return $object;
     }
 
-    public static function getAll($columns = '*'): iterable {
+    public static function getAll($columns = '*'): iterable
+    {
         $object = new static();
         return $object->get($columns)->all();
     }
 
-    public function getOne($id, $columns = '*'): iterable {
-        $query = "SELECT $columns FROM ". static::tableName() . " WHERE id = $id";
+    public function getOne($id, $columns = '*'): iterable
+    {
+        $query = "SELECT $columns FROM " . static::tableName() . " WHERE id = $id";
         return $this->DB()->query($query)->fetch(\PDO::FETCH_ASSOC);
     }
 
-    public static function getOneById($id, $columns = '*'): iterable {
+    public static function getOneById($id, $columns = '*'): iterable
+    {
         $object = new static();
         return $object->getOne($id, $columns);
     }
 
-    public function getByConditions($conditions, $columns = '*'): iterable {
+    public function getByConditions($conditions, $columns = '*'): iterable
+    {
         $where = '';
         foreach ($conditions as $key => $value) {
             $where .= "$key = '$value' AND ";
         }
         $where = substr($where, 0, -4);
         return $this->DB()
-            ->query("SELECT $columns FROM ". static::tableName() . " WHERE $where")
+            ->query("SELECT $columns FROM " . static::tableName() . " WHERE $where")
             ->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    public static function getAllByConditions($conditions, $columns = '*'): iterable {
+    public static function getAllByConditions($conditions, $columns = '*'): iterable
+    {
         $object = new static();
         return $object->getByConditions($conditions, $columns);
     }
 
-    public function getBySql($sql): iterable {
+    public function getBySql($sql): iterable
+    {
         return $this->DB()
             ->query($sql)
             ->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    public function insert(array $data): int {
+    public function insert(array $data): int
+    {
 
         // Question marks
         $marks = array_fill(0, count($data), '?');
@@ -150,7 +160,8 @@ abstract class BaseModel {
         return $this->DB()->lastInsertId();
     }
 
-    public function save(): int {
+    public function save(): int
+    {
 
         $data = [];
 
@@ -165,8 +176,19 @@ abstract class BaseModel {
         // Fields values
         $values = array_values($data);
 
-        $query = "INSERT INTO " . static::tableName() . "(" . implode(",", $fields) . ")
+        $tableName = static::tableName();
+        if ($this->id) {
+            $query = "UPDATE $tableName SET ";
+            foreach ($fields as $field) {
+                $query .= "$field = ?, ";
+            }
+            $query = substr($query, 0, -2);
+            $query.= " WHERE $tableName.id = $this->id";
+
+        } else {
+            $query = "INSERT INTO " . static::tableName() . "(" . implode(",", $fields) . ")
             VALUES(" . implode(",", $marks) . ")";
+        }
 
         // Prepare statement
         $stmt = $this->DB()->prepare($query);
@@ -176,14 +198,19 @@ abstract class BaseModel {
 
         $id = $this->DB()->lastInsertId();
 
-
-        if($id){
-            $this->afterSave($id, 'save', get_called_class());
+        if ($id) {
+            if($this->id){
+                $action = 'update';
+            }else{
+                $action = 'save';
+            }
+            $this->afterSave($id, $action, get_called_class());
         }
 
         // Return last inserted ID.
         return $id;
     }
+
 
     /**
      * El metodo devuelve una conexion PDO de la base de datos.
@@ -191,7 +218,8 @@ abstract class BaseModel {
      * @return object
      * @access  public
      */
-    protected function DB(): PDO {
+    protected function DB(): PDO
+    {
 
         return static::$db;
     }

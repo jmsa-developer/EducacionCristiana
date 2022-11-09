@@ -5,7 +5,7 @@
      <!-- /.container-fluid -->
     </section>
 
-      <form method="post" name="test">
+      <form method="post">
 
     <!-- Main content -->
     <section class="content">
@@ -100,8 +100,8 @@
                            <label>NOMBRE DEL MINISTERIO </label>
          
          <select class="form-control" id="ministerio_id" name="ministerio_id"  data-placeholder="Selecciona"
-       style="width: 100%;" required value="<?= $docente->$ministerio->id; ?>" >
-       
+       style="width: 100%;" required >
+
        <?= $ministeriosOptions ?>
 
  </select>
