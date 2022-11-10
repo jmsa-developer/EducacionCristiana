@@ -38,7 +38,7 @@
                           direccion
                       </th>
                       <th >
-                          zona
+                          email
                       </th>
                       <th >
 

@@ -16,6 +16,7 @@ class Database {
      *
      * @var string
      */
+
     const DB_NAME = 'educacioncristiana';
 
     /**

@@ -124,57 +124,6 @@
                             <div class="col-md-6">
 
                             <div class="form-group">
-                                <label>LIDER DE MINISTERIO</label>
-                              
-                <input type="text" class="form-control" maxlength="30" placeholder="Enter lider del ministerio" name="lider_ministerio" id="lider_ministerio"/> <max 30
-                    characters a-z A-Z>
-                              
-                                
-                              
-                            </div> 
-
-
-                                  <!-- /.form-group -->
-                                  <div class="form-group">
-                               
-                               <label>LIDER DEL GRUPO</label>
-               
-               <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese lider del grupo" name="lider_gdc" id="lider_gdc"/> <max 30
-                   characters a-z A-Z></tr>
-                             </div>
-                                  
-                                
-                             <div class="form-group">
-                <label>TURNO</label>
-                      
-                      <select class="form-control"  id="turno" name="turno" data-placeholder="Selecciona"
-            style="width: 100%;">
-      <option>selecciona</option>
-      <option>1er</option>
-      <option>2do</option>
-      <option>3er</option>
-      
-    </select>
-                    
-
-                    </div>
-                                <!-- /.form-group -->
-                              </div>
-                              <!-- /.col -->
-                        <div class="col-md-6">
-
-                        <div class="form-group">
-                               
-                               <label>GDC</label>
-               
-               <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese el Codigo del GDC" name="gdc" id="gdc"/> <max 30
-                   characters a-z A-Z></tr>
-                             </div>
-
-
-
-
-                             <div class="form-group">
                 <label>PASTOR</label> 
                       
                       <select class="form-control"  id="pastor_id" name="pastor_id" data-placeholder="Selecciona"
@@ -185,11 +134,29 @@
                     
 
                     </div>
-                    <div class="form-group">
+
+
+                                  <!-- /.form-group -->
+
+                                  
+                                
+
+                                <!-- /.form-group -->
+                              </div>
+                              <!-- /.col -->
+                        <div class="col-md-6">
+
+                        <div class="form-group">
                           <label>FECHA DE INGRESO:</label>
                     <input readonly name="fecha_inicio" class="form-control" id="current_date"/>
                         
-                                    </div>        
+                                    </div>  
+
+
+
+
+
+      
 <!-- /.col -->
 </div>
 <!-- /.row -->
