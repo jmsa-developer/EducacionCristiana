@@ -55,7 +55,7 @@
                                 <!-- /.form-group -->
                                 <div class="form-group">
                         <label>TELEFONO</label>
-                        <input type="text" class="form-control" name="telefono" id="telefono"  placeholder="Ingrese telefono" data-inputmask='"mask": "(9999) 999-9999"' data-mask required value="<?= $estudiante->nombre; ?>"/>                                         <max 11
+                        <input type="text" class="form-control" name="telefono" id="telefono"  placeholder="Ingrese telefono" data-inputmask='"mask": "(9999) 999-9999"' data-mask required value="<?= $estudiante->telefono; ?>"/>                                         <max 11
                           characters 0-9>
                         </div>
                       </div>
