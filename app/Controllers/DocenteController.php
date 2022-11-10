@@ -18,13 +18,15 @@ class DocenteController extends BaseController
     public function registroAction()
     {
         $docente = new DocenteForm();
-        if ($docente->load($this->post) && $docente->register()) {
-            Session::set('message', ['type' => 'success', 'message' => 'Docente registrado correctamente']);
+        if ($docente->load($this->post)) {
+            if ($docente->register()) {
+                Session::set('message', ['type' => 'success', 'message' => 'Docente registrado correctamente']);
 
-            View::redirect('/app/index');
-        }else{
-            Session::set('message', ['type' => 'danger', 'message' => 'Error la cedula del docente ya existe']);
+                View::redirect('/app/index');
+            } else {
+                Session::set('message', ['type' => 'danger', 'message' => 'Error la cedula del docente ya existe']);
 
+            }
         }
 
         $pastores = Pastor::get()->all();
