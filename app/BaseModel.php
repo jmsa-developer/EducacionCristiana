@@ -60,7 +60,7 @@ abstract class BaseModel
         $class = new ReflectionClass($this);
         $names = [];
         foreach ($class->getProperties(\ReflectionProperty::IS_PUBLIC) as $property) {
-            if (!$property->isStatic() && !is_object($property)) {
+            if (!$property->isStatic() && !is_object($property->getValue($this))) {
                 $names[] = $property->getName();
             }
         }
