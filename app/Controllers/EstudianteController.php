@@ -25,7 +25,7 @@ class EstudianteController extends BaseController
             $estudiante->register();
             Session::set('message',['type' => 'success','message'=>'Estudiante registrado correctamente']);
 
-            View::redirect('/app/index');
+            View::redirect('/estudiante/registro');
         }
 
         $pastores = Pastor::get()->all();
@@ -49,56 +49,76 @@ class EstudianteController extends BaseController
 public function consultaAction()
 {
     $estudiantes = Estudiante::get()->all();
-    //$zona = Zona::get()->all();
+   
 
     View::render('estudianteconsulta.php',[
-        'estudiantes'=>$estudiantes,
-      //  'zona'=>$zona
+        'estudiantes'=>$estudiantes
     ]);
 }
 
 public function modificarAction()
-{
+ {
     $id = $_GET['id'];
+
+    $estudiante = new EstudianteForm();
+      if ($estudiante->load($this->post)) {
+      $estudiante->update($id);
+            Session::set('message', ['type' => 'success', 'message' => 'Estudiante actualizado correctamente']);
+            View::redirect('/app/index');
+        }
+
     $estudiante = Estudiante::get()->where(['id'=>$id])->one();
 
     if($estudiante){
+        
+        $zona = Zona::get()->all();
+        $pastores = Pastor::get()->all();
+            $ministerios = Ministerio::get()->all();
+            $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre', 'turno'], $estudiante->pastor->id);
+            $ministeriosOptions = Util::renderOptions($ministerios, 'id', ['nombre_m', 'lider_ministerio'], $estudiante->ministerio->id);
+             $zonasOptions = Util::renderOptions($zona, 'id', 'zona_nombre', $estudiante->zona->id);
 
         View::render('estudiantemodificar.php',[
             'estudiante'=>$estudiante,
-
-        ]);
-    }
-
-    $pastores = Pastor::get()->all();
-        $ministerios = Ministerio::get()->all();
-
-        $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre']);
-        $ministeriosOptions = Util::renderOptions($ministerios, 'id', 'nombre_m');
-
-        View::render('estudiantemodificar.php',[
             'pastoresOptions' => $pastoresOptions,
-            'ministeriosOptions'=>$ministeriosOptions
-        ]);
-    
-        
-    Session::set('message',['type' => 'danger','message'=>"El estudiante $id no existe"]);
-    View::redirect('/app/index');
+            'ministeriosOptions' => $ministeriosOptions,
+            'zonasOptions'=>$zonasOptions
+            ]);
+        }
 
-}
+        Session::set('message', ['type' => 'danger', 'message' => "El estudiante $id no existe"]);
+        View::redirect('/app/index');
 
+    }
 public function eliminarAction  ()
 {
     $id = $_GET['id'];
+
+    $estudiante = new EstudianteForm();
+      if ($estudiante->load($this->post)) {
+      $estudiante->delete($id);
+            Session::set('message', ['type' => 'success', 'message' => 'Estudiante actualizado correctamente']);
+            View::redirect('/app/index');
+        }
+
     $estudiante = Estudiante::get()->where(['id'=>$id])->one();
 
     if($estudiante){
-
-        View::render('estudiantemodificar.php',[
-            'estudiante'=>$estudiante,
-
         
-        ]);
+        $zona = Zona::get()->all();
+        $pastores = Pastor::get()->all();
+            $ministerios = Ministerio::get()->all();
+            $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre', 'turno'], $estudiante->pastor->id);
+            $ministeriosOptions = Util::renderOptions($ministerios, 'id', ['nombre_m', 'lider_ministerio'], $estudiante->ministerio->id);
+             $zonasOptions = Util::renderOptions($zona, 'id', 'zona_nombre', $estudiante->zona->id);
+
+        View::render('estudianteeliminar.php',[
+            'estudiante'=>$estudiante,
+            'pastoresOptions' => $pastoresOptions,
+            'ministeriosOptions' => $ministeriosOptions,
+            'zonasOptions'=>$zonasOptions
+            ]);
+       
     }
 
     View::redirect('/app/index');

@@ -19,13 +19,11 @@ class EstudianteForm extends Model
     public $fecha_nacimiento;
     public $fecha_inicio;
     public $direccion;
-    public $zona;
+    public $zona_nombre;
     public $nombre_m;
     public $turno;
     public $pastor_id;
-    public $lider_gdc;
-    public $lider_ministerio;
-    public $gdc;
+    
     public $ministerio_id;
     public $zona_id;
 
@@ -50,14 +48,20 @@ class EstudianteForm extends Model
         $estudiante->load($this->data); 
         $estudiante->fecha_inicio = date('Y-m-d');
         
-       $estudiante->zona_id = $zona_id;
+     
     
         $estudiante->estado_id = 0;
 
 
         
         $estudiante->save();
-
+ 
     }
+    public function update($id){
+        $estudiante = Estudiante::get()->where(['id' => $id])->one();
+        $estudiante->load($this->data);
+        $estudiante->fecha_inicio = date('Y-m-d', strtotime($this->fecha_inicio));
 
+        $estudiante->save();
+}
 }
