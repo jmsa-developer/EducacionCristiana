@@ -48,10 +48,34 @@ use App\Access;
                     <a href="app/index" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-house-chimney"></i>
                         <p>
-                            inicio
+                            Inicio
                             <span class="right badge badge-danger"></span>
                         </p>
                     </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class='nav-link'>
+                        <i class="nav-icon fas fa-solid fa-school"></i>
+                        <p>
+                            Escuelas
+                            <i class="fas fa-angle-left right"></i>
+                            <span class="badge badge-info right"></span>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Registrar Escuela</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Consultar Escuela</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a href="#" class='nav-link'>
@@ -254,12 +278,7 @@ use App\Access;
                                 <p>consultar bitacora</p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="pages/tables/data.html" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Consultar Visión</p>
-                            </a>
-                        </li>
+
                     </ul>
                 </li>
                 <li class="nav-item">
