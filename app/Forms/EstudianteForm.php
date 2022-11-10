@@ -62,5 +62,8 @@ class EstudianteForm extends Model
         $estudiante->fecha_nacimiento = date('Y-m-d', strtotime($this->fecha_nacimiento));
 
         $estudiante->save();
-}
+    }
+
+
+    
 }

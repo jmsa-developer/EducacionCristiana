@@ -62,7 +62,7 @@ public function modificarAction()
 
     $estudiante = new EstudianteForm();
       if ($estudiante->load($this->post)) {
-      $estudiante->update($id);
+            $estudiante->update($id);
             Session::set('message', ['type' => 'success', 'message' => 'Estudiante actualizado correctamente']);
             View::redirect('/app/index');
         }
@@ -71,12 +71,12 @@ public function modificarAction()
 
     if($estudiante){
         
-        $zona = Zona::get()->all();
+        $zonas = Zona::get()->all();
         $pastores = Pastor::get()->all();
-            $ministerios = Ministerio::get()->all();
+        $ministerios = Ministerio::get()->all();
             $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre', 'turno'], $estudiante->pastor->id);
             $ministeriosOptions = Util::renderOptions($ministerios, 'id', ['nombre_m', 'lider_ministerio'], $estudiante->ministerio->id);
-             $zonasOptions = Util::renderOptions($zona, 'id', 'zona_nombre', $estudiante->zona->id);
+             $zonasOptions = Util::renderOptions($zonas, 'id', 'zona_nombre', $estudiante->zona->id);
 
         View::render('estudiantemodificar.php',[
             'estudiante'=>$estudiante,
@@ -90,6 +90,10 @@ public function modificarAction()
         View::redirect('/app/index');
 
     }
+
+
+
+    
 public function eliminarAction  ()
 {
     $id = $_GET['id'];
