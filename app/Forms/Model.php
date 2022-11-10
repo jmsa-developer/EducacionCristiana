@@ -2,7 +2,7 @@
 
 namespace App\Forms;
 
-class Model
+abstract class Model
 {
     public $data;
 
@@ -48,6 +48,6 @@ class Model
         }
     }
 
-
+    abstract public function register();
 
 }
