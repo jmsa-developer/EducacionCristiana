@@ -55,7 +55,7 @@
                                 <label>TIPO DE PAGO </label>
          
                                         <select class="form-control" id="tipo_id" name="tipo_id"  data-placeholder="Selecciona"
-                                        style="width: 100%;" required value="<?= $pago->tipo->tipo_nombre; ?>">
+                                        style="width: 100%;" required value="<?= $tipo_id->tipo; ?>">
                                          <?= $tiposOptions ?>
 
                                     </select>

@@ -48,20 +48,33 @@ class PagoController extends BaseController
         ]);
     }
  
+
+
     public function modificarAction()
     {
         $id = $_GET['id'];
-        $pago = Pago::get()->where(['id'=>$id])->one();
 
-        if($pago){
+        $pago = new PagoForm();
+        if ($pago->load($this->post)) {
+            $pago->update($id);
+            Session::set('message', ['type' => 'success', 'message' => 'Pago actualizado correctamente']);
+            View::redirect('/app/index');
+        }
 
-            View::render('pagomodificar.php',[
-                'pago'=>$pago,
+        $pago = Pago::get()->where(['id' => $id])->one();
 
+        if ($pago) {
+
+            $tipos = Tipo::get()->all();
+            $tiposOptions = Util::renderOptions($tipos, 'id', ['tipo_nombre'], $pago->tipo->id);
+
+            View::render('pagomodificar.php', [
+                'pago' => $pago,
+                'tiposOptions' => $tiposOptions
             ]);
         }
 
-        Session::set('message',['type' => 'danger','message'=>"El pago $id no existe"]);
+        Session::set('message', ['type' => 'danger', 'message' => "El pago $id no existe"]);
         View::redirect('/app/index');
 
     }

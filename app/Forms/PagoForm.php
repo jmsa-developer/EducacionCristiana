@@ -29,5 +29,11 @@ class PagoForm extends Model
 
     }
 
+    public function update($id){
+        $pago = Pago::get()->where(['id' => $id])->one();
+        $pago->load($this->data);
+
+        $pago->save();
+    }
 
 }
