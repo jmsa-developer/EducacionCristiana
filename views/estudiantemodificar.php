@@ -101,7 +101,8 @@
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
                     <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" required  
-                     value="<?= $estudiante->fecha_inicio; ?>"/>               
+                     value="<?= $estudiante->fecha_nacimiento; ?>"/>               
+
                   
                         </div>
                     </div>
@@ -137,7 +138,7 @@
                             
                               <div class="form-group">
                               <label>FECHA DE INGRESO:</label>
-                    <input readonly name="fecha_inicio" class="form-control" id="current_date" value="<?= $estudiante->fecha_ingreso; ?>"/>               
+                    <input readonly name="fecha_inicio" class="form-control" id="current_date" />               
                         
                                     </div>
                             <!-- /.form-group -->

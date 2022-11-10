@@ -47,12 +47,7 @@ class EstudianteForm extends Model
         $estudiante->usuario_id = $usuario->id;
         $estudiante->load($this->data); 
         $estudiante->fecha_inicio = date('Y-m-d');
-        
-<<<<<<< HEAD
-     
-=======
-      // $estudiante->zona_id = $zona_id;
->>>>>>> c01183132b2dc263a17b9297ab98109973f03a52
+    
     
         $estudiante->estado_id = 0;
 
@@ -64,7 +59,7 @@ class EstudianteForm extends Model
     public function update($id){
         $estudiante = Estudiante::get()->where(['id' => $id])->one();
         $estudiante->load($this->data);
-        $estudiante->fecha_inicio = date('Y-m-d', strtotime($this->fecha_inicio));
+        $estudiante->fecha_nacimiento = date('Y-m-d', strtotime($this->fecha_nacimiento));
 
         $estudiante->save();
 }

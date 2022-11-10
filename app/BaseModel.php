@@ -194,18 +194,18 @@ abstract class BaseModel
         $stmt = $this->DB()->prepare($query);
 
         // Execute statement with values
-        $stmt->execute($values);
+        $stmt->execute($values); 
 
-        $id = $this->DB()->lastInsertId();
+        $id = $this->DB()->lastInsertId(); 
 
-        if ($id) {
-            if($this->id){
-                $action = 'update';
-            }else{
-                $action = 'save';
-            }
-            $this->afterSave($id, $action, get_called_class());
-        }
+        if ($id) { 
+            if($this->id){ 
+                $action = 'update'; 
+            }else{ 
+                $action = 'save'; 
+            } 
+            $this->afterSave($id, $action, get_called_class()); 
+        } 
 
         // Return last inserted ID.
         return $id;

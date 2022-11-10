@@ -96,7 +96,7 @@ public function eliminarAction  ()
 
     $estudiante = new EstudianteForm();
       if ($estudiante->load($this->post)) {
-      $estudiante->delete($id);
+      $estudiante->update($id);
             Session::set('message', ['type' => 'success', 'message' => 'Estudiante actualizado correctamente']);
             View::redirect('/app/index');
         }
