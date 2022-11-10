@@ -69,7 +69,7 @@
                 <label>DIRECCION</label>
 
                 <input type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion"
-                 required value="<?= $estudiante->zona->direccion;?>"/>
+                 required value="<?= $estudiante->direccion;?>"/>
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
@@ -87,9 +87,10 @@
                   <div class="form-group">
                   <label>ZONA</label>
                   
-                  <input type="text"  class="form-control" name="zona" id="zona" placeholder="Ingrese  zona"
-                   required value="<?= $estudiante->zona->zona; ?>"/>
-                   
+                  <select type="text"  class="form-control" name="zona_id" id="zona_id" placeholder="Ingrese  zona"
+                   required >
+                   <?= $zonasOptions ?>
+</select>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">
@@ -100,7 +101,8 @@
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
                     <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" required  
-                     value="<?= $estudiante->fecha_inicio; ?>"/>               
+                     value="<?= $estudiante->fecha_nacimiento; ?>"/>               
+
                   
                         </div>
                     </div>
@@ -136,7 +138,7 @@
                             
                               <div class="form-group">
                               <label>FECHA DE INGRESO:</label>
-                    <input readonly name="fecha_inicio" class="form-control" id="current_date" value="<?= $estudiante->fecha_ingreso; ?>"/>               
+                    <input readonly name="fecha_inicio" class="form-control" id="current_date" />               
                         
                                     </div>
                             <!-- /.form-group -->
