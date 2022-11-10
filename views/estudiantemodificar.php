@@ -69,7 +69,7 @@
                 <label>DIRECCION</label>
 
                 <input type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion"
-                 required value="<?= $estudiante->zona->direccion;?>"/>
+                 required value="<?= $estudiante->direccion;?>"/>
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
@@ -87,9 +87,10 @@
                   <div class="form-group">
                   <label>ZONA</label>
                   
-                  <input type="text"  class="form-control" name="zona" id="zona" placeholder="Ingrese  zona"
-                   required value="<?= $estudiante->zona->zona; ?>"/>
-                   
+                  <select type="text"  class="form-control" name="zona_id" id="zona_id" placeholder="Ingrese  zona"
+                   required >
+                   <?= $zonasOptions ?>
+</select>
                                 </div>
                                 <!-- /.form-group -->
                                 <div class="form-group">

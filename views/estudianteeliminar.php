@@ -68,7 +68,7 @@
                 <div class="form-group">
                 <label>DIRECCION</label>
                 
-                <input readonly type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion" value="<?= $estudiante->zona->direccion; ?>"/>               
+                <input readonly type="text"class="form-control" name="direccion" id="direccion" maxlength="30" placeholder="ingrese direccion" value="<?= $estudiante->direccion; ?>"/>               
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
@@ -86,8 +86,8 @@
                   <div class="form-group">
                   <label>ZONA</label>
                   
-                  <input readonly type="text"  class="form-control" name="zona" id="zona" 
-                  placeholder="Ingrese  zona" value="<?= $estudiante->zona->zona; ?>"/>               
+                  <input readonly type="text"  class="form-control" name="zona_id" id="zona_id" 
+                  placeholder="Ingrese  zona" value="<?= $estudiante->zona->zona_nombre; ?>"/>               
                    
                                 </div>
                                 <!-- /.form-group -->
@@ -115,48 +115,35 @@
                            
                           <label>NOMBRE DEL MINISTERIO </label>
         
-        <select readonly class="form-control" id="nombre_m" name="nombre_m"  data-placeholder="Selecciona"
-      style="width: 100%;"value="<?= $ministerio->nombre_m; ?>">               
+        <input readonly class="form-control" id="nombre_m" name="nombre_m"  data-placeholder="Selecciona"
+      style="width: 100%;" value="<?= $estudiante->ministerio->nombre_m; ?>">               
 
-</select>
+
                               </div>
                               <!-- /.form-group -->
                              
                               
                             
-                              <div class="form-group">
-                              <label>LIDER DEL GRUPO</label>
-                    
-                    <input readonly type="text"class="form-control" name="lider_gdc" id="lider_gdc"
-                     maxlength="30" placeholder="ingrese lider del grupo" value="<?= $ministerio->lider_gdc; ?>"/>                                 
-                              
-                                
-                              
-                            </div>
+                            
                             <!-- /.form-group -->
                           </div>
                           <!-- /.col -->
                 
                      
                         <div class="col-md-6">
-                          <div class="form-group">
-                            <label>Lider del Ministerio</label>
-                            <input readonly type="text" class="form-control" name="lider_ministerio" 
-                            id="lider_ministerio" placeholder="Enter lider ministerio" value="<?= $ministerio->lider_ministerio; ?>"/>                                         </div>
-                                          <!-- /.form group -->
+                        <div class="form-group">
+                               
+                               <label>PASTOR</label>
+                       
+                               <input readonly class="form-control"  id="pastor_id" name="pastor_id" data-placeholder="Selecciona"
+             style="width: 100%;" value="<?= $estudiante->pastor->nombre; ?>" />               
+    
+       
+    
+                                   </div>       <!-- /.form group -->
                                           
                 <!-- Date dd/mm/yyyy -->
-                <div class="form-group">
-                <label>TURNO</label>
-                      
-                      <select readonly class="form-control"  id="turno" name="turno" data-placeholder="Selecciona"
-            style="width: 100%;" value="<?= $estudiante->email; ?>">         
-     
-      
-    </select>
-                    
-
-                    </div>
+    
                 </div>
 
             
@@ -165,34 +152,10 @@
                       <!-- /.col -->
                     
                            <!-- /.row -->
-                           <div class="row">
-                            <div class="col-md-6">
-                              <div class="form-group">
-                               
-                              <label>PASTOR</label>
-                      
-                              <select readonly class="form-control"  id="pastor" name="pastor" data-placeholder="Selecciona"
-            style="width: 100%;" value="<?= $pastor->pastor; ?>">               
-   
-      
-    </select>
-                                  </div>
-                                  <!-- /.form-group -->
-                                  
-                                  
-                                
-                               
-                      
-                              </div>
-                              <div class="col-md-6">
-                              <div class="form-group">
-                              <label>GDC</label>
-                    
-                    <input readonly type="text"class="form-control" name="gdc" id="gdc" maxlength="30" 
-                    placeholder="ingrese gdc" value="<?= $ministerio->gdc; ?>"/>                                                
-                    </div> 
-                              
-                            </div>
+                          
+                        
+                           
+                             
                               <!-- /.col -->
                              
 <!-- /.row -->
@@ -212,9 +175,8 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
    
            
          
-              </div>
-              <!-- /.col -->
-            </div>
+              
+             
             <!-- /.row -->
           </div>
           <div class="card-body">
@@ -222,7 +184,7 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
               <div class="col-lg-6">
                 <div class="btn-group w-100">
                   
-                  <button type="submit" class="btn btn-primary col start">
+                  <button disable type="submit" class="btn btn-primary col start">
                     <i class="fas fa-upload"></i>
                     <span>ELIMINAR</span>
                   </button>

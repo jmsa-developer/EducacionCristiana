@@ -12,8 +12,7 @@ class Ministerio extends BaseModel
 
     public $nombre_m;
     public $lider_ministerio;
-  //  public $gdc;
-   // public $lider_gdc;
+
 
 
 
