@@ -48,4 +48,6 @@ class Model
         }
     }
 
+    abstract public function register();
+
 }

@@ -13,7 +13,7 @@ use App\Util;
 use App\View;
 
 // Controlador principal de la aplicacion
-class EstudianteController extends BaseController
+class CalificacionController extends BaseController
 {
 
  

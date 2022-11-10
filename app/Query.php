@@ -152,7 +152,7 @@ trait Query
 
     }
 
-    public function afterSave($resultado, $accion, $modelo){
+    public function afterSave($resultado, $accion){
     }
 
 }

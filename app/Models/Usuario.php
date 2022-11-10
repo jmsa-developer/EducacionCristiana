@@ -29,22 +29,18 @@ class Usuario extends BaseModel
 
     public static function getByUsernameAndPassword($username, $password ){ 
 
-
         $user = self::get()->where([ 
             'usuario' => $username, 
         ])->one(); 
 
         if(!$user){ 
             return false; 
-        } 
-
+        }
 
         if(!password_verify($password, $user->clave)){ 
             return false; 
-        } 
-
-        return $user; 
-
+        }
+        return $user;
     } 
 
     public function register(): int 

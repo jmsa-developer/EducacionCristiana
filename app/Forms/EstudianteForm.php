@@ -41,17 +41,11 @@ class EstudianteForm extends Model
         $usuario->load($this->data);
         $usuario->save();
 
-        
-
-        
-
         $estudiante = new Estudiante(); 
         $estudiante->usuario_id = $usuario->id;
         $estudiante->load($this->data); 
         $estudiante->fecha_inicio = date('Y-m-d');
-        
-       $estudiante->zona_id = $zona_id;
-    
+
         $estudiante->estado_id = 0;
 
 

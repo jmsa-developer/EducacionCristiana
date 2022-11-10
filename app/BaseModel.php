@@ -137,30 +137,7 @@ abstract class BaseModel
             ->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    public function insert(array $data): int
-    {
-
-        // Question marks
-        $marks = array_fill(0, count($data), '?');
-        // Fields to be added.
-        $fields = array_keys($data);
-        // Fields values
-        $values = array_values($data);
-
-        // Prepare statement
-        $stmt = $this->DB()->prepare("
-            INSERT INTO " . static::tableName() . "(" . implode(",", $fields) . ")
-            VALUES(" . implode(",", $marks) . ")
-        ");
-
-        // Execute statement with values
-        $stmt->execute($values);
-
-        // Return last inserted ID.
-        return $this->DB()->lastInsertId();
-    }
-
-    public function save(): int
+    public function save()
     {
 
         $data = [];
@@ -193,9 +170,18 @@ abstract class BaseModel
         // Prepare statement
         $stmt = $this->DB()->prepare($query);
 
-        // Execute statement with values
+        // TODO: Agregar try catch
+        /*
+        try {
+            $stmt->execute($values);
+        }
+        catch (\PDOException $e) {
+            //echo $e->getMessage();
+            //var_dump($e);
+            return null;
+        }
+*/
         $stmt->execute($values);
-
         $id = $this->DB()->lastInsertId();
 
         if ($id) {
@@ -204,7 +190,7 @@ abstract class BaseModel
             }else{
                 $action = 'save';
             }
-            $this->afterSave($id, $action, get_called_class());
+            $this->afterSave($id, $action);
         }
 
         // Return last inserted ID.

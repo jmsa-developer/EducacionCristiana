@@ -7,7 +7,7 @@ use App\Models\Bitacora;
 trait BitacoraTrait
 {
 
-    public function afterSave($resultado, $accion, $modelo)
+    public function afterSave($resultado, $accion)
     {
         $user = Session::get('user');
         $bitacora = new Bitacora();
@@ -15,7 +15,7 @@ trait BitacoraTrait
         $bitacora->resultado = $resultado;
         $bitacora->accion = $accion;
         $bitacora->url = $_GET['route'];
-        $bitacora->modelo = $modelo;
+        $bitacora->modelo = get_class($this);
         $bitacora->fecha = date('Y-m-d h:i:s');
         $bitacora->save();
     }
