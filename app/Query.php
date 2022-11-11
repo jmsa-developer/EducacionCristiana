@@ -26,25 +26,6 @@ trait Query
         return $this;
     }
 
-    public function whereNot($conditions)
-    {
-
-        $where = static::buildCondition($conditions, '!=');
-        $this->query .= " WHERE $where";
-        return $this;
-    }
-
-
-    public static function findQuery($conditions)
-    {
-
-        $q = new static();
-
-        $q->query = "SELECT * FROM " . static::tableName() . " WHERE " . static::tableName() . "." . static::buildCondition($conditions);
-
-        return $q;
-    }
-
     private static function buildCondition($conditions, $equal = '=')
     {
 

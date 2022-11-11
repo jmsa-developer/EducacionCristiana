@@ -26,43 +26,8 @@ class DocenteForm extends Model
    // public $gdc;
   //  public $lider_gdc;
 
-    const CONTRASENA = '123456';
-
-    public function register(){
-
-        $validate = Docente::get()->where(['cedula' => $this->cedula])->one();
-
-        if($validate){
-            return false;
-        }
-
-        $usuario = new Usuario();
-        $usuario->usuario = $this->cedula;
-        $usuario->clave = password_hash(self::CONTRASENA, PASSWORD_DEFAULT);
-        $usuario->rol_id = 1;
-        $usuario->load($this->data);
-        $usuario->save();
-
-        $docente = new Docente();
-        $docente->usuario_id = $usuario->id;
-        $docente->load($this->data);
-        $docente->fecha_nacimiento = date('Y-m-d', strtotime($this->fecha_nacimiento));
-        $docente->fecha_inicio = date('Y-m-d', strtotime($this->fecha_inicio));
-        
-        $docente->save();
-
-        return true;
-
-    }
 
 
-    public function update($id){
-        $docente = Docente::get()->where(['id' => $id])->one();
-        $docente->load($this->data);
-        $docente->fecha_inicio = date('Y-m-d', strtotime($this->fecha_inicio));
-
-        $docente->save();
-    }
 
 
 }

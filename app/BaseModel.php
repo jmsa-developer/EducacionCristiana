@@ -80,13 +80,6 @@ abstract class BaseModel
         }
     }
 
-    /**
-     * Abstract method para obtener todos los registros de la base de datos
-     *
-     *
-     * @return BaseModel
-     * @access  public
-     */
     public static function get($columns = '*')
     {
         $object = new static();

@@ -17,9 +17,9 @@ class DocenteController extends BaseController
 
     public function registroAction()
     {
-        $docente = new DocenteForm();
-        if ($docente->load($this->post)) {
-            if ($docente->register()) {
+        if ($this->post) {
+            $docente = new Docente();
+            if ($docente->register($this->post)) {
                 Session::set('message', ['type' => 'success', 'message' => 'Docente registrado correctamente']);
 
                 View::redirect('/app/index');
@@ -59,9 +59,9 @@ class DocenteController extends BaseController
     {
         $id = $_GET['id'];
 
-        $docente = new DocenteForm();
-        if ($docente->load($this->post)) {
-            $docente->update($id);
+        $docente = new Docente();
+        if ($this->post) {
+            $docente->update($id, $this->post);
             Session::set('message', ['type' => 'success', 'message' => 'Docente actualizado correctamente']);
             View::redirect('/app/index');
         }
