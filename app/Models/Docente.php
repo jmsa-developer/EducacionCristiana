@@ -29,7 +29,7 @@ class Docente extends Persona
 
     public function register($data)
     {
-        $validate = Docente::get()->where(['cedula' => $this->cedula])->one();
+        $validate = Docente::get()->where(['cedula' => $data['cedula']])->one();
 
         if ($validate) {
             return false;
