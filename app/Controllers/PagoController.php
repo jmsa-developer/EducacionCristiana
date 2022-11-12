@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Forms\PagoForm;
 use App\Models\Pago;
 use App\Models\Tipo;
 
@@ -18,12 +17,17 @@ class PagoController extends BaseController
 
     public function registroAction()
     {
-        $pago = new PagoForm();
-        if ($pago->load($this->post)) {
-            $pago->register();
-            Session::set('message',['type' => 'success','message'=>'Pago registrado correctamente']);
 
-            View::redirect('/app/index');
+        if ($this->post) {
+            $pago = new Pago();
+            if ($pago->register($this->post)) {
+                Session::set('message', ['type' => 'success', 'message' => 'Pago registrado correctamente']);
+    
+                View::redirect('/app/index');
+            } else {
+                Session::set('message', ['type' => 'danger', 'message' => 'Error  del pago ya existe']);
+    
+            }
         }
 
 
@@ -34,9 +38,9 @@ class PagoController extends BaseController
     View::render('pago.php',[
         'tiposOptions'=>$tiposOptions
     ]);
-
     
 }
+
 
 
     public function consultaAction()
@@ -49,15 +53,14 @@ class PagoController extends BaseController
     }
  
 
-
     public function modificarAction()
     {
         $id = $_GET['id'];
 
-        $pago = new PagoForm();
-        if ($pago->load($this->post)) {
-            $pago->update($id);
-            Session::set('message', ['type' => 'success', 'message' => 'Pago actualizado correctamente']);
+        $pago = new Pago();
+        if ($this->post) {
+            $pago->update($id, $this->post);
+            Session::set('message', ['type' => 'success', 'message' => 'pago actualizado correctamente']);
             View::redirect('/app/index');
         }
 
@@ -78,5 +81,6 @@ class PagoController extends BaseController
         View::redirect('/app/index');
 
     }
+
     
 }

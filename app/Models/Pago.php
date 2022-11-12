@@ -29,13 +29,29 @@ class Pago extends BaseModel
     }
 
 
+    public function register($data)
+    {
 
-    public function register(){
+
+        $pago = new Pago();
+        $pago->load($data);
+        $pago->fecha_pago = date('Y-m-d', strtotime($data['fecha_pago']));
+
+        $pago->save();
+
+        return true;
 
     }
 
+    public function update($id, $data){
+        $pago = Pago::get()->where(['id' => $id])->one();
+        $pago->load($data);
 
-    public function corregir(){
+        $pago->save();
+    }
+
+    public function corregir()
+    {
 
     }
 

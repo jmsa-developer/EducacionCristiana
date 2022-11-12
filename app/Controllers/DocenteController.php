@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Forms\DocenteForm;
+//use App\Forms\DocenteForm;
 use App\Models\Docente;
 use App\Models\Ministerio;
 use App\Models\Pastor;
@@ -22,7 +22,7 @@ class DocenteController extends BaseController
             if ($docente->register($this->post)) {
                 Session::set('message', ['type' => 'success', 'message' => 'Docente registrado correctamente']);
 
-                View::redirect('/app/index');
+                View::redirect('/docente/registro');
             } else {
                 Session::set('message', ['type' => 'danger', 'message' => 'Error la cedula del docente ya existe']);
 
@@ -63,7 +63,7 @@ class DocenteController extends BaseController
         if ($this->post) {
             $docente->update($id, $this->post);
             Session::set('message', ['type' => 'success', 'message' => 'Docente actualizado correctamente']);
-            View::redirect('/app/index');
+            View::redirect('/docente/modificar');
         }
 
         $docente = Docente::get()->where(['id' => $id])->one();
