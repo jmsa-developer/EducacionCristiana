@@ -3,9 +3,14 @@
 namespace App\Models;
 
 use App\BaseModel;
+use App\BitacoraTrait;
+use App\Session;
 
 class Docente extends Persona
 {
+
+    use BitacoraTrait;
+
     const CONTRASENA = '123456';
 
     public $direccion;

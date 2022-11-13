@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Forms\EstudianteForm;
 use App\Models\Estudiante;
 use App\Models\Ministerio;
 use App\Models\Pastor;
@@ -15,17 +14,18 @@ use App\View;
 // Controlador principal de la aplicacion
 class EstudianteController extends BaseController
 {
-
- 
-
     public function registroAction()
     {
-        $estudiante = new EstudianteForm();
-        if ($estudiante->load($this->post)) {
-            $estudiante->register();
-            Session::set('message',['type' => 'success','message'=>'Estudiante registrado correctamente']);
+        if ($this->post) {
+            $estudiante = new Estudiante();
+            if ($estudiante->register($this->post)) {
+                Session::set('message', ['type' => 'success', 'message' => 'Estudiante registrado correctamente']);
 
-            View::redirect('/estudiante/registro');
+                View::redirect('/estudiante/registro');
+            } else {
+                Session::set('message', ['type' => 'danger', 'message' => 'Error la cedula del estudiante ya existe']);
+
+            }
         }
 
         $pastores = Pastor::get()->all();
@@ -40,43 +40,42 @@ class EstudianteController extends BaseController
             'pastoresOptions' => $pastoresOptions,
             'ministeriosOptions'=>$ministeriosOptions,
             'zonasOptions'=>$zonasOptions
-        ]);
-    
-        
-      
-}
+        ]);       
+      }
 
-public function consultaAction()
-{
-    $estudiantes = Estudiante::get()->all();
+
+     function consultaAction()
+    {
+        $estudiantes = Estudiante::get()->all();
    
 
-    View::render('estudianteconsulta.php',[
-        'estudiantes'=>$estudiantes
-    ]);
-}
+         View::render('estudianteconsulta.php',[
+            'estudiantes'=>$estudiantes,
+         ]);
+    }
 
 public function modificarAction()
  {
     $id = $_GET['id'];
 
-    $estudiante = new EstudianteForm();
-      if ($estudiante->load($this->post)) {
-            $estudiante->update($id);
+    $estudiante = new Estudiante();
+        if ($this->post) {
+            $estudiante->update($id, $this->post);
             Session::set('message', ['type' => 'success', 'message' => 'Estudiante actualizado correctamente']);
-            View::redirect('/app/index');
+            View::redirect('/estudiante/consulta');
         }
 
     $estudiante = Estudiante::get()->where(['id'=>$id])->one();
 
-    if($estudiante){
+    if ($estudiante) {
         
         $zonas = Zona::get()->all();
         $pastores = Pastor::get()->all();
         $ministerios = Ministerio::get()->all();
-            $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre', 'turno'], $estudiante->pastor->id);
-            $ministeriosOptions = Util::renderOptions($ministerios, 'id', ['nombre_m', 'lider_ministerio'], $estudiante->ministerio->id);
-             $zonasOptions = Util::renderOptions($zonas, 'id', 'zona_nombre', $estudiante->zona->id);
+
+        $zonasOptions = Util::renderOptions($zonas, 'id', 'zona_nombre', $estudiante->zona->id);
+        $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre', 'turno'], $estudiante->pastor->id);
+        $ministeriosOptions = Util::renderOptions($ministerios, 'id', ['nombre_m', 'lider_ministerio'], $estudiante->ministerio->id);
 
         View::render('estudiantemodificar.php',[
             'estudiante'=>$estudiante,
@@ -87,12 +86,9 @@ public function modificarAction()
         }
 
         Session::set('message', ['type' => 'danger', 'message' => "El estudiante $id no existe"]);
-        View::redirect('/app/index');
+        View::redirect('/estudiante/consulta');
 
     }
-
-
-
     
 public function eliminarAction  ()
 {
