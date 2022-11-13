@@ -48,14 +48,10 @@ class GrupoasignacionController extends BaseController
 
     public function consultaAction()
     {
-        $grupoasignaciones = grupoasignacion::get()->all();
-        $docentes = Docente::get()->all();
-    $zonas = Zona::get()->all();
+        $grupoasignaciones = Grupoasignacion::get()->all();
 
         View::render('grupoasignacionconsulta.php', [
             'grupoasignaciones' => $grupoasignaciones,
-            'docentesOptions' => $docentesOptions,
-            'zonasOptions' => $zonasOptions
         ]);
     }
 

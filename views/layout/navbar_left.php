@@ -164,7 +164,7 @@ use App\Access;
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="grupoasignacionest/registro" class="nav-link">
+                            <a href="grupoasignacion/consulta" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Consultar Grupos</p>
                             </a>
