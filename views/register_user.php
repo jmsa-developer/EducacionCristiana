@@ -1,17 +1,22 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+ 
+    <section class="content">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>REGISTRO USUARIO</h1>
-          </div>
-        
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
+        <!-- SELECT2 EXAMPLE -->
+        <div class="card card-default">
+          <div class="card-header">
+            <h3 class="card-title"> Estudiante </h3>
 
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                <i class="fas fa-minus"></i>
+              </button>
+              
+              
+            </div>
+          </div>
 
 <form method="post" name="register">
 <section class="content">
@@ -92,12 +97,22 @@
 
 
             </div>
+           
+            
+                
             <button type="submit" class="btn btn-primary col start">
                 <i class="fas fa-upload"></i>
                 <span>GUARDAR</span>
             </button>
-</DIV>
+            </div>
+
+
+
+</div> 
+</div>
+</div>
             </section>
 
         </form>
 </div>
+
