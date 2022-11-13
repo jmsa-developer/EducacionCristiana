@@ -27,16 +27,8 @@
             <div class="row">
                 <div class="col-md-6">
                 <div class="form-group">
-                <label>ESCUELA</label>
-                      
-                <select class="form-control"  id="escuela_id" name="escuela_id" data-placeholder="Selecciona" style="width: 100%;">
-
-                <?= $escuelasOptions ?>
-
-      
-                 </select>
-                    
-
+                        <label>DIRECCIÓN DEL GRUPO</label>
+                    <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese la dirección del grupo" name="direccion" id="direccion" /> <max 30 characters a-z A-Z></tr>
                   </div>
                     <!-- /.form-group -->
                     <div class="form-group">
@@ -58,7 +50,7 @@
                 <label>ZONA</label>
                       
                 <select class="form-control"  id="zona_id" name="zona_id" data-placeholder="Selecciona" style="width: 100%;">
-                <?= $zonaOptions ?>
+                <?= $zonasOptions ?>
 
 
       
@@ -68,20 +60,11 @@
                   </div>
                     <!-- /.form-group -->
                     <div class="form-group">
-                <label>Auxiliar</label>
-                      
-                <select class="form-control"  id="escuela" name="escuela" data-placeholder="Selecciona" style="width: 100%;">
-                     <option>seleccione un Auxiliar</option>
-                     <option>Mary Adames</option>
-                     <option>Jose Torrealba</option>
-                     <option>Nancy de Melendez</option>
-                     <option>Yoryanis Brito</option>
-
-      
-                </select>
-                    
-
-                  </div>
+                        <label>Auxiliar </label>
+                                  <tr>
+                        <td><input type="text" class="form-control" maxlength="20" placeholder="Ingrese el día" name="auxiliar" id="auxiliar" /> <max 30
+                        characters a-z A-Z></td>
+                    </div>
                 </div>
                     <!-- /.form-group -->
             </div>                   
@@ -124,14 +107,14 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="text" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_inicio" id="fecha_inicio">
+                    <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_inicio" id="fecha_inicio">
                   
                         </div>
                     </div>
 
                     <div class="form-group">
-                               <label>DIRECCIÓN DEL GRUPO</label>
-                                <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese la dirección del grupo" name="direccion" id="direccion" /> <max 30 characters a-z A-Z></tr>
+                            <label>DESCRIPCIÓN</label>
+                            <input type="text" class="form-control" maxlength="30" placeholder="ingrese la descripción" name="descripcion" id="descripcion"/> <max 30 characters a-z A-Z>
                     </div>
                           <!-- /.form-group -->
                         </div>
@@ -150,10 +133,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                            <label>DESCRIPCIÓN</label>
-                            <input type="text" class="form-control" maxlength="30" placeholder="ingrese la descripción" name="descripcion" id="descripcion"/> <max 30 characters a-z A-Z>
-                    </div>
+
                         <!-- /.form group -->                  
                       <!-- /.col -->
                       </div>
