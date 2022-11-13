@@ -244,6 +244,15 @@ use App\Access;
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-user"></i>
                         <p>
+                       Seguridad
+                              <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-solid fa-user"></i>
+                        <p>
                             Usuario
                             <i class="fas fa-angle-left right"></i>
                         </p>
@@ -263,6 +272,32 @@ use App\Access;
                         </li>
                     </ul>
                 </li>
+              
+            
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-solid fa-user-check"></i>
+                        <p>
+                            Roles
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="#r" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Registrar rol</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#r" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Consultar rol</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-table"></i>
@@ -280,6 +315,7 @@ use App\Access;
                         </li>
 
                     </ul>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a href="app/reporte" class="nav-link">
@@ -290,15 +326,7 @@ use App\Access;
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-solid fa-user-check"></i>
-                        <p>
-                            Roles
-                            <span class="right badge badge-danger"></span>
-                        </p>
-                    </a>
-                </li>
+               
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-book-bookmark"></i>
