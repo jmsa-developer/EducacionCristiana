@@ -52,6 +52,7 @@ class EstudianteController extends BaseController
          View::render('estudianteconsulta.php',[
             'estudiantes'=>$estudiantes,
          ]);
+         Session::set('message', ['type' => 'danger', 'message' => "El estudiante $id no existe"]);
     }
 
 public function modificarAction()
