@@ -310,7 +310,7 @@ use App\Access;
                         <li class="nav-item">
                             <a href="bitacora/consulta" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>consultar bitacora</p>
+                                <p>consultar Bitacora</p>
                             </a>
                         </li>
 
