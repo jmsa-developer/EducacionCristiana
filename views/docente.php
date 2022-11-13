@@ -32,13 +32,13 @@
                     <div class="form-group">
                         <label>NOMBRES</label>
                                   <tr>
-                        <td><input type="text" class="form-control" maxlength="20" placeholder="Ingrese nombre" name="nombre" id="nombre" /> <max 30
+                        <td><input type="text" class="form-control" maxlength="20" placeholder="Ingrese nombre" name="nombre" id="nombre" required/> <max 30
                         characters a-z A-Z></td>
                     </div>
                     <!-- /.form-group -->
                     <div class="form-group">
                         <label>CEDULA</label>
-                        <input type="text"  class="form-control"  placeholder="Ingrese  cedula" name="cedula" id="cedula"/>
+                        <input type="text"  class="form-control"  placeholder="Ingrese  cedula" name="cedula" id="cedula" required/>
                     </div>
                     <!-- /.form-group -->
                 </div>
@@ -47,13 +47,13 @@
                     <div class="form-group">
                         <label>APELLIDOS</label>
                                         
-                        <input type="text" class="form-control" maxlength="30" placeholder="Ingrese apellido" name="apellido" id="apellido"/> <max 40 
+                        <input type="text" class="form-control" maxlength="30" placeholder="Ingrese apellido" name="apellido" id="apellido" required/> <max 40 
                         characters a-z A-Z>
                     </div>
                     <!-- /.form-group -->
                     <div class="form-group">
                         <label>TELEFONO</label>
-                        <input type="text" class="form-control" data-inputmask='"mask": "(9999) 999-9999"' data-mask name="telefono" id="telefono"></td> <max 11
+                        <input type="text" class="form-control" data-inputmask='"mask": "(9999) 999-9999"' data-mask name="telefono" id="telefono" required></td> <max 11
                           characters 0-9>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>DIRECCION</label>
-                        <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese lider direccion" name="direccion" id="direccion"/> <max 30
+                        <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese lider direccion" name="direccion" id="direccion" required/> <max 30
                         characters a-z A-Z></tr>
                               </div>
                               <!-- /.form-group -->
@@ -80,7 +80,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
                     </div>
-                    <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_nacimiento" id="fecha_nacimiento">
+                    <input type="date" class="form-control" data-inputmask-alias="datetime" data-inputmask-inputformat="dd/mm/yyyy" data-mask name="fecha_nacimiento" id="fecha_nacimiento" required>
                   
                         </div>
                     </div>                              
@@ -94,7 +94,7 @@
                         <div class="col-md-6">
                           <div class="form-group">
                             <label>Email</label>
-                            <td><input type="email" class="form-control" name="email" id="email" placeholder="Enter email address"></td>
+                            <td><input type="email" class="form-control" name="email" id="email" placeholder="Enter email address" required></td>
                           </div>
                                           <!-- /.form group -->
 

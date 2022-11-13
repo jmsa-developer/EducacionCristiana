@@ -63,7 +63,7 @@ class DocenteController extends BaseController
         if ($this->post) {
             $docente->update($id, $this->post);
             Session::set('message', ['type' => 'success', 'message' => 'Docente actualizado correctamente']);
-            View::redirect('/docente/modificar');
+            View::redirect('/docente/consulta');
         }
 
         $docente = Docente::get()->where(['id' => $id])->one();

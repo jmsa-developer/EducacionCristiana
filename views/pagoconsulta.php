@@ -5,7 +5,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">consulta docente</h3>
+          <h3 class="card-title">Consulta Pago</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -13,6 +13,23 @@
             </button>
            
           </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <form action="simple-results.html">
+                        <div class="input-group">
+                            <input type="search" class="form-control form-control-lg" placeholder="Buscar">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-lg btn-default">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
           <div class="card-body p-0">

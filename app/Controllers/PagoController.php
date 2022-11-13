@@ -23,7 +23,7 @@ class PagoController extends BaseController
             if ($pago->register($this->post)) {
                 Session::set('message', ['type' => 'success', 'message' => 'Pago registrado correctamente']);
     
-                View::redirect('/app/index');
+                View::redirect('/pago/registro');
             } else {
                 Session::set('message', ['type' => 'danger', 'message' => 'Error  del pago ya existe']);
     
@@ -61,7 +61,7 @@ class PagoController extends BaseController
         if ($this->post) {
             $pago->update($id, $this->post);
             Session::set('message', ['type' => 'success', 'message' => 'pago actualizado correctamente']);
-            View::redirect('/app/index');
+            View::redirect('/pago/consulta');
         }
 
         $pago = Pago::get()->where(['id' => $id])->one();
