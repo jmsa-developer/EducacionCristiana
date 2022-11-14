@@ -30,6 +30,23 @@
             <!-- /.card -->
 
           </div>
+
+          <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <form action="simple-results.html">
+                        <div class="input-group">
+                            <input type="search" class="form-control form-control-lg" placeholder="Buscar">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-lg btn-default">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> 
           <!--/.col (left) -->
           <!-- right column -->
           <div class="col-md-8">

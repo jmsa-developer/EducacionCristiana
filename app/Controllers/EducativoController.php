@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Forms\EducativoForm;
+//use App\Forms\EducativoForm;
 use App\Models\Educativo;
 
 
@@ -16,23 +16,26 @@ class EducativoController extends BaseController
 
     
 
-    public function registroAction()
-    {
-        $educativo = new EducativoForm();
-        if ($educativo->load($this->post)) {
-            $educativo->register();
-            Session::set('message',['type' => 'success','message'=>'tema registrado correctamente']);
+public function registroAction()
+{
 
-            View::redirect('/app/index');
+    if ($this->post) {
+        $educativo = new Educativo();
+        if ($educativo->register($this->post)) {
+            Session::set('message', ['type' => 'success', 'message' => 'Tema registrado correctamente']);
+
+            View::redirect('/educativo/registro');
+        } else {
+            Session::set('message', ['type' => 'danger', 'message' => 'Error  del educativo ya existe']);
+
         }
+    }
 
-      
+View::render('educativo.php',[
+]);
 
-        View::render('educativo.php'
-        );
-    
-        
 }
+
 
 public function consultaAction()
 
