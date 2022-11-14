@@ -87,42 +87,6 @@ abstract class BaseModel
         return $object;
     }
 
-    public static function getAll($columns = '*'): iterable
-    {
-        $object = new static();
-        return $object->get($columns)->all();
-    }
-
-    public function getOne($id, $columns = '*'): iterable
-    {
-        $query = "SELECT $columns FROM " . static::tableName() . " WHERE id = $id";
-        return $this->DB()->query($query)->fetch(\PDO::FETCH_ASSOC);
-    }
-
-    public static function getOneById($id, $columns = '*'): iterable
-    {
-        $object = new static();
-        return $object->getOne($id, $columns);
-    }
-
-    public function getByConditions($conditions, $columns = '*'): iterable
-    {
-        $where = '';
-        foreach ($conditions as $key => $value) {
-            $where .= "$key = '$value' AND ";
-        }
-        $where = substr($where, 0, -4);
-        return $this->DB()
-            ->query("SELECT $columns FROM " . static::tableName() . " WHERE $where")
-            ->fetchAll(\PDO::FETCH_ASSOC);
-    }
-
-    public static function getAllByConditions($conditions, $columns = '*'): iterable
-    {
-        $object = new static();
-        return $object->getByConditions($conditions, $columns);
-    }
-
     public function getBySql($sql): iterable
     {
         return $this->DB()
@@ -188,6 +152,19 @@ abstract class BaseModel
 
         // Return last inserted ID.
         return $id;
+    }
+
+
+    public function delete($soft = true)
+    {
+        //comprobar si el objeto tiene la propiedad borrado
+        if ($soft && property_exists($this, 'borrado')) {
+            $query = "UPDATE " . static::tableName() . " SET borrado = NOW() WHERE id = $this->id";
+        }else{
+            $query = "DELETE FROM " . static::tableName() . " WHERE id = $this->id";
+        }
+
+        return $this->DB()->exec($query);
     }
 
 

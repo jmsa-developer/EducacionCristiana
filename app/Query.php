@@ -10,15 +10,6 @@ trait Query
 
     protected $result;
 
-    public static function find()
-    {
-        $q = new static();
-
-        $q->query = "SELECT * FROM " . static::tableName();
-
-        return $q;
-    }
-
     public function where($conditions)
     {
         $where = static::buildCondition($conditions);
@@ -93,11 +84,6 @@ trait Query
         $record->id = intval($record->id);
 
         return $record;
-    }
-
-    public static function instantiate()
-    {
-        return new static();
     }
 
     public function count()
