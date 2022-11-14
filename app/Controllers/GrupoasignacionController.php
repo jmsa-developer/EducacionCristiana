@@ -55,7 +55,37 @@ class GrupoasignacionController extends BaseController
         ]);
     }
 
+    public function modificarAction()
+    {
+        $id = $_GET['id'];
 
+        $grupoasignacion = new Grupoasignacion();
+        if ($this->post) {
+            $grupoasignacion->update($id, $this->post);
+            Session::set('message', ['type' => 'success', 'message' => 'Grupo actualizado correctamente']);
+            View::redirect('/grupoasignacion/consulta');
+        }
+
+        $grupoasignacion = Grupoasignacion::get()->where(['id' => $id])->one();
+
+        if ($grupoasignacion) {
+
+            $docentes = Docente::get()->all();
+            $zonas = Zona::get()->all();
+            $docentesOptions = Util::renderOptions($docentes, 'id', ['nombre', 'apellido'], $grupoasignacion->docente->id);
+            $zonasOptions = Util::renderOptions($zonas, 'id', ['zona_nombre'], $grupoasignacion->zona->id);
+
+            View::render('grupoasignacionmodificar.php', [
+                'grupoasignacion' => $grupoasignacion,
+                'docentesOptions' => $docentesOptions,
+                'zonasOptions' => $zonasOptions
+            ]);
+        }
+
+        Session::set('message', ['type' => 'danger', 'message' => "El Grupo $id no existe"]);
+        View::redirect('/app/index');
+
+    }
 
  
 }
