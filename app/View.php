@@ -11,19 +11,20 @@ class View {
      */
     static function render(string $view, array $params = []): void {
 
-        // Extract controller variables
+        // Extraer los parametros
         
         extract($params, EXTR_SKIP);
 
-        // Page template path.
-        $content = APP_ROOT . "/Views/$view";
+        $root = dirname(__FILE__);
+        // ruta de la vista
+        $content = "$root/Views/$view";
 
         if (is_readable($content)) {
 
          if($view=="login.php"){
-            require_once APP_ROOT . "/Views/layout/main_principal.php";            
+            require_once "$root/Views/layout/main_principal.php";
          }else{
-            require_once APP_ROOT . "/Views/layout/main.php";
+            require_once "$root/Views/layout/main.php";
          }
             
         } else {
