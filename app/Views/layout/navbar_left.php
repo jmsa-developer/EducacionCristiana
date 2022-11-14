@@ -64,13 +64,13 @@ use App\Access;
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="escuela/Registro" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Registrar Escuela</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="escuela/consulta" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Consultar Escuela</p>
                             </a>
