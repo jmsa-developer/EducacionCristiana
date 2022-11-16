@@ -12,7 +12,6 @@ class Zona extends BaseModel
 
     public $zona_nombre;
 
-    public $borrado;
 
 
 

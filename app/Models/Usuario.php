@@ -16,7 +16,6 @@ class Usuario extends BaseModel
     public $rol_id; 
     public $descripcion; 
     public $estado; 
-    public $borrado; 
 
     private $rol;
 

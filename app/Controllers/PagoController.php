@@ -42,16 +42,22 @@ class PagoController extends BaseController
 }
 
 
-
     public function consultaAction()
     {
-        $pagos = Pago::get()->all();
+        if(isset($this->params['search'])){
+            $pagos = Pago::get()
+                ->where(['fecha_pago' => $this->params['search']],'LIKE')
+                ->orWhere(['pago_total' => $this->params['search']],'LIKE')
+                ->all();
+        }else{
+            $pagos = Pago::get()->all();
 
-        View::render('pagoconsulta.php',[
-            'pagos'=>$pagos,
+        }
+
+        View::render('pagoconsulta.php', [
+            'pagos' => $pagos,
         ]);
     }
- 
 
     public function modificarAction()
     {

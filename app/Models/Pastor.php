@@ -11,7 +11,6 @@ class Pastor extends BaseModel
 
     public $nombre;
     public $turno;
-    public $borrado;
 
 
 

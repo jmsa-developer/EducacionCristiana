@@ -36,14 +36,22 @@ class EscuelaController extends BaseController
 
 
 
-    public function consultaAction()
-    {
+public function consultaAction()
+{
+    if(isset($this->params['search'])){
+        $escuelas = Escuela::get()
+            ->where(['nombre' => $this->params['search']],'LIKE')
+            ->orWhere(['tema' => $this->params['search']],'LIKE')
+            ->all();
+    }else{
         $escuelas = Escuela::get()->all();
 
-        View::render('escuelaconsulta.php',[
-            'escuelas'=>$escuelas,
-        ]);
     }
+
+    View::render('escuelaconsulta.php', [
+        'escuelas' => $escuelas,
+    ]);
+}
  
 
     public function modificarAction()

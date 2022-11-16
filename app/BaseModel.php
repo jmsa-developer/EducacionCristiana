@@ -15,7 +15,7 @@ abstract class BaseModel
 
     public $borrado;
 
-    public $incluir_borrados = false;
+    private $incluir_borrados = false;
 
 
     /**

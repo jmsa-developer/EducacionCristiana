@@ -44,16 +44,24 @@ class EstudianteController extends BaseController
       }
 
 
-     function consultaAction()
-    {
-        $estudiantes = Estudiante::get()->all();
-   
-
-         View::render('estudianteconsulta.php',[
-            'estudiantes'=>$estudiantes,
-         ]);
-         Session::set('message', ['type' => 'danger', 'message' => "El estudiante $id no existe"]);
-    }
+      public function consultaAction()
+      {
+          if(isset($this->params['search'])){
+              $estudiantes = Estudiante::get()
+              ->where(['cedula' => $this->params['search']],'LIKE')
+              ->orWhere(['nombre' => $this->params['search']],'LIKE')
+              ->orWhere(['apellido' => $this->params['search']],'LIKE')
+              ->orWhere(['email' => $this->params['search']],'LIKE')
+              ->all();
+          }else{
+              $estudiantes = Estudiante::get()->all();
+  
+          }
+  
+          View::render('estudianteconsulta.php', [
+              'estudiantes' => $estudiantes,
+          ]);
+      }
 
 public function modificarAction()
  {

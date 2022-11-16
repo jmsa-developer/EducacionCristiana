@@ -13,7 +13,6 @@ class Escuela extends BaseModel
     public $nombre;
     public $tema;
     public $descripcion;
-    public $borrado;
 
 
     public function register($data)

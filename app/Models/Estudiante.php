@@ -53,6 +53,7 @@ class Estudiante extends Persona
 
         $estudiante = new Estudiante();
         $estudiante->usuario_id = $usuario->id;
+        $estudiante->estado_id = 1;
         $estudiante->load($data);
         $estudiante->fecha_nacimiento = date('Y-m-d', strtotime($data['fecha_nacimiento']));
         $estudiante->fecha_inicio = date('Y-m-d', strtotime($data['fecha_inicio']));
