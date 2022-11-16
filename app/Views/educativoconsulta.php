@@ -91,6 +91,11 @@
 
                       </td>
                       <td class='project-actions text-right'>
+                      <a class='btn btn-info btn-sm' href='educativo/descargar?id=".$educativo->id."'>
+                          <i class='fas fa-pencil-alt'>
+                          </i>
+                          Descargar archivo
+                      </a>
 
                       <a class='btn btn-info btn-sm' href='educativo/modificar?id=".$educativo->id."'>
                           <i class='fas fa-pencil-alt'>
