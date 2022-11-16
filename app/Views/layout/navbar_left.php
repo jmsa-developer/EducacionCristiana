@@ -318,7 +318,7 @@ use App\Access;
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="app/reporte" class="nav-link">
+                    <a href="reporte/index" class="nav-link">
                         <i class="nav-icon fas fa-solid fa-paste"></i>
                         <p>
                             Reportes

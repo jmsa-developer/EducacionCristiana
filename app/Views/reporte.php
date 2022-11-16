@@ -1,4 +1,7 @@
+<?php
 
+
+?>
 
     <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
@@ -35,7 +38,7 @@
             </div>
           </div>
         
-        <form class="row p-5 d-flex justify-content-center" id="formulario" method="POST" action="?pagina=reporte_" target="_blank">
+        <form class="row p-5 d-flex justify-content-center" id="formulario" method="POST" target="_blank">
             <div class="formulario__grupo col-md-8" id="grupo__tipo">
                 
                 <label for="tipo" class="formulario__label">Tipo de Reporte: </label>
@@ -44,16 +47,12 @@
                
             
                     <select class="form-control" style="width: 100%;" name="tipo" id="tipo" required>
-                    <option value=""></option> selecione  
-                    <option value="estudiante">estudiantes</option>
-                        <option value="escuelas">escuelas</option>
+                        <option value=""></option> selecione
+                        <option value="estudiante">estudiantes</option>
+                        <option value="escuela">escuelas</option>
                         <option value="zona">zonas</option>
-                        <option value="pendiente">pendiente</option>
-                        <option value="cursos">Cursos</option>
-                        <option value="pagos">pagos</option>
-                        <option value="pendiente">pendiente</option>
-                        <option value="pendiente">pendiente</option>
-                        <option value="pendiente">pendiente</option>
+                        <option value="pago">pagos</option>
+
                     </select>
                     <i class="formulario__validacion-estado fas fa-times-circle"></i>
                 </div>
