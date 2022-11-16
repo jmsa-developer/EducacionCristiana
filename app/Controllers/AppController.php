@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Forms\EstudianteForm;
 use App\Forms\DocenteForm;
-use App\Forms\GrupoAsignacionForm;
+use App\Forms\Grupoasignacion;
 use App\Models\Docente;
 use App\Models\Estudiante;
 use App\Models\Ministerio;
@@ -91,21 +91,10 @@ class AppController extends BaseController
         View::render('usuario.php');
     }
 
-    public function grupoasignacionAction()
-    {
-        $grupoasignacion = new GrupoAsignacionForm();
-        if ($grupoasignacion->load($this->post)) {
-            $grupoasignacion->register();
 
-            View::redirect('/app/index');
-        }
-
-
-        View::render('grupoasignacion.php');
-    }
     public function grupoasignacionestAction()
     {
-        $grupoasignacionest = new GrupoAsignacionEstForm();
+        $grupoasignacionest = new Grupoasignacionest();
         if ($grupoasignacionest->load($this->post)) {
             $grupoasignacionest->register();
 
@@ -155,7 +144,7 @@ class AppController extends BaseController
     }
    
 
-   
+
    
 
 }
