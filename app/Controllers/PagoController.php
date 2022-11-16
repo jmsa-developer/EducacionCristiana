@@ -88,5 +88,18 @@ class PagoController extends BaseController
 
     }
 
+    public function eliminarAction()
+    {
+        $id = $_GET['id'];
+
+        if ($id) {
+            $pago = Pago::get()->where(['id' => $id])->one();
+            $pago->delete();
+            Session::set('message', ['type' => 'success', 'message' => 'Pago eliminado correctamente']);
+            View::redirect('/pago/consulta');
+        }
+
+    }
+
     
 }

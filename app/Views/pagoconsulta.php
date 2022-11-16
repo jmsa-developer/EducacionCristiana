@@ -93,7 +93,7 @@
                           </i>
                           Edit
                       </a>
-                      <a class='btn btn-danger btn-sm' href='app/docenteeliminar?id=".$pago->id."'>
+                      <a class='eliminar btn btn-danger btn-sm' href='pago/eliminar?id=".$pago->id."'>
                           <i class='fas fa-trash'>
                           </i>
                           Delete

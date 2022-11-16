@@ -80,5 +80,18 @@ public function consultaAction()
 
     }
 
+    public function eliminarAction()
+    {
+        $id = $_GET['id'];
+
+        if ($id) {
+            $escuela = Escuela::get()->where(['id' => $id])->one();
+            $escuela->delete();
+            Session::set('message', ['type' => 'success', 'message' => 'Escuela eliminado correctamente']);
+            View::redirect('/escuela/consulta');
+        }
+
+    }
+
     
 }

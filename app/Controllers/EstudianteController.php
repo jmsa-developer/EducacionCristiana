@@ -103,7 +103,7 @@ public function eliminarAction  ()
 {
     $id = $_GET['id'];
 
-    $estudiante = new EstudianteForm();
+    $estudiante = new Estudiante();
       if ($estudiante->load($this->post)) {
       $estudiante->update($id);
             Session::set('message', ['type' => 'success', 'message' => 'Estudiante actualizado correctamente']);

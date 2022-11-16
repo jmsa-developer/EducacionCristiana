@@ -2,9 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Forms\EstudianteForm;
-use App\Forms\DocenteForm;
-use App\Forms\Grupoasignacion;
+use App\Models\Grupoasignacion;
 use App\Models\Docente;
 use App\Models\Estudiante;
 use App\Models\Ministerio;
@@ -43,74 +41,7 @@ class AppController extends BaseController
         View::render('register.php');
     }
 
-    public function estudianteAction()
-    {
-        $estudiante = new EstudianteForm();
-        if ($estudiante->load($this->post)) {
-            $estudiante->register();
-
-          //  View::redirect('/app/index');
-        }
-
-
-        View::render('estudiante.php');
-    }
-
-
-    public function docenteAction()
-    {
-        $docente = new DocenteForm();
-        if ($docente->load($this->post)) {
-            $docente->register();
-
-            View::redirect('/app/index');
-        }
-
-
-        View::render('docente.php');
-    }
-
-    public function usuarioAction()
-    {
-        if ($this->isPost()) {
-
-            $usuario = new Usuario();
-            $usuario->nombre = $this->post['nombre'];
-            $usuario->apellido = $this->post['apellido'];
-            $usuario->cedula = $this->post['cedula'];
-            $usuario->email = $this->post['email'];
-            $usuario->usuario = $this->post['usuario'];
-            $usuario->clave = $this->post['clave'];
-            $usuario->rol_id = $this->post['rol_id'];
-            $usuario->descripcion = $this->post['descripcion'];
-            $usuario->save();
-
-            View::redirect('/user/login');
-        }
-
-        View::render('usuario.php');
-    }
-
-
     public function grupoasignacionestAction()
-    {
-        $grupoasignacionest = new Grupoasignacionest();
-        if ($grupoasignacionest->load($this->post)) {
-            $grupoasignacionest->register();
-
-            View::redirect('/app/index');
-        }
-
-
-        View::render('grupoasignacionest.php');
-    }
-
-
-  
-
-
-
-    public function calificacionesAction()
     {
         if ($this->isPost()) {
 
@@ -123,8 +54,13 @@ class AppController extends BaseController
         }
 
 
-        View::render('calificaciones.php');
+        View::render('grupoasignacionest.php');
     }
+
+
+
+
+
 
     public function reporteAction()
     {
