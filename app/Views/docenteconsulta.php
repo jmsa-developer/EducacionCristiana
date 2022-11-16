@@ -17,9 +17,9 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <form action="simple-results.html">
+                    <form>
                         <div class="input-group">
-                            <input type="search" class="form-control form-control-lg" placeholder="Buscar">
+                            <input type="search" class="form-control form-control-lg" placeholder="Buscar" name="search">
                             <div class="input-group-append">
                                 <button type="submit" class="btn btn-lg btn-default">
                                     <i class="fa fa-search"></i>
@@ -113,7 +113,7 @@
                           </i>
                           Edit
                       </a>
-                      <a class='btn btn-danger btn-sm' href='app/docenteeliminar?id=".$docente->id."'>
+                      <a class='eliminar btn btn-danger btn-sm' href='docente/eliminar?id=".$docente->id."'>
                           <i class='fas fa-trash'>
                           </i>
                           Delete

@@ -35,6 +35,7 @@
 <!-- fullCalendar 2.2.5 -->
 <script src="public/plugins/moment/moment.min.js"></script>
 <script src="public/plugins/fullcalendar/main.js"></script>
+<script src="public/js/app.js"></script>
 
 
 

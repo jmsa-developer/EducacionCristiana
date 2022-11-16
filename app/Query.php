@@ -10,10 +10,24 @@ trait Query
 
     protected $result;
 
-    public function where($conditions)
+    public function where($conditions, $equal = '=')
     {
-        $where = static::buildCondition($conditions);
+        $where = static::buildCondition($conditions, $equal);
         $this->query .= " WHERE $where";
+        return $this;
+    }
+
+    public function andWhere($conditions, $equal = '=')
+    {
+        $where = static::buildCondition($conditions, $equal);
+        $this->query .= " AND $where";
+        return $this;
+    }
+
+    public function orWhere($conditions, $equal = '=')
+    {
+        $where = static::buildCondition($conditions, $equal);
+        $this->query .= " OR $where";
         return $this;
     }
 
@@ -23,7 +37,11 @@ trait Query
         $where = '';
 
         foreach ($conditions as $key => $value) {
-            $where .= "$key $equal '$value' AND ";
+            if($equal === '='){
+                $where .= "$key $equal '$value' AND ";
+            }else{
+                $where .= "$key $equal '%$value%' AND ";
+            }
         }
 
         $where = substr($where, 0, -4);
@@ -33,6 +51,14 @@ trait Query
 
     public function one()
     {
+        if (!$this->incluir_borrados) {
+            if (strpos($this->query, 'WHERE') !== false) {
+                $this->query .= " AND borrado IS NULL";
+            } else {
+                $this->query .= " WHERE borrado IS NULL";
+            }
+        }
+
         $this->result = $this->DB()->query($this->query)->fetch(\PDO::FETCH_ASSOC);
         $modelName = get_called_class();
         $model = new $modelName;
@@ -49,16 +75,24 @@ trait Query
 
     public function all()
     {
-        $result =  [];
+        $result = [];
         if ($this->limit) {
             $this->query .= " limit $this->limit";
         }
 
+        if (!$this->incluir_borrados) {
+            if (strpos($this->query, 'WHERE') !== false) {
+                $this->query .= " AND borrado IS NULL";
+            } else {
+                $this->query .= " WHERE borrado IS NULL";
+            }
+        }
+
         $this->result = $this->DB()->query($this->query)->fetchAll(\PDO::FETCH_ASSOC);
 
-        if($this->result >0){
+        if ($this->result > 0) {
 
-            foreach ($this->result as $res){
+            foreach ($this->result as $res) {
                 $modelName = get_called_class();
                 $model = new $modelName;
                 $model = static::populateRecord($model, $res);
@@ -115,11 +149,13 @@ trait Query
     {
     }
 
-    public function loadRelations(){
+    public function loadRelations()
+    {
 
     }
 
-    public function afterSave($resultado, $accion){
+    public function afterSave($resultado, $accion)
+    {
     }
 
 }

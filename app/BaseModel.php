@@ -13,6 +13,11 @@ abstract class BaseModel
 
     public $id;
 
+    public $borrado;
+
+    public $incluir_borrados = false;
+
+
     /**
      * Representa una instancia de PDO
      *
@@ -92,6 +97,12 @@ abstract class BaseModel
         return $this->DB()
             ->query($sql)
             ->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function incluirBorrados()
+    {
+        $this->incluir_borrados = true;
+        return $this;
     }
 
     public function save()

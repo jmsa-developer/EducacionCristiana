@@ -47,7 +47,17 @@ class DocenteController extends BaseController
 
     public function consultaAction()
     {
-        $docentes = Docente::get()->all();
+        if(isset($this->params['search'])){
+            $docentes = Docente::get()
+                ->where(['cedula' => $this->params['search']],'LIKE')
+                ->orWhere(['nombre' => $this->params['search']],'LIKE')
+                ->orWhere(['apellido' => $this->params['search']],'LIKE')
+                ->orWhere(['email' => $this->params['search']],'LIKE')
+                ->all();
+        }else{
+            $docentes = Docente::get()->all();
+
+        }
 
         View::render('docenteconsulta.php', [
             'docentes' => $docentes,
@@ -84,6 +94,19 @@ class DocenteController extends BaseController
 
         Session::set('message', ['type' => 'danger', 'message' => "El docente $id no existe"]);
         View::redirect('/app/index');
+
+    }
+
+    public function eliminarAction()
+    {
+        $id = $_GET['id'];
+
+        if ($id) {
+            $docente = Docente::get()->where(['id' => $id])->one();
+            $docente->delete();
+            Session::set('message', ['type' => 'success', 'message' => 'Docente eliminado correctamente']);
+            View::redirect('/docente/consulta');
+        }
 
     }
 
