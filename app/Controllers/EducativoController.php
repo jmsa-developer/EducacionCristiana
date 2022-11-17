@@ -37,13 +37,18 @@ class EducativoController extends BaseController
 
 
     public function consultaAction()
-
     {
-        $educativo = Educativo::get()->all();
+        if(isset($this->params['search'])){
+            $educativo = Educativo::get()
+            ->where(['nombre' => $this->params['search']],'LIKE')
+            ->all();
+        }else{
+            $educativo = Educativo::get()->all();
+
+        }
 
         View::render('educativoconsulta.php', [
             'educativo' => $educativo,
-
         ]);
     }
 

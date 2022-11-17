@@ -99,39 +99,17 @@ public function modificarAction()
 
     }
     
-public function eliminarAction  ()
-{
-    $id = $_GET['id'];
+    public function eliminarAction()
+    {
+        $id = $_GET['id'];
 
-    $estudiante = new Estudiante();
-      if ($estudiante->load($this->post)) {
-      $estudiante->update($id);
-            Session::set('message', ['type' => 'success', 'message' => 'Estudiante actualizado correctamente']);
-            View::redirect('/app/index');
+        if ($id) {
+            $estudiante = Estudiante::get()->where(['id' => $id])->one();
+            $estudiante->delete();
+            Session::set('message', ['type' => 'success', 'message' => 'Estudiante eliminado correctamente']);
+            View::redirect('/estudiante/consulta');
         }
 
-    $estudiante = Estudiante::get()->where(['id'=>$id])->one();
-
-    if($estudiante){
-        
-        $zona = Zona::get()->all();
-        $pastores = Pastor::get()->all();
-            $ministerios = Ministerio::get()->all();
-            $pastoresOptions = Util::renderOptions($pastores, 'id', ['nombre', 'turno'], $estudiante->pastor->id);
-            $ministeriosOptions = Util::renderOptions($ministerios, 'id', ['nombre_m', 'lider_ministerio'], $estudiante->ministerio->id);
-             $zonasOptions = Util::renderOptions($zona, 'id', 'zona_nombre', $estudiante->zona->id);
-
-        View::render('estudianteeliminar.php',[
-            'estudiante'=>$estudiante,
-            'pastoresOptions' => $pastoresOptions,
-            'ministeriosOptions' => $ministeriosOptions,
-            'zonasOptions'=>$zonasOptions
-            ]);
-       
     }
-
-    View::redirect('/app/index');
-
-}
  
 }
