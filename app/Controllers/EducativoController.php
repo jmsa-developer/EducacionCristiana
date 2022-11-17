@@ -80,23 +80,31 @@ class EducativoController extends BaseController
     }
 
 
-    public function estudiantemodificarAction()
+    public function modificarAction()
     {
         $id = $_GET['id'];
-        $estudiante = Estudiante::get()->where(['id' => $id])->one();
 
-        if ($estudiante) {
+        $educativo = new Educativo();
+        if ($this->post) {
+            $educativo->update($id, $this->post);
+            Session::set('message', ['type' => 'success', 'message' => 'Educativo actualizado correctamente']);
+            View::redirect('/educativo/consulta');
+        }
 
-            View::render('estudiantemodificar.php', [
-                'estudiante' => $estudiante,
+        $educativo = Educativo::get()->where(['id' => $id])->one();
+
+        if ($educativo) {
+
+
+            View::render('educativomodificar.php', [
+                'educativo' => $educativo
 
             ]);
         }
 
-        Session::set('message', ['type' => 'danger', 'message' => "El estudiante $id no existe"]);
+        Session::set('message', ['type' => 'danger', 'message' => "El educativos $id no existe"]);
         View::redirect('/app/index');
 
     }
-
 
 }
