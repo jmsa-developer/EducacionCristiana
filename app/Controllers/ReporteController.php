@@ -64,7 +64,7 @@ class ReporteController extends BaseController
     {
         $pdf = new PDF();
         // Títulos de las columnas
-        $header = [];
+        $header = ['Nombre', 'Tema'];
         // Carga de datos
 
         $escuelas = Escuela::get()->all();
@@ -80,7 +80,7 @@ class ReporteController extends BaseController
     {
         $pdf = new PDF();
         // Títulos de las columnas
-        $header = [];
+        $header = ['Zona'];
         // Carga de datos
 
         $zonas = Zona::get()->all();
@@ -96,7 +96,7 @@ class ReporteController extends BaseController
     {
         $pdf = new PDF();
         // Títulos de las columnas
-        $header = [];
+        $header = ['Fecha_pago', 'Numero_referencia', 'Pago_total'];
         // Carga de datos
 
         $pagos = Pago::get()->all();

@@ -36,7 +36,7 @@ class PDF extends FPDF
         $data = [];
 
         foreach ($array as $item) {
-            $data[] = [];
+            $data[] = [$item->nombre, $item->tema];
         }
 
         return $data;
@@ -46,7 +46,7 @@ class PDF extends FPDF
         $data = [];
 
         foreach ($array as $item) {
-            $data[] = [];
+            $data[] = [$item->zona_nombre];
         }
 
         return $data;
@@ -56,7 +56,7 @@ class PDF extends FPDF
         $data = [];
 
         foreach ($array as $item) {
-            $data[] = [];
+            $data[] = [$item->fecha_pago, $item->numero_referencia, $item->pago_total];
         }
 
         return $data;

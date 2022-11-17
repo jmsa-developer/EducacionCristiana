@@ -44,6 +44,7 @@ class Usuario extends BaseModel
 
     public function register(): int 
     {
+        $this->rol_id = 1;
         $this->clave = password_hash($this->clave, PASSWORD_DEFAULT); 
         return parent::save(); 
     } 
