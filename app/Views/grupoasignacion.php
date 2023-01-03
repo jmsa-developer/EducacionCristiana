@@ -5,7 +5,7 @@
       <!-- /.container-fluid -->
     </section>
 
-      <form method="post" name="test">
+      <form method="post" name="test" action="grupoasignacion/registrofinal">
 
     <!-- Main content -->
     <section class="content">
@@ -28,7 +28,7 @@
                 <div class="col-md-6">
                 <div class="form-group">
                         <label>DIRECCIÓN DEL GRUPO</label>
-                    <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese la dirección del grupo" name="direccion" id="direccion" /> <max 30 characters a-z A-Z></tr>
+                    <td><input type="text"class="form-control"  maxlength="30" placeholder="ingrese la dirección del grupo" name="direccion" id="direccion" required/> <max 30 characters a-z A-Z></tr>
                   </div>
                     <!-- /.form-group -->
                     <div class="form-group">
@@ -184,10 +184,10 @@ document.getElementById("current_date").value = day + "/" +  month+ "/" + year;
                     <i class="fas fa-times-circle"></i>
                     <span>LIMPIAR</span>
                   </button>
-                  <a class="btn btn-success col fileinput-button" href='app/grupoasignacionest'>
-                  <i class="fas fa-arrow-right"></i>
-                          <span>SIGUENTE</span>
-                      </a>
+                    <button type="submit" class="btn btn-success fileinput-button">
+                        <i class="fas fa-arrow-right"></i>
+                        <span>SIGUENTE</span>
+                    </button>
                   
                 </div>
               </div>

@@ -22,6 +22,7 @@ class Grupoasignacion extends BaseModel
 
     public $docente_id;
     public $zona_id;
+    private $zona;
 
 
     public function loadRelations(){

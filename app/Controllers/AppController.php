@@ -33,20 +33,6 @@ class AppController extends BaseController
         View::render('register.php');
     }
 
-    public function grupoasignacionestAction()
-    {
-        if ($this->isPost()) {
 
-            $calificaciones = new calificaciones();
-            $calificaciones->name = $this->post['name'];
-            $calificaciones->cedula = $this->post['cedula'];
-            $calificaciones->save();
-
-            View::redirect('/user/login');
-        }
-
-
-        View::render('grupoasignacionest.php');
-    }
 
 }

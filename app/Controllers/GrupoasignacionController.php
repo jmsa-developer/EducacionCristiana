@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 //use App\Forms\GrupoAsignacionForm;
 use App\Models\Docente;
+use App\Models\Estudiante;
 use App\Models\Grupoasignacion;
 use App\Models\Zona;
 use App\Tools\Session;
@@ -28,8 +29,6 @@ class GrupoasignacionController extends BaseController
             }
         }
 
-
-
     $docentes = Docente::get()->all();
     $zonas = Zona::get()->all();
 
@@ -43,6 +42,24 @@ class GrupoasignacionController extends BaseController
         'zonasOptions' => $zonasOptions
     ]);
 
+    }
+
+    public function registrofinalAction()
+    {
+        if ($this->isPost()) {
+
+            $grupoasignacion = new Grupoasignacion();
+            $grupoasignacion->load($this->post);
+            $estudiantes = Estudiante::get()->where(['zona_id' => $grupoasignacion->zona_id])->all();
+
+            //View::redirect('/user/login');
+        }
+
+
+        View::render('grupoasignacionest.php',[
+            'grupoasignacion' => $grupoasignacion,
+            'estudiantes' => $estudiantes
+        ]);
     }
 
     public function consultaAction()

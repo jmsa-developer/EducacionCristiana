@@ -1,4 +1,5 @@
-  <!-- Content Wrapper. Contains page content -->
+
+<!-- Content Wrapper. Contains page content -->
   <div class="">
     <!-- Content Header (Page header) -->
     <section class="content">
@@ -169,10 +170,7 @@
                     <i class="fas fa-upload"></i>
                     <span>GUARDAR</span>
                   </button>
-                  <button type="reset" class="btn btn-warning col cancel">
-                    <i class="fas fa-times-circle"></i>
-                    <span>LIMPIAR</span>
-                  </button>
+
                 </div>
               </div>
           <!-- /.card-body -->
