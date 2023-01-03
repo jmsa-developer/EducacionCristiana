@@ -53,4 +53,11 @@ class Usuario extends BaseModel
         return $this->rol; 
     }
 
+    public function update($id, $data){
+        $user = Usuario::get()->where(['id' => $id])->one();
+        $user->load($data);
+
+        $user->save();
+    }
+
 }

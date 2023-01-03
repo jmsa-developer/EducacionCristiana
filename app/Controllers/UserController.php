@@ -85,6 +85,32 @@ class UserController extends BaseController
         ]);
     }
 
+    public function modificaruserAction()
+    {
+        $id = $_GET['id'];
+
+        $user = new Usuario();
+        if ($this->post) {
+            $user->update($id, $this->post);
+            Session::set('message', ['type' => 'success', 'message' => 'Usuario actualizado correctamente']);
+            View::redirect('/user/consultauser');
+        }
+
+        $user = Usuario::get()->where(['id' => $id])->one();
+
+        if ($user) {
+
+
+
+            View::render('modificar_user.php', [
+                'user' => $user
+            ]);
+        }
+
+        Session::set('message', ['type' => 'danger', 'message' => "El pago $id no existe"]);
+        View::redirect('/app/index');
+
+    }
 
     public function eliminaruserAction()
     {

@@ -102,7 +102,7 @@
                      
                       <td class='project-actions text-right'>
 
-                      <a class='btn btn-info btn-sm' href='user/modificar?id=".$user->id."'>
+                      <a class='btn btn-info btn-sm' href='user/modificaruser?id=".$user->id."'>
                           <i class='fas fa-pencil-alt'>
                           </i>
                           Edit

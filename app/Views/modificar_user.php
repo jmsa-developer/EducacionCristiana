@@ -7,7 +7,7 @@
         <!-- SELECT2 EXAMPLE -->
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title"> USUARIO </h3>
+            <h3 class="card-title"> USUARIO MODIFICAR </h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -32,7 +32,7 @@
 
                     <label>NOMBRE</label>
 
-                    <input type="text" class="form-control" maxlength="20" placeholder="Ingrese nombre" name="nombre" required/>
+                    <input type="text" class="form-control" maxlength="20" placeholder="Ingrese nombre" name="nombre" required value="<?= $user->nombre; ?>"/>
 
                 </div>
 
@@ -40,7 +40,7 @@
 
                     <label>CEDULA</label>
 
-                    <input type="text" class="form-control" placeholder="Ingrese cedula" name="cedula" required />
+                    <input type="text" class="form-control" placeholder="Ingrese cedula" name="cedula" required value="<?= $user->cedula; ?>" />
 
                 </div>
 
@@ -53,7 +53,7 @@
 
                     <label>APELLIDOS</label>
 
-                    <input type="text" class="form-control" maxlength="30" placeholder="Ingrese apellido" name="apellido" required />
+                    <input type="text" class="form-control" maxlength="30" placeholder="Ingrese apellido" name="apellido" required value="<?= $user->apellido; ?>"/>
 
                 </div>
 
@@ -61,7 +61,7 @@
 
                     <label>EMAIL</label>
 
-                    <input type="email" class="form-control" name="email" placeholder="Ingrese email" required>
+                    <input type="email" class="form-control" name="email" placeholder="Ingrese email" required value="<?= $user->email; ?>">
 
                 </div>
 
@@ -77,7 +77,7 @@
 
                     <label>USUARIO</label>
 
-                    <input type="text" class="form-control" name="usuario" placeholder="Ingrese su usuario" required/>
+                    <input type="text" class="form-control" name="usuario" placeholder="Ingrese su usuario" required value="<?= $user->usuario; ?>"/>
 
                 </div>
 
@@ -87,13 +87,7 @@
             <div class="col-md-6">
 
 
-                <div class="form-group">
 
-                    <label>CLAVE</label>
-
-                    <input type="password" class="form-control" name="clave" placeholder="Ingrese su clave" required />
-
-                </div>
 
 
             </div>
