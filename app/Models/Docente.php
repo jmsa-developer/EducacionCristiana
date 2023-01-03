@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Tools\BaseModel;
 use App\Tools\BitacoraTrait;
 
 class Docente extends BaseModel
