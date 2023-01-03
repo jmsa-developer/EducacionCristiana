@@ -34,7 +34,7 @@ class GrupoasignacionController extends BaseController
     $zonas = Zona::get()->all();
 
     $docentesOptions = Util::renderOptions($docentes, 'id', ['nombre','apellido']);
-    $zonasOptions = Util::renderOptions($zonas, 'id', 'zona_nombre');
+    $zonasOptions = Util::renderOptions($zonas, 'id', 'zona');
 
  //   $ministeriosOptions = Util::renderOptions($ministerios, 'id', ['nombre_m','lider_ministerio']);
 
