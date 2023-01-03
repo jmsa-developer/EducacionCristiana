@@ -2,9 +2,8 @@
 
 namespace App\Models;
 
-use App\Tools\BaseModel;
-use App\Tools\BitacoraTrait;
-
+use App\BaseModel;
+use App\BitacoraTrait;
 class Persona extends BaseModel
 {
     use BitacoraTrait;
@@ -17,7 +16,6 @@ class Persona extends BaseModel
     public $fecha_nacimiento;
     public $fecha_inicio;
     public $direccion;
-    public $borrado;
 
 
 

@@ -51,5 +51,12 @@ class Educativo extends BaseModel
 
     }
 
+    public function update($id, $data){
+        $educativo = Educativo::get()->where(['id' => $id])->one();
+        $educativo->load($data);
+
+        $educativo->save();
+    }
+
 
 }

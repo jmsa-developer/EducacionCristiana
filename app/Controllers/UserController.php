@@ -61,14 +61,65 @@ class UserController extends BaseController
 
     }
 
+
     public function consultauserAction()
     {
-        $user = Usuario::get()->all();
+        if(isset($this->params['search'])){
+            $user = Usuario::get()
+                ->where(['cedula' => $this->params['search']],'LIKE')
+                ->orWhere(['nombre' => $this->params['search']],'LIKE')
+                ->orWhere(['apellido' => $this->params['search']],'LIKE')
+                ->orWhere(['email' => $this->params['search']],'LIKE')
+                ->orWhere(['usuario' => $this->params['search']],'LIKE')
+                ->all();
+        }else{
+            $user = Usuario::get()->all();
 
-        View::render('consulta_user.php',[
-            'user'=>$user,
+        }
+
+        View::render('consulta_user.php', [
+            'user' => $user,
         ]);
     }
 
+    public function modificaruserAction()
+    {
+        $id = $_GET['id'];
+
+        $user = new Usuario();
+        if ($this->post) {
+            $user->update($id, $this->post);
+            Session::set('message', ['type' => 'success', 'message' => 'Usuario actualizado correctamente']);
+            View::redirect('/user/consultauser');
+        }
+
+        $user = Usuario::get()->where(['id' => $id])->one();
+
+        if ($user) {
+
+
+
+            View::render('modificar_user.php', [
+                'user' => $user
+            ]);
+        }
+
+        Session::set('message', ['type' => 'danger', 'message' => "El pago $id no existe"]);
+        View::redirect('/app/index');
+
+    }
+
+    public function eliminaruserAction()
+    {
+        $id = $_GET['id'];
+
+        if ($id) {
+            $user = Usuario::get()->where(['id' => $id])->one();
+            $user->delete();
+            Session::set('message', ['type' => 'success', 'message' => 'Usuario eliminado correctamente']);
+            View::redirect('/user/consultauser');
+        }
+
+    }    
 
 }

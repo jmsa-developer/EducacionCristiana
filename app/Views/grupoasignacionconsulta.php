@@ -46,9 +46,9 @@
                       <th style="width: 10%">
                           Docente
                       </th>
-                      <th style="width: 20%">
+                    <!--  <th style="width: 20%">
                           Numero de Estudiantes
-                      </th>
+                      </th>-->
                       <th style="width: 30%" >
                           Día
                       </th>
@@ -88,12 +88,7 @@
                           </a>
 
                       </td>
-                      <td>
-                          <a>
-                           ".$grupoasignacion->numero_estudiantes."
-                          </a>
 
-                      </td>
                       <td>
                           <a>
                                ".$grupoasignacion->dia."

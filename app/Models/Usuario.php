@@ -44,12 +44,20 @@ class Usuario extends BaseModel
 
     public function register(): int 
     {
+        $this->rol_id = 1;
         $this->clave = password_hash($this->clave, PASSWORD_DEFAULT); 
         return parent::save(); 
     } 
 
     public function getRol(){
         return $this->rol; 
+    }
+
+    public function update($id, $data){
+        $user = Usuario::get()->where(['id' => $id])->one();
+        $user->load($data);
+
+        $user->save();
     }
 
 }

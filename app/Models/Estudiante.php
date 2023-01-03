@@ -4,11 +4,21 @@ namespace App\Models;
 
 use App\Tools\BitacoraTrait;
 
-class Estudiante extends Persona
+class Estudiante extends BaseModel
 {
     use BitacoraTrait;
 
     const CONTRASENA = '123456';
+
+
+    public $nombre;
+    public $apellido;
+    public $cedula;
+    public $telefono;
+    public $email;
+    public $fecha_nacimiento;
+    public $fecha_inicio;
+    public $direccion;
 
     public $pastor_id;
     public $ministerio_id;
