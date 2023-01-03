@@ -2,19 +2,11 @@
 
 namespace App\Controllers;
 
-use App\Models\Grupoasignacion;
-use App\Models\Docente;
 use App\Models\Estudiante;
-use App\Models\Ministerio;
-use App\Models\Usuario;
-use App\Models\educativo;
-use App\Models\Zona;
-use App\Models\Pastor;
-use App\Models\Bitacora;
-use App\Session;
-use App\View;
-//use App\Models\Educativo;
 use App\Models\Estudianteeliminar;
+use App\Tools\View;
+
+//use App\Models\Educativo;
 
 // Controlador principal de la aplicacion
 class AppController extends BaseController

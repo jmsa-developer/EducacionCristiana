@@ -1,6 +1,8 @@
 <?php
 
-namespace App;
+namespace App\Tools;
+
+use App\ReflectionClass;
 
 trait Query
 {
@@ -51,15 +53,25 @@ trait Query
 
     public function one()
     {
-        if (!$this->incluir_borrados) {
+        if (property_exists($this,'borrado') && !$this->incluir_borrados) {
             if (strpos($this->query, 'WHERE') !== false) {
+                var_dump($this);
+
                 $this->query .= " AND borrado IS NULL";
             } else {
                 $this->query .= " WHERE borrado IS NULL";
             }
         }
 
-        $this->result = $this->DB()->query($this->query)->fetch(\PDO::FETCH_ASSOC);
+        try {
+            $this->result = $this->DB()->query($this->query)->fetch(\PDO::FETCH_ASSOC);
+
+        }catch (\PDOException $e){
+            var_dump($this->query);
+            var_dump($e->getMessage());
+            die;
+        }
+
         $modelName = get_called_class();
         $model = new $modelName;
 
@@ -69,6 +81,7 @@ trait Query
         $model = static::populateRecord($model, $this->result);
         $model->afterFind();
         $model->loadRelations();
+
         return $model;
     }
 
@@ -80,7 +93,7 @@ trait Query
             $this->query .= " limit $this->limit";
         }
 
-        if (!$this->incluir_borrados) {
+        if (property_exists($this,'borrado') && !$this->incluir_borrados) {
             if (strpos($this->query, 'WHERE') !== false) {
                 $this->query .= " AND borrado IS NULL";
             } else {
@@ -88,7 +101,15 @@ trait Query
             }
         }
 
-        $this->result = $this->DB()->query($this->query)->fetchAll(\PDO::FETCH_ASSOC);
+        try {
+            $this->result = $this->DB()->query($this->query)->fetchAll(\PDO::FETCH_ASSOC);
+
+        }catch (\PDOException $e){
+            var_dump($this->query);
+            var_dump($e->getMessage());
+            die;
+        }
+
 
         if ($this->result > 0) {
 

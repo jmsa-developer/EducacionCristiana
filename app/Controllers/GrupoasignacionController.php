@@ -3,13 +3,12 @@
 namespace App\Controllers;
 
 //use App\Forms\GrupoAsignacionForm;
-use App\Models\Grupoasignacion;
 use App\Models\Docente;
+use App\Models\Grupoasignacion;
 use App\Models\Zona;
-
-use App\Session;
-use App\Util;
-use App\View;
+use App\Tools\Session;
+use App\Tools\Util;
+use App\Tools\View;
 
 // Controlador principal de la aplicacion
 class GrupoasignacionController extends BaseController

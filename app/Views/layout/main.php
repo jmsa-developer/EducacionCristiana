@@ -3,7 +3,7 @@
 
 <?php
 
-use App\Session;
+use App\Tools\Session;
 
 include "header.php"; ?>
 <base href="/EducacionCristiana/">

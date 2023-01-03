@@ -2,9 +2,8 @@
 
 namespace App\Models;
 
-use App\BaseModel;
-use App\BitacoraTrait;
-use App\Session;
+use App\Tools\BaseModel;
+use App\Tools\BitacoraTrait;
 
 
 class Educativo extends BaseModel

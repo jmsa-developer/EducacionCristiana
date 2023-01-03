@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use App\BaseModel;
-use App\BitacoraTrait;
+use App\Tools\BaseModel;
+use App\Tools\BitacoraTrait;
+
 class Permiso extends BaseModel
 {
     use BitacoraTrait;

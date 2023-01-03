@@ -6,11 +6,9 @@ use App\Forms\EstudianteForm;
 use App\Models\Estudiante;
 use App\Models\Ministerio;
 use App\Models\Pastor;
-use App\Models\Usuario;
-
-use App\Session;
-use App\Util;
-use App\View;
+use App\Tools\Session;
+use App\Tools\Util;
+use App\Tools\View;
 
 // Controlador principal de la aplicacion
 class CalificacionController extends BaseController

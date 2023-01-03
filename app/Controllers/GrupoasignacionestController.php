@@ -4,8 +4,7 @@ namespace App\Controllers;
 
 use App\Forms\GrupoasignacionestForm;
 use App\Models\Grupoasignacionest;
-use App\Models\Usuario;
-use App\View;
+use App\Tools\View;
 
 // Controlador principal de la aplicacion
 

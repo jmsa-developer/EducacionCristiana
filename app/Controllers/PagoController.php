@@ -4,10 +4,9 @@ namespace App\Controllers;
 
 use App\Models\Pago;
 use App\Models\Tipo;
-
-use App\Session;
-use App\Util;
-use App\View;
+use App\Tools\Session;
+use App\Tools\Util;
+use App\Tools\View;
 
 // Controlador principal de la aplicacion
 class PagoController extends BaseController

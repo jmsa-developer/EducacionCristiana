@@ -3,10 +3,8 @@
 namespace App\Controllers;
 
 use App\Models\Escuela;
-
-use App\Session;
-use App\Util;
-use App\View;
+use App\Tools\Session;
+use App\Tools\View;
 
 // Controlador principal de la aplicacion
 class EscuelaController extends BaseController

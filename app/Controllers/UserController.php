@@ -3,13 +3,10 @@
 namespace App\Controllers;
 
 
-use App\Models\Estudiante;
-use App\Models\Persona;
 use App\Models\Usuario;
-use App\Session;
+use App\Tools\Session;
+use App\Tools\View;
 
-
-use App\View;
 
 // Controlador principal de la aplicacion
 class UserController extends BaseController

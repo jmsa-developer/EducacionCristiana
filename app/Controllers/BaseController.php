@@ -2,9 +2,9 @@
 
 namespace App\Controllers;
 
-use App\Access;
-use App\Session;
-use App\View;
+use App\Tools\Access;
+use App\Tools\Session;
+use App\Tools\View;
 
 class BaseController
 {

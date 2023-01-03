@@ -3,14 +3,13 @@
 namespace App\Controllers;
 
      use App\Forms\EvaluacionForm;
-     use App\Models\Evaluacion;
-use App\Models\Tema;
-use App\Models\Evaluacion_tipo;
-//use App\Models\Estudiante;
-use App\Models\Docente;
-use App\Session;
-use App\Util;
-use App\View;
+     use App\Models\Evaluacion_tipo;
+     use App\Models\Tema;
+     use App\Tools\Session;
+     use App\Tools\Util;
+     use App\Tools\View;
+
+     //use App\Models\Estudiante;
 
 // Controlador principal de la aplicacion
 class EvaluacionController extends BaseController

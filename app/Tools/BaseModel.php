@@ -1,8 +1,7 @@
 <?php
 
-namespace App;
+namespace App\Tools;
 
-use Exception;
 use PDO;
 use ReflectionClass;
 
@@ -12,8 +11,6 @@ abstract class BaseModel
     use Query;
 
     public $id;
-
-    public $borrado;
 
     private $incluir_borrados = false;
 

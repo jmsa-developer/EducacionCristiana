@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Tools;
 
 class Database {
 
@@ -31,7 +31,7 @@ class Database {
      *
      * @var string
      */
-    const DB_PASSWORD = '';
+    const DB_PASSWORD = 'root';
 }
 
 

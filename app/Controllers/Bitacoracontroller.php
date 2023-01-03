@@ -1,11 +1,10 @@
 <?php  
 namespace App\Controllers;
 
-use App\View;
+use App\Models\Bitacora;
+use App\Tools\View;
 
- use App\Models\Bitacora;
-
-	class Bitacoracontroller extends BaseController
+class Bitacoracontroller extends BaseController
 	
      
     {

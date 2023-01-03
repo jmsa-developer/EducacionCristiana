@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
-use App\BaseModel;
-use App\BitacoraTrait;
+use App\Tools\BaseModel;
+
 class Rol extends BaseModel
 {
     public $nombre;
     public $descripcion;
     public $url_base;
+    public $borrado;
 
     public function getPermisos(){
         return Permiso::get()->where([

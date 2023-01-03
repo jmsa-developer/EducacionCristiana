@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Tools;
 
 use App\Models\Bitacora;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Tools;
 
 use Exception;
 
@@ -15,7 +15,8 @@ class View {
         
         extract($params, EXTR_SKIP);
 
-        $root = dirname(__FILE__);
+        $root = dirname(__FILE__,2);
+
         // ruta de la vista
         $content = "$root/Views/$view";
 

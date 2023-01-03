@@ -2,8 +2,7 @@
 
 namespace App\Models;
 
-use App\BaseModel;
-use App\Session;
+use App\Tools\BaseModel;
 
 class Bitacora extends BaseModel
 {

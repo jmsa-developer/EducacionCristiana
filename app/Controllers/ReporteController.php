@@ -2,13 +2,12 @@
 
 namespace App\Controllers;
 
-use App\Models\Docente;
 use App\Models\Escuela;
 use App\Models\Estudiante;
 use App\Models\Pago;
 use App\Models\Zona;
-use App\PDF;
-use App\View;
+use App\Tools\PDF;
+use App\Tools\View;
 
 class ReporteController extends BaseController
 {

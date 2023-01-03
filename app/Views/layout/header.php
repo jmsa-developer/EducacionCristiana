@@ -53,7 +53,8 @@
  
 
     <?php
-    use App\Session;
+
+    use App\Tools\Session;
 
     $message = Session::getMessage();
     if (!empty($message)) {

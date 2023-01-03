@@ -4,11 +4,9 @@ namespace App\Controllers;
 
 //use App\Forms\EducativoForm;
 use App\Models\Educativo;
+use App\Tools\Session;
+use App\Tools\View;
 
-
-use App\Session;
-use App\Util;
-use App\View;
 
 // Controlador principal de la aplicacion
 class EducativoController extends BaseController

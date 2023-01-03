@@ -1,9 +1,9 @@
 <?php  
 namespace App\Controllers;
 
-use App\View;
+use App\Tools\View;
 
-	class PlantillaController{
+class PlantillaController{
 
 		public function indexAction(){
 			View::render('plantilla.php');

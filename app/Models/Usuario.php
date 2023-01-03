@@ -2,9 +2,9 @@
 
 namespace App\Models; 
 
-use App\BaseModel; 
-use App\BitacoraTrait; 
-class Usuario extends BaseModel 
+use App\Tools\BaseModel;
+
+class Usuario extends BaseModel
 {
 
     public $nombre; 
@@ -15,28 +15,28 @@ class Usuario extends BaseModel
     public $clave; 
     public $rol_id; 
     public $descripcion; 
-    public $estado; 
+    public $estado;
+    public $borrado;
 
     private $rol;
 
     public function afterFind() 
     {
-        
+        $this->rol = Rol::get()->where(['id'=>$this->rol_id])->one();
 
-        $this->rol = Rol::get()->where(['id'=>$this->rol_id])->one(); 
     } 
 
     public static function getByUsernameAndPassword($username, $password ){ 
 
         $user = self::get()->where([ 
             'usuario' => $username, 
-        ])->one(); 
+        ])->one();
 
         if(!$user){ 
             return false; 
         }
 
-        if(!password_verify($password, $user->clave)){ 
+        if(!password_verify($password, $user->clave)){
             return false; 
         }
         return $user;
@@ -48,7 +48,7 @@ class Usuario extends BaseModel
         return parent::save(); 
     } 
 
-    public function getRol(){ 
+    public function getRol(){
         return $this->rol; 
     }
 

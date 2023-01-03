@@ -1,10 +1,9 @@
 <?php 
 
-namespace App; 
+namespace App\Tools;
 
-use App\Models\Permiso; 
-use App\Models\Rol_Permiso; 
-use App\Models\Usuario; 
+use App\Models\Permiso;
+use App\Models\Rol_Permiso;
 
 class Access 
 { 
@@ -20,9 +19,13 @@ class Access
 
         if(!$user){ 
             return false; 
-        } 
+        }
 
-        if ($user->getRol()->nombre === 'admin') { 
+        if (!$user->getRol()) {
+            return false;
+        }
+
+        if ($user->getRol()->nombre === 'admin') {
             return true; 
         } 
 
